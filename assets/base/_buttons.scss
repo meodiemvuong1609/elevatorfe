@@ -1,0 +1,136 @@
+.button {
+  @extend %h5;
+
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  padding: 0.5em 1em;
+
+  &:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+
+.button__icon svg {
+  width: 12px;
+  height: 12px;
+  pointer-events: none;
+}
+
+.button--white {
+  color: $c-black;
+  background: $c-white;
+  border-radius: 8px;
+  transition: color $speed $ease;
+  border: 1px solid $c-border;
+
+  @media (min-width: break($xs)) {
+    
+  }
+}
+
+.button--red {
+  color: $c-white;
+  background: $c-red-1;
+  border-radius: 8px;
+  transition: color $speed $ease;
+  border: 1px solid $c-red-1-text;
+
+  @media (min-width: break($xs)) {
+    
+  }
+}
+
+.button--yellow {
+  color: $c-yellow-2;
+  background: $c-yellow;
+  border-radius: 8px;
+  transition: color $speed $ease;
+}
+
+.button--green {
+  color: $c-green-2;
+  background: $c-green;
+  border-radius: 8px;
+  transition: color $speed $ease;
+}
+
+.button--primary {
+  height: 56px;
+  width: 100%;
+  color: $c-white;
+  background: $c-red-1;
+  border-radius: 8px;
+  transition: color $speed $ease;
+
+  @media (min-width: break($xs)) {
+    height: 49px;
+    line-height: 49px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: $c-black;
+    transition: background-color $speed $ease, transform $speed $ease;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border-radius: 5px;
+    border: solid 1px transparent;
+    transition: border $speed $ease;
+
+    @media (min-width: break($xs)) {
+      top: -4px;
+      left: -4px;
+      width: calc(100% + 6px);
+      height: calc(100% + 6px);
+    }
+  }
+
+  .non-touch &:hover:not([disabled]):not([href=""]) {
+    &::before {
+      transform: scale(0.95);
+    }
+  }
+}
+
+.button--border {
+  height: 40px;
+  width: 106px;
+  color: $c-red-1;
+  background-color: $c-white;
+  border-radius: 8px;
+  border: 1px solid $c-red-1-text;
+}
+
+.button--status {
+  @extend %h6;
+
+  height: 56px;
+  width: 100%;
+  padding: 0 16px;
+  color: $c-red-1;
+  background-color: $c-green-3;
+  border-radius: 8px;
+
+  .button__el {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

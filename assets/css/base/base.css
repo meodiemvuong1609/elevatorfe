@@ -1,0 +1,7 @@
+@layer el-button--secondary {
+  .el-button--secondary {
+    background: #303439;
+    border-color: #303439;
+    color: #FFF;
+  }
+}

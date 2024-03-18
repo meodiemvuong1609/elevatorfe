@@ -1,0 +1,69 @@
+@import '~/assets/base/variables';
+.nuxt-link-exact-active{
+  height: auto;
+  // color: $c-primary;
+  &p{
+    font: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+  }
+
+  &.breadcrumb--primary{
+    color: $c-primary;
+  }
+  &.breadcrumb--warning{
+    color: $c-yellow-2;
+  }
+  &.breadcrumb--info{
+    color: $c-blue-2;
+  }
+  &.breadcrumb--danger{
+    color: $c-red-text;
+  }
+  &.breadcrumb--success{
+    color: $c-green;
+  }
+}
+
+.breadcrumb {
+  &--primary:hover {
+    & p {
+      color: $c-primary !important;
+      padding-bottom: 2px;
+      border-bottom: 1px solid $c-primary !important;
+    }
+  }
+  &--warning:hover{
+    & p {
+      color: $c-yellow-2 !important;
+      padding-bottom: 2px;
+      border-bottom: 1px solid $c-yellow-2 !important;
+    }
+  }
+  &--info:hover{
+    & p {
+      color: $c-blue-2 !important;
+      padding-bottom: 2px;
+      border-bottom: 1px solid $c-blue-2 !important;
+    }
+  }
+  &--danger:hover{
+    & p {
+      color: $c-red-text !important;
+      padding-bottom: 2px;
+      border-bottom: 1px solid $c-red-text !important;
+    }
+  }
+  &--success:hover{
+    & p {
+      color: $c-green !important;
+      padding-bottom: 2px;
+      border-bottom: 1px solid $c-green !important;
+    }
+  }
+}
+
+.disabled {
+  color: $c-line !important;
+  pointer-events: none;
+}

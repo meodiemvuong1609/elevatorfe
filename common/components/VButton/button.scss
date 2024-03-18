@@ -1,0 +1,256 @@
+@import '~/assets/base/variables';
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    gap: 0.4rem;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: 500;
+    transition: background .2s linear, border-color .2s linear;
+    vertical-align: middle;
+    &.bg__none {
+        font-weight: 600;
+        transition: background .2s linear, border-color .2s linear;
+    }
+
+    &__color--default {
+        &.bg__none {
+            border-color: transparent;
+            color: $c-black;
+    
+            &:disabled {
+                color: $c-line-2;
+            }
+    
+            &:not(:disabled):hover {
+                color: $c-black;
+            }
+    
+            &:not(:disabled):active {
+                color: $c-black-2;
+            }
+        }
+    
+        &:not(.bg__none) {
+            background: $c-white;
+            border-color: $c-line-2;
+            color: $c-black;
+    
+            &:disabled {
+                background: $c-black-3;
+                border-color: $c-line;
+                color: $c-gray-text;
+            }
+    
+            &:not(:disabled):hover {
+                color: $c-black;
+            }
+    
+            &:not(:disabled):active {
+                color: $c-black-2;
+            }
+        }
+    }
+    
+    &__color--primary {
+        &.bg__none {
+            border-color: transparent;
+            color: $c-primary;
+    
+            &:disabled {
+                color: $c-primary-3;
+            }
+    
+            &:not(:disabled):hover {
+                color: $c-primary-2;
+            }
+    
+            &:not(:disabled):active {
+                color: $c-primary-4;
+            }
+        }
+    
+        &:not(.bg__none) {
+            background: $c-primary;
+            border-color: $c-primary;
+            color: #ffffff;
+    
+            &:disabled {
+                background: $c-primary-3;
+                border-color: $c-primary-3;
+            }
+    
+            &:not(:disabled):hover {
+                background: $c-primary-2;
+                border-color: $c-primary-2;
+            }
+    
+            &:not(:disabled):active {
+                background: $c-primary-4;
+                border-color: $c-primary-4;
+            }
+        }
+
+        &.out__line{
+            background: $c-white !important;
+            border-color: $c-primary !important;
+            color: $c-primary !important;
+        }
+    }
+    
+    &__color--warning {
+        &.bg__none {
+            border-color: transparent;
+            color: $c-orange-1;
+    
+            &:disabled {
+                color: $c-orange-3;
+            }
+    
+            &:not(:disabled):hover {
+                color: $c-orange-2;
+            }
+    
+            &:not(:disabled):active {
+                color: $c-orange-4;
+            }
+        }
+
+        &.out__line{
+            background: $c-white !important;
+            border-color: $c-orange-1 !important;
+            color: $c-orange-1 !important;
+        }
+    
+        &:not(.bg__none) {
+            background: $c-orange-1;
+            border-color: $c-orange-1;
+            color: #ffffff;
+    
+            &:disabled {
+                background: $c-orange-3;
+                border-color: $c-orange-3;
+            }
+    
+            &:not(:disabled):hover {
+                background: $c-orange-2;
+                border-color: $c-orange-2;
+            }
+    
+            &:not(:disabled):active {
+                background: $c-orange-4;
+                border-color: $c-orange-4;
+            }
+        }
+    }
+
+    &__color--danger {
+        &.bg__none {
+            border-color: transparent;
+            color: $c-red-1;
+    
+            &:disabled {
+                color: $c-red-3;
+            }
+    
+            &:not(:disabled):hover {
+                color: $c-red-2;
+            }
+    
+            &:not(:disabled):active {
+                color: $c-red-3;
+            }
+        }
+
+        &.out__line{
+            background: $c-white !important;
+            border-color: $c-red-2-text !important;
+            color: $c-red-2-text !important;
+        }
+    
+        &:not(.bg__none) {
+            background: $c-red-1;
+            border-color: $c-red-1;
+            color: #ffffff;
+    
+            &:disabled {
+                background: $c-red-3;
+                border-color: $c-red-3;
+            }
+    
+            &:not(:disabled):hover {
+                background: $c-red-2;
+                border-color: $c-red-2;
+            }
+    
+            &:not(:disabled):active {
+                background: $c-red-3;
+                border-color: $c-red-3;
+            }
+        }
+    }
+    
+    &__color--dark {
+        &.bg__none {
+            border-color: transparent;
+            color: $c-black;
+    
+            &:disabled {
+                color: $c-line-2;
+            }
+    
+            &:not(:disabled):hover {
+                color: $c-black;
+            }
+    
+            &:not(:disabled):active {
+                color: $c-black-2;
+            }
+        }
+
+        &.out__line{
+            background: $c-white !important;
+            border-color: $c-black !important;
+            color: $c-black !important;
+        }
+    
+        &:not(.bg__none) {
+            background: $c-black;
+            border-color: $c-black;
+            color: #ffffff;
+    
+            &:disabled {
+                background: $c-black-3;
+                border-color: $c-black-3;
+                color: $c-line-2;
+            }
+    
+            &:not(:disabled):hover {
+                background: $c-black-1;
+                border-color: $c-black-1;
+            }
+    
+            &:not(:disabled):active {
+                background: $c-black-2;
+                border-color: $c-black-2;
+            }
+        }
+    }
+    
+    &__size--mini {
+        height: 29px;
+        padding: 0 8px;
+    }
+    &__size--default {
+        height: 36px;
+        padding: 0 12px;
+    }
+    &__size--large {
+        height: 45px;
+        padding: 0 16px;
+    }
+}
+

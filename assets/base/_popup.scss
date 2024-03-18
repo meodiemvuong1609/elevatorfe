@@ -1,0 +1,16 @@
+.pop-up--bottom {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100px);
+  transition: all 0.3s ease;
+
+  &.is-show {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}

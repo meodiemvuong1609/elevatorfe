@@ -1,0 +1,14 @@
+.el-button--secondary {
+  @apply text-white;
+  @apply bg-black;
+  @apply border-black;
+}
+
+.el-button--icon-left {
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+  }
+}

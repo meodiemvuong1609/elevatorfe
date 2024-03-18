@@ -1,0 +1,60 @@
+@import '~/assets/base/variables';
+
+.v-table {
+    padding: 0 1rem 1rem;
+    position: relative;
+    background: $c-gray;
+
+    &.loading {
+        padding: 0;
+    }
+
+    &--paginate {
+        justify-content: flex-end;
+    }
+
+    &--header {
+        display: flex;
+        width: 100%;
+
+        & .v-table--item {
+            background: transparent;
+            font-weight: 600;
+        }
+    }
+
+    &--row {
+        display: flex;
+        width: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+
+        & + & {
+            margin-top: 8px;
+        }
+
+        @media screen and (max-width: $xs) {
+            &.mobile {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &--item {
+        flex: 1;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        background: $c-white;
+
+        &.index {
+            justify-content: center;
+            max-width: 70px;
+        }
+
+        @media screen and (max-width: $xs) {
+            justify-content: space-between;
+        }
+    }
+}

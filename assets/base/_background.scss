@@ -1,0 +1,54 @@
+%bg-primary,
+.bg-primary { 
+    background: var(--color-primary);
+}
+
+%bg-white,
+.bg-white { 
+    background-color: var(--color-white);
+}
+
+%bg-yellow,
+.bg-yellow { 
+    background-color: $c-yellow;
+}
+
+%bg-gray,
+.bg-gray { 
+    background-color: $c-gray-3;
+}
+
+%bg-violet,
+.bg-violet { 
+    background-color: $c-violet;
+}
+
+.bg-header { 
+    @extend %bg-primary;
+
+    @media (min-width: break($s)) {
+        background: transparent;
+    }
+}
+
+.bg-image {
+    background-image: url('https://media-check.s3.us-west-004.backblazeb2.com/bg-ecobi.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-overlay {
+    position: relative;
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: #26262685;
+    }
+}

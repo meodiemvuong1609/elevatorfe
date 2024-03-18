@@ -1,0 +1,189 @@
+$icons: (
+  'success-circle':
+    '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.59375 10.625C7.25 10.9688 6.71875 10.9688 6.375 10.625L4.375 8.625C4.03125 8.28125 4.03125 7.75 4.375 7.40625C4.71875 7.0625 5.25 7.0625 5.59375 7.40625L7 8.78125L10.375 5.40625C10.7188 5.0625 11.25 5.0625 11.5938 5.40625C11.9375 5.75 11.9375 6.28125 11.5938 6.625L7.59375 10.625ZM16 8C16 12.4375 12.4062 16 8 16C3.5625 16 0 12.4375 0 8C0 3.59375 3.5625 0 8 0C12.4062 0 16 3.59375 16 8ZM8 1.5C4.40625 1.5 1.5 4.4375 1.5 8C1.5 11.5938 4.40625 14.5 8 14.5C11.5625 14.5 14.5 11.5938 14.5 8C14.5 4.4375 11.5625 1.5 8 1.5Z" fill="%2335DB7B"/></svg>',
+  'warning-circle':
+    '<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.5 0C5.84375 0 0.5 5.39062 0.5 12C0.5 18.6562 5.84375 24 12.5 24C19.1094 24 24.5 18.6562 24.5 12C24.5 5.39062 19.1094 0 12.5 0ZM12.5 21.75C7.10938 21.75 2.75 17.3906 2.75 12C2.75 6.65625 7.10938 2.25 12.5 2.25C17.8438 2.25 22.25 6.65625 22.25 12C22.25 17.3906 17.8438 21.75 12.5 21.75ZM12.5 14.25C13.1094 14.25 13.625 13.7812 13.625 13.125V7.125C13.625 6.51562 13.1094 6 12.5 6C11.8438 6 11.375 6.51562 11.375 7.125V13.125C11.375 13.7812 11.8438 14.25 12.5 14.25ZM12.5 15.8438C11.6562 15.8438 11 16.5 11 17.2969C11 18.0938 11.6562 18.75 12.5 18.75C13.2969 18.75 13.9531 18.0938 13.9531 17.2969C13.9531 16.5 13.2969 15.8438 12.5 15.8438Z" fill="%23FFCC17"/></svg>',
+  'error-circle':
+    '<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.5 0C5.84375 0 0.5 5.39062 0.5 12C0.5 18.6562 5.84375 24 12.5 24C19.1094 24 24.5 18.6562 24.5 12C24.5 5.39062 19.1094 0 12.5 0ZM12.5 21.75C7.10938 21.75 2.75 17.3906 2.75 12C2.75 6.65625 7.10938 2.25 12.5 2.25C17.8438 2.25 22.25 6.65625 22.25 12C22.25 17.3906 17.8438 21.75 12.5 21.75ZM12.5 14.25C13.1094 14.25 13.625 13.7812 13.625 13.125V7.125C13.625 6.51562 13.1094 6 12.5 6C11.8438 6 11.375 6.51562 11.375 7.125V13.125C11.375 13.7812 11.8438 14.25 12.5 14.25ZM12.5 15.8438C11.6562 15.8438 11 16.5 11 17.2969C11 18.0938 11.6562 18.75 12.5 18.75C13.2969 18.75 13.9531 18.0938 13.9531 17.2969C13.9531 16.5 13.2969 15.8438 12.5 15.8438Z" fill="%23EC1929"/></svg>',
+  'info-circle':
+    '<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.5 0C5.84375 0 0.5 5.39062 0.5 12C0.5 18.6562 5.84375 24 12.5 24C19.1094 24 24.5 18.6562 24.5 12C24.5 5.39062 19.1094 0 12.5 0ZM12.5 21.75C7.10938 21.75 2.75 17.3906 2.75 12C2.75 6.65625 7.10938 2.25 12.5 2.25C17.8438 2.25 22.25 6.65625 22.25 12C22.25 17.3906 17.8438 21.75 12.5 21.75ZM12.5 14.25C13.1094 14.25 13.625 13.7812 13.625 13.125V7.125C13.625 6.51562 13.1094 6 12.5 6C11.8438 6 11.375 6.51562 11.375 7.125V13.125C11.375 13.7812 11.8438 14.25 12.5 14.25ZM12.5 15.8438C11.6562 15.8438 11 16.5 11 17.2969C11 18.0938 11.6562 18.75 12.5 18.75C13.2969 18.75 13.9531 18.0938 13.9531 17.2969C13.9531 16.5 13.2969 15.8438 12.5 15.8438Z" fill="%2300AEEF"/></svg>',
+);
+
+$data-svg-prefix: 'data:image/svg+xml;utf-8,';
+
+.toastr-icon {
+  display: inline-block;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: unset;
+  height: 21px;
+  width: 21px;
+}
+
+@each $name, $value in $icons {
+  .#{$name} {
+    background-image: url($data-svg-prefix + map-get($icons, #{$name}));
+  }
+}
+
+#toastr {
+  &-top-right {
+    position: fixed;
+    z-index: 9999;
+    padding: 1rem;
+    top: 0;
+    right: 0;
+  }
+
+  &-bottom-right {
+    position: fixed;
+    z-index: 9999;
+    padding: 1rem;
+    bottom: 0;
+    right: 0;
+    & .toastr {
+      margin-bottom: 0;
+      margin-top: 1rem;
+    }
+  }
+
+  &-top-left {
+    position: fixed;
+    z-index: 9999;
+    padding: 1rem;
+    top: 0;
+    left: 0;
+    & .toastr {
+      animation: toastrShowLeft ease 0.4s, toastrHideLeft linear 0.4s var(--delay) forwards;
+    }
+  }
+
+  &-bottom-left {
+    position: fixed;
+    z-index: 9999;
+    padding: 1rem;
+    bottom: 0;
+    left: 0;
+    & .toastr {
+      margin-bottom: 0;
+      margin-top: 1rem;
+      animation: toastrShowLeft ease 0.4s, toastrHideLeft linear 0.4s var(--delay) forwards;
+    }
+  }
+
+  @keyframes toastrShowLeft {
+    from {
+      opacity: 0;
+      transform: translateX(calc(-100% - 1rem));
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes toastrHideLeft {
+    to {
+      opacity: 0;
+      transform: translateX(calc(-100% - 1rem));
+    }
+  }
+}
+
+.toastr {
+  min-width: 250px;
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 1rem;
+  transition: all 0.5s;
+  animation: toastrShow ease 0.4s, toastrHide linear 0.6s var(--delay) forwards;
+
+  &.success {
+    & .toastr-content {
+      border-color: #35db7b;
+    }
+  }
+
+  &.warning {
+    & .toastr-content {
+      border-color: #ffcc17;
+    }
+  }
+
+  &.error {
+    & .toastr-content {
+      border-color: #ec1929;
+    }
+  }
+
+  &.info {
+    & .toastr-content {
+      border-color: #319eff;
+    }
+  }
+
+  &-content {
+    padding: 1rem;
+    width: 100%;
+    border: 0.5px solid #dddddd;
+    background-color: #ffffff;
+    border-radius: 8px;
+    min-height: 50px;
+    padding: 24px 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+
+    &--title {
+      font-weight: 500;
+    }
+
+    &--icon {
+      line-height: 0.5;
+      margin-top: -3px;
+    }
+
+    &--main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    &--text {
+      font-size: 14px;
+      color: #a7aeb8;
+      line-height: 1.15;
+    }
+
+    &--close {
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-left: 14px;
+      color: #a7aeb8;
+      line-height: 16px;
+    }
+  }
+
+  @keyframes toastrShow {
+    from {
+      opacity: 0;
+      transform: translateX(calc(100% + 1rem));
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes toastrHide {
+    to {
+      opacity: 0;
+      transform: translateX(calc(100% + 1rem));
+    }
+  }
+}

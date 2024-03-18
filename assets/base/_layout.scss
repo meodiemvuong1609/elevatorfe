@@ -1,0 +1,55 @@
+.popup {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+
+  @extend .f;
+  @extend .jcc;
+  @extend .aic;
+  height: 100vh;
+  width: 100vw;
+
+  background: #0000008d;
+
+  animation: zoomin 0.2s linear;
+
+  &-content {
+    width: 343px;
+    @extend .bg-white;
+    @extend .border-radius;
+    @extend .px1;
+    animation-delay: 0.05s;
+    animation: zoomin_item 0.2s linear;
+  }
+}
+
+@keyframes zoomin {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  100% {
+    transform:  scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomin_item {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  100% {
+    transform:  scale(1);
+    opacity: 1;
+  }
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}

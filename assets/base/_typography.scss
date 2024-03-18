@@ -1,0 +1,329 @@
+@font-face {
+  src: url('~/assets/fonts/Helvetica-Neue/HelveticaNeue-Bold.ttf');
+  font-family: "Helvetica Neue Bold";
+}
+
+@font-face {
+  src: url('~/assets/fonts/Helvetica-Neue/HelveticaNeue-Medium.ttf');
+  font-family: "Helvetica Neue Medium";
+}
+
+@font-face {
+  src: url('~/assets/fonts/Helvetica-Neue/HelveticaNeue.ttf');
+  font-family: "Helvetica Neue";
+}
+
+@font-face {
+  src: url('~/assets/fonts/Helvetica-Neue/HelveticaNeue-Light.ttf');
+  font-family: "Helvetica Neue Light";
+}
+
+@font-face {
+  src: url('~/assets/fonts/Helvetica-Neue/HelveticaNeue-Thin.ttf');
+  font-family: "Helvetica Neue Thin";
+}
+
+%f-primary-bold {
+  font-family: 'Helvetica Neue Bold', sans-serif;
+}
+
+%f-primary-medium {
+  font-family: 'Helvetica Neue Medium', sans-serif;
+}
+
+%f-primary-regular {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+%f-primary-light {
+  font-family: 'Helvetica Neue Light', sans-serif;
+}
+
+%f-primary-thin {
+  font-family: 'Helvetica Neue Thin', sans-serif;
+}
+
+%anti-alias {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @extend %f-primary-regular;
+  color: $c-black;
+
+  * {
+    @extend %anti-alias;
+  }
+}
+
+a {
+  //@include transition(all);
+  color: $c-black;
+  text-decoration: none;
+}
+
+%price-large {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+// Fonts
+/* Heading */
+%h1 {
+  @extend %f-primary-bold;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 45px;
+}
+
+.h1,
+h1 {
+  @extend %h1
+};
+
+%h2 {
+  @extend %f-primary-bold;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.h2,
+h2 {
+  @extend %h2
+};
+
+%h3 {
+  @extend %f-primary-bold;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.h3,
+h3 {
+  @extend %h3
+};
+
+%h4 {
+  @extend %f-primary-bold;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.h4,
+h4 {
+  @extend %h4
+};
+
+%h5 {
+  @extend %f-primary-bold;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.h5,
+h5 {
+  @extend %h5
+};
+
+%h6 {
+  @extend %f-primary-bold;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.h6,
+h6 {
+  @extend %h6
+};
+
+/* Body text */
+%p1 {
+  @extend %f-primary-medium;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.p1,
+p1 {
+  @extend %p1
+};
+
+%p2 {
+  @extend %f-primary-regular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.p2,
+p2 {
+  @extend %p2
+};
+
+%p3 {
+  @extend %f-primary-medium;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.p3,
+p3 {
+  @extend %p3
+};
+
+%p4 {
+  @extend %f-primary-regular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.p4,
+p4 {
+  @extend %p4
+};
+
+%p5 {
+  @extend %f-primary-medium;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.p5,
+p5 {
+  @extend %p5
+};
+
+%p6 {
+  @extend %f-primary-regular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.p6,
+p6 {
+  @extend %p6
+};
+
+%p7 {
+  @extend %f-primary-medium;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.p7,
+p7 {
+  @extend %p7
+};
+
+%p8 {
+  @extend %f-primary-medium;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.p8,
+p8 {
+  @extend %p8
+};
+
+/* Extra support*/
+%s1 {
+  @extend %f-primary-regular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-decoration: underline;
+}
+
+.s1,
+s1 {
+  @extend %s1
+};
+
+%s2 {
+  @extend %f-primary-regular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.s2,
+s2 {
+  @extend %s2
+};
+
+// Border
+.cursor {
+  cursor: pointer;
+}
+
+.border-radius {
+  border-radius: 4px;
+}
+
+.border-radius-m {
+  border-radius: 8px;
+}
+
+.border-radius-m-bottom {
+  border-radius: 0 0 8px 8px;
+}
+
+.border {
+  border: 1px solid $c-line-3;
+}
+
+.border-top {
+  border-top: 1px solid $c-line-2;
+}
+
+.border-2 {
+  border: 1px solid $c-line-2;
+}
+
+.border-primary {
+  border: 1px solid $c-primary;
+}
+
+.gap025 {
+  gap: 0.25em;
+}
+
+.gap05 {
+  gap: 0.5em;
+}
+
+.gap1 {
+  gap: 1em;
+}

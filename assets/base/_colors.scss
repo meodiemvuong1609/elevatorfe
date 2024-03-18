@@ -1,0 +1,92 @@
+// Colors
+.primary {color: $c-primary}
+// .primary-1 {color: $c-primary-1}
+.primary-2 {color: $c-primary-2}
+.primary-3 {color: $c-primary-3}
+.primary-4 {color: $c-primary-4}
+
+.white {color: $c-white;}
+.gray {color: $c-gray;}
+.black {color: $c-black;}
+
+.red {color: $c-red}
+.red-2 {color: $c-red-2-text}
+.green {color: $c-green}
+.green-2 {color: $c-green-4}
+.blue {color: $c-blue}
+.blue-3 {color: $c-blue-3}
+.purple {color: $c-purple}
+.yellow{color: $c-yellow}
+.yellow-2{color: $c-yellow-text}
+.turquoise {color: $c-turquoise}
+.pink {color: $c-pink}
+.light-red {color: $c-light-red}
+.light-green {color: $c-light-green}
+.light-blue {color: $c-light-blue}
+.light-purple {color: $c-light-purple}
+.light-yellow {color: $c-light-yellow}
+.light-turquoise {color: $c-light-turquoise}
+.light-pink {color: $c-light-pink}
+
+.gray-1 {color: $c-gray-1}
+.gray-2 {color: $c-gray-2}
+.gray-3 {color: $c-gray-3}
+.gray-4 {color: $c-gray-4}
+.gray-5 {color: $c-gray-text;}
+
+.orange {color: $c-orange}
+.orange-1 {color: $c-orange-1}
+.orange-2 {color: $c-orange-2}
+.orange-3 {color: $c-orange-3}
+.orange-4 {color: $c-orange-4}
+
+// Background Colors
+.bg-primary {background: $c-primary}
+// .bg-primary-1 {color: $c-primary-1}
+.bg-primary-2 {background: $c-primary-2}
+.bg-primary-3 {background: $c-primary-3}
+.bg-primary-4 {background: $c-primary-4}
+
+.bg-red {background: $c-red}
+.bg-light-red {background: $c-light-error}
+.bg-green {background: $c-green}
+.bg-green-2 {background: $c-green-2}
+.bg-green-5 {background: $c-green-5}
+
+.bg-blue {background: $c-blue}
+.bg-blue-3 {background: $c-blue-3}
+.bg-blue-4 {background: $c-blue-4}
+
+.bg-purple {background: $c-purple}
+.bg-yellow{background: $c-yellow}
+.bg-turquoise {background: $c-turquoise}
+.bg-pink {background: $c-pink}
+
+.bg-light-red {background: $c-light-red}
+.bg-light-green {background: $c-light-green}
+.bg-light-blue {background: $c-light-blue}
+.bg-light-purple {background: $c-light-purple}
+.bg-light-yellow {background: $c-light-yellow}
+.bg-light-turquoise {background: $c-light-turquoise}
+.bg-light-pink {background: $c-light-pink}
+
+.bg-gray-1 {background: $c-gray-1}
+.bg-gray-2 {background: $c-gray-2}
+.bg-gray-3 {background: $c-gray-3}
+.bg-gray-4 {background: $c-gray-4}
+.bg-gray-5 {background: $c-gray-5}
+
+.bg-orange {background: $c-orange}
+.bg-orange-1 {background: $c-orange-1}
+.bg-orange-2 {background: $c-orange-2}
+.bg-orange-3 {background: $c-orange-3}
+.bg-orange-4 {background: $c-orange-4}
+
+// Shadow
+.shadow {
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.16);
+}
+
+.box-shadow-t {
+    box-shadow: 4px 0 20px -6px rgba(0, 0, 0, 0.3);
+}

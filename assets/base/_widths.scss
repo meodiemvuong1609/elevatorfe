@@ -1,0 +1,127 @@
+.w100 { width: 100%; }
+.h100 { height: 100%; }
+
+.h100vh { height: 100vh; }
+.h105vh { height: 105vh; }
+.h90vh { height: 90vh; }
+.h-hero { height: 250px; }
+
+.w50 { 
+    width: 100%; 
+
+    @media (min-width: break($s)) {
+        width: 50%
+    }
+}
+
+.w50mb { 
+    width: 50%; 
+
+    @media (min-width: break($s)) {
+        width: 50%
+    }
+}
+
+.w10mb { 
+    width: 10%; 
+
+    @media (min-width: break($s)) {
+        width: 10%; 
+    }
+}
+
+.w90mb { 
+    width: 90%; 
+
+    @media (min-width: break($s)) {
+        width: 90%; 
+    }
+}
+
+.w70 { 
+    width: 100%; 
+
+    @media (min-width: break($s)) {
+        width: calc(70% - 1em); 
+    }
+}
+
+.w85 { 
+    width: 100%; 
+
+    @media (min-width: break($s)) {
+        width: calc(85%); 
+    }
+}
+
+.w80 { 
+    width: 100%; 
+
+    @media (min-width: break($s)) {
+        width: calc(80% - 1em); 
+    }
+}
+
+.w60 { 
+    width: 100%; 
+
+    @media (min-width: break($s)) {
+        width: calc(60% - 1em); 
+    }
+}
+
+.w40 { 
+    width: 100%; 
+
+    @media (min-width: break($s)) {
+        width: calc(40% - 1em); 
+    }
+}
+
+.w30 { 
+    width: 100%; 
+
+    @media (min-width: break($s)) {
+        width: calc(30% - 1em); 
+    }
+}
+
+.w20 { 
+    width: 100%; 
+
+    @media (min-width: break($s)) {
+        width: 20%; 
+    }
+}
+
+.w20em { 
+    width: 100%; 
+
+    @media (min-width: break($s)) {
+        width: calc(20% - 1em); 
+    }
+}
+
+.w15 { 
+    width: 100%; 
+
+    @media (min-width: break($s)) {
+        width: 15%; 
+    }
+}
+
+.w10 { 
+    width: 100%; 
+
+    @media (min-width: break($s)) {
+        width: 10%; 
+    }
+}
+
+.col4-nores {
+    width: calc(100%/4 - 1em); 
+
+    @media (min-width: break($s)) {
+        width: calc(100%/4 - 1em); 
+    }
+}

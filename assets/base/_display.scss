@@ -1,0 +1,56 @@
+/* defer:start */
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.static {
+  position: static;
+}
+
+.hide {
+  display: none;
+}
+
+.show-only-mobile {
+  display: none;
+
+  @media (max-width: break($s)) {
+    display: flex;
+  }
+}
+
+.desktop {
+  display: none;
+
+  @media (min-width: break($s)) {
+    display: flex;
+  }
+}
+
+.mobile {
+  display: flex;
+
+  @media (min-width: break($s)) {
+    display: none;
+  }
+}

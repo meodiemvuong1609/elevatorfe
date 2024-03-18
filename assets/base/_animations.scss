@@ -1,0 +1,75 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes swing {
+  from {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-15deg);
+  }
+  30% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  70% {
+    transform: rotate(15deg);
+  }
+  90% {
+    transform: rotate(-15deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+
+@keyframes ontop {
+  0% {
+    transform: translate(0,0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translate(0,-16px);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translate(0,-32px);
+    opacity: 0;
+  }
+
+}
+
+@keyframes text-link-hover {
+  0% {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+
+  50% {
+    left: auto;
+    right: 0;
+    width: 0%;
+  }
+
+  51% {
+    left: 0;
+    right: auto;
+  }
+
+  100% {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}

@@ -1,0 +1,46 @@
+@import '~/assets/base/variables';
+
+.chip {
+  &__container {
+    border: 1px solid $c-line-2;
+    flex-wrap: wrap;
+  }
+
+  &__value {
+    width: fit-content;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+
+    &__item {
+      background: $c-line;
+      width: fit-content;
+
+      & p {
+        max-width: 80px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &__input {
+    width: fit-content;
+    flex: 1;
+    
+    & input {
+      padding-left: 12px;
+      width: 100%;
+      border: none;
+      min-height: 45px;
+      z-index: -1 !important;
+      &::placeholder {
+        color: $c-gray-text;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

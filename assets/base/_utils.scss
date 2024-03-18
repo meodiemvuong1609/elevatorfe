@@ -1,0 +1,230 @@
+@mixin aspect-ratio($w: 1, $h: 1, $pos: before) {
+  position: relative;
+  &:#{$pos} {
+    content: '';
+    display: block;
+    padding-top: percentage($h/$w);
+  }
+}
+
+@mixin bg-center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+%bg-cover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+%bg-contain {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+%bg-center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin background($size: cover) {
+  background-size: $size;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.background-cover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin transition($element: all, $time: 0.3s, $type: ease) {
+  transition: $element $time $type;
+}
+
+%transition-all {
+	@include transition;
+}
+
+@mixin fade-out {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+  visibility: visible;
+}
+
+@mixin fade-in {
+  visibility: visible;
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@mixin overlay {
+  position: relative;
+  &:before {
+    @extend %transition-all;
+    @include fade-out;
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    z-index: 9;
+    background-color: rgba($c-black, 0.4);
+  }
+}
+
+.overlay {
+  position: relative;
+  &:before {
+    @extend %transition-all;
+    @include fade-out;
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    z-index: 9;
+    background-color: rgba($c-black, 0.4);
+  }
+}
+
+@mixin absolute-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+%absolute-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.absolute-full {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@mixin list-reset() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin word-wrap {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: none;
+}
+
+@mixin focus() {
+  &:focus {
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: Highlight;
+
+    @media (-webkit-min-device-pixel-ratio: 0) {
+      outline-color: -webkit-focus-ring-color;
+      outline-style: auto;
+    }
+  }
+}
+
+@mixin link-hover($color: $c-yellow) {
+  &:hover {
+    @include transition(all);
+    color: $color;
+  }
+}
+@mixin hr( $animate: false, $full: false, $position: after ) {
+  position: relative;
+
+  @if ($animate == animateOn) {
+    &:#{$position} {
+      @include transition(width);
+      @if ( $full == true ) {
+        width: 100%;
+      } @else {
+        width: 60px;
+        @media (min-width: break($s)) {
+          width: 100px;
+        }
+        @media (min-width: break($l)) {
+          width: 125px;
+        }
+      }
+    }
+  } @else {
+    &:#{$position} {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      height: 1px;
+      background-color: $c-gray;
+
+      @if ($position == 'before') {
+        top: 0;
+      } @else if ($position == 'after') {
+        bottom: 0;
+      }
+
+      @if ($animate == false) {
+        left: 50%;
+        transform: translateX(-50%);
+        @if $full {
+          width: 100%;
+        } @else {
+          width: 60px;
+
+          @media (min-width: break($s)) {
+            width: 100px;
+          }
+          @media (min-width: break($l)) {
+            width: 125px;
+          }
+        }
+      } @else if ($animate == animateOff) {
+        @include transition(width);
+        width: 0;
+        left: 0;
+      }
+    }
+  }
+}
+
+@mixin font($type: $f-sans, $font-size: 14px, $line-height: 22px, $letter-spacing: false){
+  @if( $type == $f-sans ) {
+    font-family: $f-sans;
+  } @else if( $type == $f-serif) {
+    font-family: $f-serif;
+  }
+  font-size: $font-size;
+  line-height: $line-height;
+  @if( $letter-spacing ) {
+    letter-spacing: $letter-spacing;
+  }
+}
+

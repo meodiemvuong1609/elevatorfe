@@ -1,0 +1,67 @@
+@import '~/assets/base/variables';
+
+.v-tab {
+  &__header {
+    overflow: auto;
+    padding-bottom: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+    width: 100vw;
+
+    @media only screen and (max-width: $xs) {
+      &::-webkit-scrollbar {
+        height: 0px;
+      }
+
+      &:hover::-webkit-scrollbar-thumb {
+        background: none;
+        height: 0px;
+      }
+    }
+
+    &--body {
+      height: 100%;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      justify-content: flex-start;
+      width: max-content;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: color .2s linear, border-color .2s linear;
+    user-select: none;
+    color: $c-gray-text;
+
+    &:hover {
+      color: $c-primary-4;
+    }
+
+    &:active {
+      color: $c-primary-3;
+    }
+
+    &--active {
+      color: $c-primary;
+      border-bottom: 1px solid $c-primary;
+    }
+
+    &--disabled {
+      pointer-events: none;
+      color: $c-line;
+      border-color: $c-line;
+    }
+  }
+
+  &__body {
+    padding: 1rem 0;
+    margin-top: 60px;
+  }
+}
