@@ -23,7 +23,7 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/css/main.css',
-    '@/assets/css/base.css'
+    '@/assets/css/base.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -70,7 +70,7 @@ export default {
     {
       src: '~/common/plugins/vue-flickity.js',
       ssr: false,
-    }
+    },
     
   ],
 
