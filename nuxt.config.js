@@ -33,15 +33,6 @@ export default {
       mode: 'client',
     },
     {
-      src: '~/common/plugins/barcode.js',
-      mode: 'client',
-      ssr: false,
-    },
-    {
-      src: '~/common/plugins/services.js',
-      mode: 'client',
-    },
-    {
       src: '~/common/plugins/toastr',
       mode: 'client',
     },
@@ -49,17 +40,12 @@ export default {
       src: '~/common/plugins/vue-carousel.js',
       mode: 'client',
     },
+    { src: '~/common/plugins/mobileDetect.js', 
+      mode: 'client' 
+    },
     {
       src: '~/common/plugins/axios-config.js',
       mode: 'client',
-    },
-    {
-      src: '~/common/plugins/vue-apexchart.js',
-      ssr: false,
-    },
-    {
-      src: '~/common/plugins/vue-calendar.js',
-      ssr: false,
     },
     {
       src: '~/common/plugins/ultiEvents.js',
