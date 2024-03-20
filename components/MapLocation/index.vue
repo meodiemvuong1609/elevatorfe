@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isShow" class="w-full">
+  <div class="w-full">
     <div class="relative map__container border-radius-m mt1">
       <div id="map"></div>
     </div>
@@ -8,8 +8,8 @@
 
 <script>
 import 'mapbox-gl/dist/mapbox-gl.css'
-import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder'
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css'
+import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder'
 import mapboxgl from 'mapbox-gl';
 
 export default {

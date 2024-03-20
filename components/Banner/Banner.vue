@@ -1,7 +1,7 @@
 <template>
   <div >
     <Flickity
-      class="carousel" 
+      class="carousel max-sm:hidden" 
       :options="{
         wrapAround: true,
         pageDots: false,
@@ -10,10 +10,22 @@
       }"
       ref="flickity"
     >
-      <div class="carousel-cell max-sm:hidden" v-if="$mobileDetect && !$mobileDetect.mobile()">
+      <div class="carousel-cell">
         <img src="~/assets/img/banner3.png" alt="">
       </div>
-      <div class="carousel-cell sm:hidden" v-if="$mobileDetect && $mobileDetect.mobile()">
+
+    </Flickity>
+    <Flickity
+      class="carousel sm:hidden" 
+      :options="{
+        wrapAround: true,
+        pageDots: false,
+        prevNextButtons: true,
+        autoPlay: 5000
+      }"
+      ref="flickity"
+    >
+      <div class="carousel-cell">
         <img src="~/assets/img/banner-sm.png" alt="">
       </div>
 

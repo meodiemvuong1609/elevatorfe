@@ -40,9 +40,6 @@ export default {
       src: '~/common/plugins/vue-carousel.js',
       mode: 'client',
     },
-    { src: '~/common/plugins/mobileDetect.js', 
-      mode: 'client' 
-    },
     {
       src: '~/common/plugins/axios-config.js',
       mode: 'client',
