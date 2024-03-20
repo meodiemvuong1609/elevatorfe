@@ -31,10 +31,10 @@ export default {
         prevNextButtons: false,
         autoPlay: 5000
       },
-      mobile: false
+      mobile: true
     }
   },
-  created() {
+  mounted() {
     this.mobile = this.isMobile()
   },
   methods: {
@@ -53,7 +53,7 @@ export default {
           return true;
         } else return false;
       }
-      
+
     }
   },
 
