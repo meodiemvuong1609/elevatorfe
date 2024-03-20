@@ -1,18 +1,18 @@
 <template>
-  <div class="header flex h-[110px] custom-gradient ">
-    <div class="flex items-center mx-auto w-3/4 justify-between">
-      <div class="logo flex ">
+  <div class="flex h-[110px] custom-gradient max-sm:px-4 ">
+    <div class="flex items-center mx-auto w-3/4 justify-between max-sm:w-full">
+      <div class="flex items-center ">
         <img src="~/assets/img/logo.png" class=" max-h-[80px]" alt="">
         <div class="flex-row ml-2 ">
-          <div class="bo font-bold text-2xl text-white">
+          <div class="bo font-bold text-2xl max-sm:text-xl text-white">
             THANG MÁY HƯNG PHÁT
           </div>
-          <div class=" text-white font-normal text-lg">
+          <div class=" text-white font-normal text-lg ">
             HUNG PHAT ELEVATOR
           </div>
         </div>
       </div>
-      <div class="flex items-center gap-5">
+      <div class="flex items-center gap-5 max-sm:hidden">
         <nuxt-link to="">
           <div class="text-white text-lg">Trang chủ</div>
         </nuxt-link>
@@ -27,7 +27,7 @@
         </nuxt-link>
 
       </div>
-      <div class="flex items-end justify-between">
+      <div class="flex items-end justify-between max-sm:hidden">
         <div class="relative w-full">
           <v-input 
             :height="45" 
@@ -36,6 +36,9 @@
           />
           <Icons-Search class="absolute top-1/2 left-4 transform -translate-y-1/2" />
         </div>
+      </div>
+      <div class="sm:hidden">
+        <Icons-List />
       </div>
     </div>
   </div>

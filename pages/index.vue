@@ -1,9 +1,12 @@
 <template>
-  <div class=" bg-gray-light-1 grid gap-4">
+  <div>
     <Header />
-    <Banner />
-    <Introduce />
-    <!-- <Project /> -->
+    <div class="bg-gray-light-1 grid gap-4">
+      
+      <Banner />
+      <Introduce />
+      <!-- <Project /> -->
+    </div>
     <Footer />
   </div>
 </template>

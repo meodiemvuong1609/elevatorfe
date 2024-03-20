@@ -6,19 +6,15 @@
         wrapAround: true,
         pageDots: false,
         prevNextButtons: true,
-        autoPlay: 5000
       }"
       ref="flickity"
     >
-      <div class="carousel-cell">
-          <img src="~/assets/img/banner3.png" alt="">
+      <div class="carousel-cell max-sm:hidden" v-if="!isMobile()" >
+        <img src="~/assets/img/banner3.png" alt="">
       </div>
-      <!-- <div class="carousel-cell">
-          <img src="~/assets/img/banner1.png" alt="">
+      <div class="carousel-cell sm:hidden" v-if="isMobile()">
+        <img src="~/assets/img/banner-sm.png" alt="">
       </div>
-      <div class="carousel-cell">
-          <img src="~/assets/img/banner2.jpeg" alt="">
-      </div> -->
 
     </Flickity>
   </div>
@@ -35,7 +31,11 @@ export default {
         prevNextButtons: false,
         autoPlay: 5000
       },
+      mobile: false
     }
+  },
+  created() {
+    this.mobile = this.isMobile()
   },
   methods: {
     showPrevNextButtons(show) {
@@ -47,6 +47,14 @@ export default {
       
       }
     },
+    isMobile() {
+      if (typeof navigator !== 'undefined') {
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+          return true;
+        } else return false;
+      }
+      
+    }
   },
 
 }
