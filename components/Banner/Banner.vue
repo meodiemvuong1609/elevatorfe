@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div class="border-b border-gray-light-1" >
     <Flickity
       class="carousel max-sm:hidden" 
       :options="{

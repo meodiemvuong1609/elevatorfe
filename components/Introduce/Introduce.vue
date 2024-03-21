@@ -3,7 +3,7 @@
     <div class="flex items-center justify-center font-bold text-2xl max-sm:text-xl text-center">
       CÔNG TY TNHH CÔNG NGHỆ THANG MÁY HƯNG PHÁT
     </div>
-    <div class="grid grid-cols-2 w-3/5 mx-auto max-sm:block max-sm:w-full">
+    <div class="grid grid-cols-2 w-2/3 mx-auto max-sm:block max-sm:w-full">
       <div class="p-4 ">
         <div class="flex py-3 font-bold text-xl items-center justify-start ">
           Giới thiệu về chúng tôi

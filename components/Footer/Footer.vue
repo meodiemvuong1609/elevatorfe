@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <div class="w-full custom-gradient">
-      <div class="w-4/5 mx-auto justify-between items-start px-4 py-5 grid grid-cols-3 max-sm:block max-sm:items-center">
+      <div class="w-4/5 mx-auto justify-between items-start px-4 py-5 grid grid-cols-3 max-sm:block max-sm:items-center max-sm:w-full max-sm:p-6">
         <div class="flex p-4" >
           <div>
             <div class="text-white text-xl">GIỚI THIỆU</div>
@@ -17,7 +17,7 @@
           </div>
           <div class="flex pt-2 gap-2 items-center">
             <Icon-Phone />
-            <div class="text-white "> 0856174003 </div>
+            <div class="text-white "> 090 1987 666 </div>
           </div>
           <div class="flex pt-2 gap-2 items-center">
             <Icons-Email />

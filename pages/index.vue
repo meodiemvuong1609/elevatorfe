@@ -1,13 +1,15 @@
 <template>
   <div>
     <Header />
-    <div class="bg-gray-light-1 grid gap-4">
+    <div class=" grid gap-4">
       
       <Banner />
       <Introduce />
+      <Feature />
       <!-- <Project /> -->
+      <Footer />
     </div>
-    <Footer />
+    
   </div>
 </template>
 
