@@ -1,12 +1,13 @@
 <template>
   <div class="w-full">
-    <div class=" relative map__container border-radius-m mt1">
+    <div class="relative map__container border-radius-m mt1">
       <div id="map"></div>
     </div>
   </div>
 </template>
 
 <script>
+import 'mapbox-gl/dist/mapbox-gl.css'
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css'
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder'
 import mapboxgl from 'mapbox-gl';
@@ -25,7 +26,7 @@ export default {
     },
     hasSearchBox: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     draggable: {
       type: Boolean,
@@ -37,7 +38,6 @@ export default {
     }
   },
   mounted() {
-    console.log(this.$config.ACCESS_TOKEN_MAP_BOX);
     const accessToken = this.$config.ACCESS_TOKEN_MAP_BOX
     this.map = new mapboxgl.Map({
       accessToken: accessToken,
@@ -49,11 +49,13 @@ export default {
 
     const geocoder = new MapboxGeocoder({
       accessToken: accessToken,
-      mapboxgl: mapboxgl
+      mapboxgl: mapboxgl,
+      placeholder: 'Tìm kiếm...',
+      marker: false,
     });
     this.map.addControl(geocoder);
 
-    // Add marker at [0, 0]
+
     new mapboxgl.Marker().setLngLat([105.6894529, 19.87015]).addTo(this.map);
   },
 }
@@ -68,14 +70,12 @@ export default {
     padding-top: calc(167 / 335 * 100%);
   }
 }
-
 .mapboxgl-map {
-  position: absolute;
+  position: absolute !important;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 0.5em;
 }
 
 .mapboxgl-ctrl-geocoder--input {
@@ -90,4 +90,7 @@ export default {
 .mapboxgl-ctrl-geocoder--icon-close {
   margin-top: 3px;
 }
+
+
+
 </style>
