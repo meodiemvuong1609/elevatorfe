@@ -1,12 +1,13 @@
 <template>
   <div class="w-full">
-    <div class="relative map__container border-radius-m mt1">
+    <div class=" map__container border-radius-m mt1">
       <div id="map"></div>
     </div>
   </div>
 </template>
 
 <script>
+import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css'
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder'
 import mapboxgl from 'mapbox-gl';
 
