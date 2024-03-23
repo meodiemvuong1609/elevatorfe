@@ -7,10 +7,9 @@
 </template>
 
 <script>
-import 'mapbox-gl/dist/mapbox-gl.css'
-import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css'
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder'
 import mapboxgl from 'mapbox-gl';
+
 
 export default {
   name: 'MapGetLocation',
