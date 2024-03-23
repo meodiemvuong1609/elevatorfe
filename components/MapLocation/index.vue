@@ -1,6 +1,6 @@
 <template>
   <div class="w-full">
-    <div class=" map__container border-radius-m mt1">
+    <div class=" relative map__container border-radius-m mt1">
       <div id="map"></div>
     </div>
   </div>
