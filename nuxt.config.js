@@ -63,7 +63,7 @@ export default {
   },
 
   dir: {
-    // layouts: 'common/layouts',
+    layouts: 'common/layouts',
     middleware: 'common/middlewares',
   },
 

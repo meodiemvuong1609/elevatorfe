@@ -13,6 +13,10 @@
       <div class="carousel-cell">
         <img src="~/assets/img/banner3.png" alt="">
       </div>
+      <!-- <div class="carousel-cell">
+        <img src="~/assets/img/banner-hungphat.png" alt="">
+      </div> -->
+      
 
     </Flickity>
     <Flickity
@@ -70,7 +74,7 @@ export default {
   overflow: hidden;
   img {
     width: 100%;
-    height: 500px;
+    height: 600px;
   }
 }
 </style>

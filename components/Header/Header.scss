@@ -5,3 +5,27 @@
     border-bottom: 1px solid #F5F5F5;
 
 }
+
+.text-header {
+    color: rgb(217, 25, 28);
+}
+
+.sidebar {
+    background: hsla(0,0%,100%,.95);
+    right: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 99999;
+    padding: 24px;
+    width: 300px;
+    
+    &__menu {
+        
+        border-right: 1px solid #F5F5F5;
+        
+        height: 100vh;
+
+    }
+    
+
+}

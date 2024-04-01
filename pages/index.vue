@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <div class=" grid gap-4">
+    <div class="grid gap-4">
       
       <Banner />
       <Introduce />

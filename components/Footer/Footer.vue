@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <div class="w-full custom-gradient">
-      <div class="w-4/5 mx-auto justify-between items-start px-4 py-5 grid grid-cols-3 max-sm:block max-sm:items-center max-sm:w-full max-sm:p-6">
+      <div class="w-4/5 mx-auto justify-between items-start px-4 py-5 grid grid-cols-3 max-sm:block max-sm:items-center max-sm:w-full max-sm:p-4">
         <div class="flex p-4" >
           <div>
             <div class="text-white text-xl">GIỚI THIỆU</div>
@@ -13,7 +13,7 @@
           <div class="text-white text-xl">ĐỊA CHỈ CÔNG TY</div>
           <div class="flex pt-4 gap-2 items-center">
             <Icon-Location />
-            <div class="text-white "> Tiểu Khu 9, Thị trấn Thanh Hóa, Thiệu Hóa, Thanh Hóa </div>
+            <div class="text-white "> Khu Đô Thị Ba Chè, Thị trấn Thanh Hóa, Thiệu Hóa, Thanh Hóa </div>
           </div>
           <div class="flex pt-2 gap-2 items-center">
             <Icon-Phone />
@@ -21,7 +21,7 @@
           </div>
           <div class="flex pt-2 gap-2 items-center">
             <Icons-Email />
-            <div class="text-white "> hungphat@gmail.com </div>
+            <div class="text-white "> thangmayhungphat666@gmail.com </div>
           </div>
           <div class="flex pt-2 gap-2 items-center">
             <Icons-Facebook />
