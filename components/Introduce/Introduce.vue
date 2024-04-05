@@ -15,9 +15,7 @@
           Chuyên gia tư vấn giải pháp, nhà cung cấp, lắp đặt và bảo hành, bảo trì thang máy cho Villa, biệt thự, Shophouse, nhà cải tạo, nhà văn phòng cho thuê, nhà ống, chung cư, bệnh viện ...
         </div>
         
-        <div class="flex items-center justify-center bg-red-dark-2 text-white rounded-large font-bold py-2 px-4 mt-4">
-          <button>Đọc thêm</button>
-        </div>
+        <button class="w-full py-2 px-4 mt-4 flex items-center justify-center bg-red-dark-2 text-white rounded-large font-bold">Đọc thêm</button>
         
       </div>
       <div class="p-4 flex items-center justify-between">

@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Header />
     <div class=" grid gap-4">
       <Flickity
         class="carousel hidden sm:block" 
@@ -16,23 +15,33 @@
         </div>
       </Flickity>
 
-      <div class="p-4">
+      <div class="p-6">
         <div class="flex items-center justify-center font-bold text-2xl max-sm:text-xl text-center">
-          CÔNG TY TNHH CÔNG NGHỆ THANG MÁY HƯNG PHÁT
+          HUNG PHAT ELEVATOR
         </div>
-        <div class=" w-2/3 mx-auto text text-lg mt-4">
+        <div class="flex items-center justify-center p-4">
+          <div class="line"></div>
+        </div>
+        <div class=" w-3/5 mx-auto text mt-4">
           <div class=" text-gray-1 text-center">
-            Hoạt động trong lĩnh vực thang máy gia đình trên 10 năm giúp chúng tôi hiểu được ngôi nhà của bạn. Hưng Phát luôn đồng hành cùng công trình ngay từ khi thai nghén ý tưởng, tư vấn phương án thang máy tối ưu, phối hợp cùng các đơn vị thi công liên quan, thực hiện công tác chuẩn bị, triển khai lắp đặt và vận hành thang máy theo đúng tiêu chuẩn an toàn.
-          </div>
-          <div class=" mt-2 text-gray-1">
-            Chuyên gia tư vấn giải pháp, nhà cung cấp, lắp đặt và bảo hành, bảo trì thang máy cho Villa, biệt thự, Shophouse, nhà cải tạo, nhà văn phòng cho thuê, nhà ống, chung cư, bệnh viện ...
+            Bắt đầu từ những chiếc thang máy gia đình có trải nghiệm tốt nhất, an toàn nhất, thẩm mỹ cá nhân hóa với giá cả cạnh tranh. Thang máy Hưng Phát không ngừng nỗ lực và cải tiến để mang đến cho khách hàng trải nghiệm mua hàng tốt nhất, dịch vụ sau mua hàng chất lượng và tận tâm.
           </div>
         </div>
       </div>
 
+      <div class="p-6 bg-gray-light-1">
+        <div>
+          <div class="flex items-center justify-center font-bold text-2xl max-sm:text-xl text-center">
+            GIÁ TRỊ CỐT LỖI CỦA CHÚNG TÔI
+          </div>
+          <div class="flex items-center justify-center p-4">
+            <div class="line"></div>
+          </div>
+        </div>
+
+      </div>
+
     </div>
-    <Footer />
-    
   </div>
 </template>
 
@@ -56,6 +65,12 @@ export default {
     width: 100%;
     height: 500px;
   }
+}
+
+.line {
+  background: #004c84;
+  width: 100px;
+  height: 2px;
 }
 
 </style>

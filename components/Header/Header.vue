@@ -1,12 +1,12 @@
 <template>
   <div class="flex h-[110px] custom-gradient relative">
-    <div class="flex items-center mx-auto w-3/4 justify-between max-sm:w-full">
+    <div class="flex items-center mx-auto w-5/6 justify-between max-sm:w-full">
       <div class="flex items-center justify-center">
-        <div class="flex items-center">
+        <div class="flex items-center sm:ml-4">
           <img src="~/assets/img/hungphat.png" class=" h-[150px] mt-4" alt="">
         </div>
         <div class="flex-row ml-2">
-          <div class="bo font-bold text-2xl max-sm:text-xl text-header">
+          <div class="bo font-bold text-2xl max-sm:text-xl text-header text-nowrap">
             THANG MÁY HƯNG PHÁT
           </div>
           <div class=" text-header font-normal text-lg ">
@@ -16,19 +16,19 @@
       </div>
       <div class="flex items-center gap-5 max-sm:hidden">
         <nuxt-link to="/">
-          <div class=" text-lg">Trang chủ</div>
+          <div class=" text-lg text-nowrap">Trang chủ</div>
         </nuxt-link>
         <nuxt-link to="/introduce">
-          <div class=" text-lg">Giới thiệu</div>
+          <div class=" text-lg text-nowrap">Giới thiệu</div>
         </nuxt-link>
         <nuxt-link to="">
-          <div class=" text-lg">Sản phẩm</div>
+          <div class=" text-lg text-nowrap">Sản phẩm</div>
         </nuxt-link>
         <nuxt-link to="">
-          <div class=" text-lg">Dự án</div>
+          <div class=" text-lg text-nowrap">Dự án</div>
         </nuxt-link>
         <nuxt-link to="">
-          <div class=" text-lg">Liên hệ</div>
+          <div class=" text-lg text-nowrap">Liên hệ</div>
         </nuxt-link>
 
       </div>
