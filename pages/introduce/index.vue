@@ -15,21 +15,37 @@
         </div>
       </Flickity>
 
-      <div class="p-6">
+       <Flickity
+        class="carousel sm:hidden" 
+        :options="{
+          wrapAround: true,
+          pageDots: false,
+          prevNextButtons: true,
+          autoPlay: 5000
+        }"
+        ref="flickity"
+      >
+        <div class="carousel-cell">
+          <img src="~/assets/img/banner-sm.png" alt="">
+        </div>
+
+      </Flickity>
+
+      <div class="p-6 max-sm:p-4">
         <div class="flex items-center justify-center font-bold text-2xl max-sm:text-xl text-center">
           HUNG PHAT ELEVATOR
         </div>
         <div class="flex items-center justify-center p-4">
           <div class="line"></div>
         </div>
-        <div class=" w-3/5 mx-auto text mt-4">
+        <div class=" w-3/5 mx-auto text mt-4 max-sm:w-full max-sm:px-4">
           <div class=" text-gray-1 text-center">
             Bắt đầu từ những chiếc thang máy gia đình có trải nghiệm tốt nhất, an toàn nhất, thẩm mỹ cá nhân hóa với giá cả cạnh tranh. Thang máy Hưng Phát không ngừng nỗ lực và cải tiến để mang đến cho khách hàng trải nghiệm mua hàng tốt nhất, dịch vụ sau mua hàng chất lượng và tận tâm.
           </div>
         </div>
       </div>
 
-      <div class="px-6 bg-gray-light-1 py-12">
+      <div class="px-6 bg-gray-light-1 py-12 max-sm:p-4">
         <div>
           <div class="flex items-center justify-center font-bold text-2xl max-sm:text-xl text-center">
             GIÁ TRỊ CỐT LỖI CỦA CHÚNG TÔI
@@ -37,7 +53,7 @@
           <div class="flex items-center justify-center p-4">
             <div class="line"></div>
           </div>
-          <div class="content grid grid-cols-3 w-3/4 mx-auto gap-4 mt-4">
+          <div class="content grid grid-cols-3 w-3/4 mx-auto gap-4 mt-4 max-sm:grid-cols-1 max-sm:w-full">
             <div class="bg-white p-6 border border-gray-light" >
               <p class=" text-xl font-bold text-center pb-4">Chất lượng vượt trội</p>
               <div class="text-center">

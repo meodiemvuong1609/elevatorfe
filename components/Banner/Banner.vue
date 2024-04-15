@@ -11,7 +11,7 @@
       ref="flickity"
     >
       <div class="carousel-cell">
-        <img src="~/assets/img/banner3.png" alt="">
+        <img src="~/assets/img/banner-lg.png" alt="">
       </div>
       <!-- <div class="carousel-cell">
         <img src="~/assets/img/banner-hungphat.png" alt="">
@@ -74,7 +74,7 @@ export default {
   overflow: hidden;
   img {
     width: 100%;
-    height: 400px;
+    height: 500px;
   }
 }
 </style>

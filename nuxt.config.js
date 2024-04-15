@@ -23,7 +23,7 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/css/main.css',
-    '@/assets/css/base.css',
+    // '@/assets/css/base.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -64,7 +64,7 @@ export default {
 
   dir: {
     layouts: 'common/layouts',
-    middleware: 'common/middlewares',
+    // middleware: 'common/middlewares',
   },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules

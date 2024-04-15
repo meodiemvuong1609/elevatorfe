@@ -5,7 +5,7 @@
       <Banner />
       <Introduce />
       <Feature />
-      <div class="px-6 bg-gray-light-1 py-12">
+      <div class="px-6 bg-gray-light-1 py-12 max-sm:p-4">
         <div>
           <div class="flex items-center justify-center font-bold text-2xl max-sm:text-xl text-center">
             GIÁ TRỊ CỐT LỖI CỦA CHÚNG TÔI
@@ -13,7 +13,7 @@
           <div class="flex items-center justify-center p-4">
             <div class="line"></div>
           </div>
-          <div class="content grid grid-cols-3 w-3/4 mx-auto gap-4 mt-4">
+          <div class="content grid grid-cols-3 w-3/4 mx-auto gap-4 mt-4 max-sm:grid-cols-1 max-sm:w-full">
             <div class="bg-white p-6 border border-gray-light" >
               <p class=" text-xl font-bold text-center pb-4">Chất lượng vượt trội</p>
               <div class="text-center">
@@ -32,7 +32,7 @@
           </div>
         </div>
       </div>
-      <!-- <Project /> -->
+      <Project />
     </div>
     
   </div>
@@ -43,3 +43,11 @@ export default {
   name: 'IndexPage'
 }
 </script>
+
+<style scoped>
+.line {
+  background: #004c84;
+  width: 100px;
+  height: 2px;
+}
+</style>
