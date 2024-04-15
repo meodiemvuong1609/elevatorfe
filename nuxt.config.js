@@ -94,7 +94,11 @@ export default {
     baseURL: process.env.API_URL || '',
     debug: process.env.DEBUG || false,
   },
-
+  pwa: {
+    icon: {
+      fileName: 'hungphat.ico',
+    },
+  },
   publicRuntimeConfig: {
     API_ENVIRONMENT: process.env.API_ENVIRONMENT || '',
     ACCESS_TOKEN_MAP_BOX: process.env.ACCESS_TOKEN_MAP_BOX || '',
