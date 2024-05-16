@@ -32,7 +32,7 @@
           </div>
         </div>
       </div>
-      <Project />
+      <ProjectCard />
     </div>
     
   </div>

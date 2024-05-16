@@ -2,7 +2,7 @@
   <div>
     <div class=" grid gap-4">
       <Flickity
-        class="carousel hidden sm:block" 
+        class="carousel hidden " 
         :options="{
           wrapAround: true,
           pageDots: false,

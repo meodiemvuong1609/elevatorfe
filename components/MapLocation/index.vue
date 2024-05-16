@@ -44,7 +44,7 @@ export default {
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v12', // Specify the map style here
       center: [105.6894529, 19.87015], // Specify the center of the map
-      zoom: 10 // Specify the zoom level
+      zoom: 13 // Specify the zoom level
     });
 
     const geocoder = new MapboxGeocoder({
@@ -64,6 +64,8 @@ export default {
 <style lang="scss" scoped>
 .map__container {
   overflow: hidden;
+  // width: 80%;
+  height: 120%;
   &:before {
     content: '';
     display: block;
