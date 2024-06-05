@@ -43,10 +43,11 @@
         </div>
       </div>
       <div class="">
-        <div v-if="!menushow" class="sm:hidden max-sm:pr-4" @click="menushow=true">
+        <div class="sm:hidden max-sm:pr-4" @click="menushow=true">
           <Icons-List />
         </div>
-        <div v-else class="">
+        <popup-menu :is-show="menushow" @close="menushow = false"/>
+        <!-- <div v-if="menushow" class="">
           <div class="absolute sidebar">
             <div class="my-6 text-red font-semibold " @click="handleRoute('/')">Trang chủ</div>
             <div class="my-6 text-red font-semibold " @click="handleRoute('/introduce')">Giới thiệu</div>
@@ -54,7 +55,7 @@
             <div class="my-6 text-red font-semibold " @click="handleRoute('/project')">Dự án</div>
             <div class="my-6 text-red font-semibold " @click="handleRoute('/')">Liên hệ</div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -71,11 +72,7 @@ export default {
     }
   },
   methods: {
-    handleRoute(to) {
-      this.menushow = false
-      this.$router.push(to)
     
-    }
   }
 }
 </script>

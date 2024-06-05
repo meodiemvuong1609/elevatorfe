@@ -1,3 +1,5 @@
+const path = require('path');
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -111,6 +113,15 @@ export default {
       if (isClient) {
         config.devtool = 'source-map'
       }
-    }
+    },
+    postcss: {
+      plugins: {
+        'postcss-import': {},
+        'postcss-nested': {},
+        'tailwindcss/nesting': {},
+        tailwindcss: path.resolve(__dirname, './tailwind.config.js'),
+        autoprefixer: {},
+      },
+    },
   }
 }
