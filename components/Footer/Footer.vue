@@ -48,27 +48,15 @@
             <div class="pt-2">
               <Icon-Location />
             </div>
-            <div class="text-white "> Khu Đô Thị Ba Chè, Thị trấn Thanh Hóa, Thiệu Hóa, Thanh Hóa </div>
+            <div class="text-white "> 22 đường Phú Thứ, Phường Phú Sơn, Thành phố Thanh Hóa </div>
           </div>
           <div class="flex pt-2 gap-2 items-start">
             <div class="pt-2">
               <Icon-Location />
             </div>
-            <div class="text-white "> Khu Đô Thị Ba Chè, Thị trấn Thanh Hóa, Thiệu Hóa, Thanh Hóa </div>
+            <div class="text-white "> Số 497/73/14 Phan Văn Trí, Phường 5, Quận Gò Vấp, Thành phố Hồ Chí Minh </div>
           </div>
-          <!-- <div class="flex pt-4 gap-2 items-center">
-            <Icon-Phone />
-            <div class="text-white "> 090.1987.666 </div>
-          </div>
-          <div class="flex pt-2 gap-2 items-center">
-            <Icons-Email />
-            <div class="text-white "> hungphatlift@elevator.vn </div>
-          </div>
-          <div class="flex pt-2 gap-2 items-center">
-            <Icons-Facebook />
-            <div class="text-white"> facebook.com/hungphatelevator </div>
-          </div> -->
-          
+        
         </div>
         <div class="p-4">
           <div class="text-white text-xl">KẾT NỐI VỚI HƯNG PHÁT</div>
@@ -77,10 +65,6 @@
           </div>
         </div>
       </div>
-      <!-- <div class="w-4/5 mx-auto max-sm:w-full max-sm:p-4 max-sm:block max-sm:items-center">
-        <div class="px-4 text-white text-xl">ĐỊA CHỈ CÔNG TY</div>
-        <div></div>
-      </div> -->
     </div>
     <div class="copyright flex items-center justify-center text-white p-2 gap-1">
       Copyright 2024 © <p><strong> Hưng Phát</strong></p>

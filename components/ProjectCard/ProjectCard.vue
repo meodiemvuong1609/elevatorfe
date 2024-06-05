@@ -103,19 +103,4 @@ export default {
   height: 2px;
 }
 
-// .carousel-cell {
-//   width: 100%;
-//   margin-right: 10px;
-//   border-radius: 5px;
-//   overflow: hidden;
-//   img {
-//     width: 100%;
-//     height: 300px;
-//   }
-// }
-// img {
-//   object-fit: fill;
-//   height: 300px;
-// }
-
 </style>
