@@ -11,7 +11,7 @@
           <div>
             <div class="text-white text-xl pt-6">THÔNG TIN LIÊN HỆ</div>
             <div class="flex pt-4 gap-2 items-center">
-              <Icon-Phone />
+              <Icons-Phone />
               <div class="text-white "> 090.1987.666 </div>
             </div>
             <div class="flex pt-2 gap-2 items-center">
@@ -28,31 +28,31 @@
           <div class="text-white text-xl">ĐỊA CHỈ CÔNG TY</div>
           <div class="flex pt-4 gap-2 items-start">
             <div class="pt-2">
-              <Icon-Location />
+              <Icons-Location />
             </div>
             <div class="text-white "> Số 8, ngõ 9, đường Dương Quảng Hàm, P. Quan Hoa, Q. Cầu Giấy, TP. Hà Nội </div>
           </div>
           <div class="flex pt-2 gap-2 items-start">
             <div class="pt-2">
-              <Icon-Location />
+              <Icons-Location />
             </div>
             <div class="text-white "> KCN Thiệu Hóa, Tiểu Khu 13, Thị trấn Thiệu Hóa, Huyện Thiệu Hóa, Tỉnh THanh Hóa </div>
           </div>
           <div class="flex pt-2 gap-2 items-start">
             <div class="pt-2">
-              <Icon-Location />
+              <Icons-Location />
             </div>
             <div class="text-white "> Số 100, đường Đội Cấn, Tổ 7, Khu 5, P. Giếng Đáy, TP. Hạ Long, Tỉnh Quảng Ninh </div>
           </div>
           <div class="flex pt-2 gap-2 items-start">
             <div class="pt-2">
-              <Icon-Location />
+              <Icons-Location />
             </div>
             <div class="text-white "> 22 đường Phú Thứ, Phường Phú Sơn, Thành phố Thanh Hóa </div>
           </div>
           <div class="flex pt-2 gap-2 items-start">
             <div class="pt-2">
-              <Icon-Location />
+              <Icons-Location />
             </div>
             <div class="text-white "> Số 497/73/14 Phan Văn Trí, Phường 5, Quận Gò Vấp, Thành phố Hồ Chí Minh </div>
           </div>
@@ -61,7 +61,7 @@
         <div class="p-4">
           <div class="text-white text-xl">KẾT NỐI VỚI HƯNG PHÁT</div>
           <div class="pt-4">
-            <MapLocation />
+            <!-- <MapLocation /> -->
           </div>
         </div>
       </div>

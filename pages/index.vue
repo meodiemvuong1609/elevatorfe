@@ -40,7 +40,9 @@
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  created() {
+  }
 }
 </script>
 
