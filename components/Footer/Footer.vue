@@ -61,7 +61,7 @@
         <div class="p-4">
           <div class="text-white text-xl">KẾT NỐI VỚI HƯNG PHÁT</div>
           <div class="pt-4">
-            <!-- <MapLocation /> -->
+            <MapLocation />
           </div>
         </div>
       </div>

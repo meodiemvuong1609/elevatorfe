@@ -5,10 +5,10 @@
     :class="{ 'show-popup': isShow, 'hide-popup': !isShow }"
     @transitionend="onTransitionEnd"
   >
-  <div class="flex justify-between items-center mt-6 mr-4">
+  <!-- <div class="flex justify-between items-center mt-7 mr-4">
     <div class="cursor-pointer"></div>
-    <v-button type="infor" @click="close"><icons-x /></v-button>
-  </div>
+    <div @click="close"><icons-x /></div>
+  </div> -->
     <div
       class="popup__content absolute bg-white rounded-b-2xl"
       :class="paddingClass"

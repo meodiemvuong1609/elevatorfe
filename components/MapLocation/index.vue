@@ -38,6 +38,7 @@ export default {
     }
   },
   mounted() {
+    console.log('this.$config',this.$config)
     const accessToken = this.$config.ACCESS_TOKEN_MAP_BOX
     this.map = new mapboxgl.Map({
       accessToken: accessToken,
