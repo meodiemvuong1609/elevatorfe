@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
-    <div class="relative map__container border-radius-m mt1">
-      <div id="map"></div>
+    <div class="relative map__container border-radius-m mt1" :style="styleMap">
+      <div id="map" :style="`height: ${height}`"></div>
     </div>
   </div>
 </template>
@@ -32,13 +32,33 @@ export default {
       type: Boolean,
       default: true,
     },
+    width: {
+      type: String,
+      default: () => '100%',
+    },
+    height: {
+      type: String,
+      default: () => '40vh',
+    },
+    isBorderRadius: {
+      type: Boolean,
+      default: () => false
+    }
   },
   data() {
     return {
     }
   },
+  computed: {
+    styleMap() {
+      return {
+        width: this.width,
+        height: this.height,
+        borderRadius: this.isBorderRadius ? '12px' : 0,
+      }
+    },
+  },
   mounted() {
-    console.log('this.$config',this.$config)
     const accessToken = this.$config.ACCESS_TOKEN_MAP_BOX
     this.map = new mapboxgl.Map({
       accessToken: accessToken,

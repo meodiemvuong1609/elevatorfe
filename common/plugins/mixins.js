@@ -1,4 +1,15 @@
-export default {
+import Vue from 'vue';
+const TABLET_SCREEN = 648
+
+Vue.mixin({
+  data: () => ({
+    windowWidth: window.innerWidth,
+  }),
+  computed: {
+    isMobile() {
+      return this.windowWidth < TABLET_SCREEN
+    },
+  },
   methods: {
     removeVietnameseTones(str) {
       str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g,"a")
@@ -21,6 +32,6 @@ export default {
       str = str.trim()
       str = str.replace(/!|@|%|\^|\*|\(|\)|\+|\=|\<|\>|\?|\/|,|\.|\:|\|\'|\"|\&|\#|\[|\]|~|\$|_|`|-|{|}|\||\\/g," ")
       return str
-    }
+    },
   }
-}
+})

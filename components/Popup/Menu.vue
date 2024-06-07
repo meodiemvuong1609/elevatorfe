@@ -1,6 +1,6 @@
 <template>
-  <!-- v-if="isShow" -->
   <div
+  v-if="isShow"
     class="popup__container fixed"
     :class="{ 'show-popup': isShow, 'hide-popup': !isShow }"
     @transitionend="onTransitionEnd"
@@ -10,9 +10,14 @@
     <div @click="close"><icons-x /></div>
   </div> -->
     <div
-      class="popup__content absolute bg-white rounded-b-2xl"
+      class="popup__content absolute bg-white"
       :class="paddingClass"
     >
+      <div class="" @click="handleRoute('/')">
+        <div class="flex items-center">
+          <img src="~/assets/img/hungphat.png" class=" h-[150px] mt-4" alt="">
+        </div>
+      </div>
       <div class="py-4 text-red font-semibold border-b border-gray" @click="handleRoute('/')">
         Trang chủ
       </div>

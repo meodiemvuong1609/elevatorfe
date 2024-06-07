@@ -52,9 +52,7 @@ export default {
   },
   methods: {
     showPrevNextButtons(show) {
-      console.log('show', show);
       this.flickityOptions.prevNextButtons = show;
-      console.log('this.$refs.flickity', this.$refs.flickity);
       if (this.$refs.flickity) {
         this.$refs.flickity.$flickity.options.prevNextButtons = show;
       

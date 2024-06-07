@@ -56,6 +56,10 @@ export default {
       src: '~/common/plugins/vue-flickity.js',
       ssr: false,
     },
+    {
+      src: '~/common/plugins/mixins',
+      mode: 'client',
+    }
     
   ],
 
@@ -89,6 +93,8 @@ export default {
     "vue2-editor/nuxt",
     // https://www.npmjs.com/package/@nuxtjs/firebase
     '@nuxtjs/tailwindcss',
+
+    '@nuxtjs/fontawesome',
   ],
 
   axios: {
@@ -104,6 +110,15 @@ export default {
   publicRuntimeConfig: {
     API_ENVIRONMENT: process.env.API_ENVIRONMENT || '',
     ACCESS_TOKEN_MAP_BOX: process.env.ACCESS_TOKEN_MAP_BOX || '',
+  },
+
+  fontawesome: {
+    component: 'fa',
+    icons: {
+      solid: [
+        'faMapMarkerAlt'  // thêm các icon bạn muốn sử dụng
+      ]
+    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
