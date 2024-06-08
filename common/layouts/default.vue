@@ -1,15 +1,15 @@
 <template>
-  <div class="layout-container">
-    <div>
+  <div class="layout-container pt-[80px]">
       <Header />
-    </div>
     <nuxt-child />
-    <div class="fixed bottom-5 left-5 mx-4">
-      <div class="hotline-phone-ring-img-circle-fill bg-red-light-1 rounded-full fixed bottom-[6px] left-5"></div>
-      <div
-        class="hotline-phone-ring-img-circle p-4 rounded-full bg-red-light-1"
-      >
-        <icons-phone color="white" />
+    <div class="fixed bottom-8 right-4 mx-4 cursor-pointer" @click="makeCall">
+      <div class="relative">
+        <div class="hotline-phone-ring-img-circle-fill bg-red-light-1 rounded-full absolute bottom-0 right-0"></div>
+        <div
+          class="hotline-phone-ring-img-circle p-3 rounded-full bg-red-light-1 absolute bottom-[18px] right-[20px]"
+        >
+          <icons-phone color="white" />
+        </div>
       </div>
     </div>
     <div class="zalo-widget-container">
@@ -31,6 +31,12 @@
 <script>
 export default {
   name: "DefaultLayout",
+
+  methods: {
+    makeCall() {
+      window.location.href = 'tel:0901987666';
+    }
+  }
 };
 </script>
 
@@ -38,13 +44,13 @@ export default {
 .zalo-widget-container {
   position: fixed !important;
   z-index: 9000;
+  right: 10px !important;
 }
 
 .zalo-chat-widget {
   position: fixed !important;
-  bottom: 20px !important;
+  bottom: 40px !important;
   right: 20px !important;
-  left: auto !important;
 }
 
 .hotline-phone-ring-img-circle-fill {

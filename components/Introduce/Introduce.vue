@@ -19,7 +19,7 @@
             Chuyên gia tư vấn giải pháp, nhà cung cấp, lắp đặt và bảo hành, bảo trì thang máy cho Villa, biệt thự, Shophouse, nhà cải tạo, nhà văn phòng cho thuê, nhà ống, chung cư, bệnh viện ...
           </div>
         </div>
-        <button class="w-full self-end py-2 px-4 mt-6 flex items-end justify-center bg-red-dark-2 text-white rounded-large font-bold">Đọc thêm</button>
+        <button class="w-full self-end py-2 px-4 mt-6 flex items-end justify-center bg-red-dark-2 text-white rounded-large font-bold rounded-lg" @click="$router.push('/introduce')">Đọc thêm</button>
       </div>
 
       <div class="p-4">
@@ -28,14 +28,6 @@
         </div>
         <div class="flex items-center justify-between">
           <img src="~/assets/img/banner-video.png" class=" h-[300px] w-full rounded-lg border border-gray-light-1 max-sm:h-[250px]" alt="">
-          <!-- <iframe
-            class="py-3"
-            width="100%"
-            height="320"
-            src="https://www.youtube.com/embed/bMhbCGVhOaE"
-            frameborder="0"
-            allowfullscreen
-          ></iframe> -->
         </div>
       </div>
     </div>
