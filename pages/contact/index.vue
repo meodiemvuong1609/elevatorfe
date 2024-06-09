@@ -84,20 +84,20 @@ export default {
         },
         {
           title: "Văn phòng Thanh Hoá",
-          address: "Số 8, ngõ 9, Dương Quảng Hàm, Quan Hoa, Cầu Giấy, Hà Nội",
+          address: "Số 22 đường Phú Thứ, Phường Phú Sơn, Thành phố Thanh Hóa",
           phone: "090.1987.666",
           email: "hungphatlift@elevator.vn",
         },
         {
           title: "Văn phòng Hồ Chí Minh",
-          address: "Số 22 đường Phú Thứ, Phường Phú Sơn, Thanh phố Thanh Hoá",
+          address: "Số 497/73/14 Phan Văn Trí, Phường 5, Quận Gò Vấp, Thành phố Hồ Chí Minh",
           phone: "090.1987.666",
           email: "hungphatlift@elevator.vn",
         },
         {
           title: "Nhà máy sản xuất",
           address:
-            "Số 497/73/14 Phan Văn Trí, Phường 5, Quận Gò Vấp, Thành phố Hồ Chí Minh",
+            "KCN Thiệu Hóa, Tiểu Khu 13, Thị trấn Thiệu Hóa, Huyện Thiệu Hóa, Tỉnh THanh Hóa",
           phone: "090.1987.666",
           email: "hungphatlift@elevator.vn",
         },
