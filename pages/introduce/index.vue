@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class=" grid gap-4">
+    <div class="grid gap-4">
       <Flickity
         class="carousel hidden " 
         :options="{
@@ -45,6 +45,18 @@
         </div>
       </div>
 
+      <div class="w-3/4 mx-auto gap-4 mt-4 max-sm:grid-cols-1 max-sm:w-full">
+        <div class="flex items-center justify-center font-bold text-2xl max-sm:text-xl text-center">
+          SƠ ĐỒ TỔ CHỨC
+        </div>
+        <div class="flex items-center justify-center p-4">
+          <div class="line"></div>
+        </div>
+        <div class="flex items-center justify-between">
+          <img src="~/assets/img/banner-video.png" class=" h-auto w-full rounded-lg border border-gray-light-1 max-sm:h-[250px]" alt="">
+        </div>
+      </div>
+
       <div class="px-6 bg-gray-light-1 py-12 max-sm:p-4">
         <div>
           <div class="flex items-center justify-center font-bold text-2xl max-sm:text-xl text-center">
@@ -73,11 +85,42 @@
         </div>
       </div>
 
+      <div class="px-6 py-12 max-sm:p-4">
+        <div>
+          <div class="flex items-center justify-center font-bold text-2xl max-sm:text-xl text-center">
+            TẦM NHÌN VÀ SỨ MỆNH
+          </div>
+          <div class="flex items-center justify-center p-4">
+            <div class="line"></div>
+          </div>
+          <div class="content grid grid-cols-2 w-3/4 mx-auto gap-4 mt-4 max-sm:grid-cols-1 max-sm:w-full">
+            <div class="bg-white pb-6 border border-gray-light" >
+              <div class="h-[300px]">
+                <img src="https://media.licdn.com/dms/image/C5612AQHPvFYw27kzqg/article-cover_image-shrink_720_1280/0/1520174890596?e=2147483647&v=beta&t=809CD_Flshw-FoEPLfkvVl_xD0Rvxd1-RtrIIZXEn4k" class="w-full h-full object-cover" alt="">
+              </div>
+              <p class=" text-xl font-bold text-center py-4">Tầm nhìn</p>
+              <div class="text-center">
+                Chúng tôi sử dụng công nghệ hiện đại, vật liệu cao cấp và quy trình sản xuất nghiêm ngặt để đảm bảo mỗi thang máy đều đạt tiêu chuẩn chất lượng cao nhất trên thị trường.
+              </div>
+            </div>
+            <div class="bg-white pb-6 border border-gray-light" >
+              <div class="h-[300px]">
+                <img src="https://www.psychologicalscience.org/redesign/wp-content/uploads/2017/01/PAFF_012516_businesspeoplehands-1024x683.jpg" class="w-full h-full object-cover" alt="">
+              </div>
+              <p class=" text-xl font-bold text-center py-4">Sứ mệnh</p>
+              <div class="text-center">
+                Chúng tôi sử dụng công nghệ hiện đại, vật liệu cao cấp và quy trình sản xuất nghiêm ngặt để đảm bảo mỗi thang máy đều đạt tiêu chuẩn chất lượng cao nhất trên thị trường.
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </template>
 
-<script src="https://sp.zalo.me/plugins/sdk.js"></script>
 
 <script>
 export default {

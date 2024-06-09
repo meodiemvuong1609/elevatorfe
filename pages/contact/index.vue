@@ -24,8 +24,8 @@
               <!-- <div class="w-[300px] h-[180px] rounded-lg">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-QjWZ4HN4mVML0loV7HCQ_upXCmogUiX0Xw&s" alt="" class="w-full h-full rounded-lg object-cover">
               </div> -->
-              <div class="flex items-center gap-1 address">
-                <div class="pt-2 pr-1">
+              <div class="flex items-start gap-1 address">
+                <div class="pt-1 pr-1">
                   <Icons-Location />
                 </div>
                 : {{ item.address }}

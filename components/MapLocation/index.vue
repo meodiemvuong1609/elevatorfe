@@ -38,7 +38,7 @@ export default {
     },
     height: {
       type: String,
-      default: () => '40vh',
+      default: () => '30vh',
     },
     isBorderRadius: {
       type: Boolean,
