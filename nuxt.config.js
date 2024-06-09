@@ -12,7 +12,18 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Thang máy Hưng Phát cung cấp các giải pháp thang máy chất lượng cao, đáng tin cậy và an toàn.' },
       { name: 'format-detection', content: 'telephone=no' },
-      { name: 'keywords', content: 'Thang máy, Hưng Phát, Thang máy chất lượng, Thang máy an toàn, thang máy elevator, Thang máy elevator' },
+      { name: 'keywords', content: 'Thang máy, Hưng Phát, Thang máy chất lượng, Thang máy an toàn, thang máy elevator, Thang máy elevator, Hưng Phát elevator, Thang máy Hưng Phát' },
+      // Open Graph
+      { property: 'og:locale', content: 'vi_VN' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:title', content: 'Công ty thang máy Uy Tín - Chất lượng | Thang máy Hưng Phát' },
+      { property: 'og:description', content: 'Công ty thang máy Hưng Phát chuyên cung cấp các loại thang máy liên doanh và cầu thang máy nhập khẩu Uy Tín - Giá Rẻ hàng đầu Việt Nam.' },
+      { property: 'og:url', content: 'https://hungphatelevator.com/' },
+      { property: 'og:site_name', content: 'Thang máy Hưng Phát' },
+      // Twitter Card
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: 'Công ty thang máy Uy Tín - Chất lượng | Thang máy Hưng Phát' },
+      { name: 'twitter:description', content: 'Công ty thang máy Hưng Phát chuyên cung cấp các loại thang máy liên doanh và cầu thang máy nhập khẩu Uy Tín - Giá Rẻ hàng đầu Việt Nam.' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
