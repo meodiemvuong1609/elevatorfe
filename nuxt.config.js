@@ -1,131 +1,171 @@
-const path = require('path');
+const path = require("path");
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Thang máy Hưng Phát',
+    title: "Thang máy Hưng Phát",
     htmlAttrs: {
-      lang: 'vi'
+      lang: "vi",
     },
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Thang máy Hưng Phát cung cấp các giải pháp thang máy chất lượng cao, đáng tin cậy và an toàn.' },
-      { name: 'format-detection', content: 'telephone=no' },
-      { name: 'keywords', content: 'Thang máy, Hưng Phát, Thang máy chất lượng, Thang máy an toàn, thang máy elevator, Thang máy elevator, Hưng Phát elevator, Thang máy Hưng Phát' },
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Thang máy Hưng Phát cung cấp các giải pháp thang máy chất lượng cao, đáng tin cậy và an toàn.",
+      },
+      { name: "format-detection", content: "telephone=no" },
+      {
+        hid: "keywords",
+        name: "keywords",
+        content:
+          "Thang máy, Hưng Phát, Thang máy chất lượng, Thang máy an toàn, thang máy elevator, Thang máy elevator, Hưng Phát elevator, Thang máy Hưng Phát",
+      },
       // Open Graph
-      { property: 'og:locale', content: 'vi_VN' },
-      { property: 'og:type', content: 'website' },
-      { property: 'og:title', content: 'Công ty thang máy Uy Tín - Chất lượng | Thang máy Hưng Phát' },
-      { property: 'og:description', content: 'Công ty thang máy Hưng Phát chuyên cung cấp các loại thang máy liên doanh và cầu thang máy nhập khẩu Uy Tín - Giá Rẻ hàng đầu Việt Nam.' },
-      { property: 'og:url', content: 'https://hungphatelevator.com/' },
-      { property: 'og:site_name', content: 'Thang máy Hưng Phát' },
+      { property: "og:locale", content: "vi_VN" },
+      { property: "og:type", content: "website" },
+      {
+        hid: "og:title",
+        property: "og:title",
+        content: "Công ty thang máy Uy Tín - Chất lượng | Thang máy Hưng Phát",
+      },
+      {
+        hid: "og:description",
+        property: "og:description",
+        content:
+          "Công ty thang máy Hưng Phát chuyên cung cấp các loại thang máy liên doanh và cầu thang máy nhập khẩu Uy Tín - Giá Rẻ hàng đầu Việt Nam.",
+      },
+      { property: "og:url", content: "https://hungphatelevator.com/" },
+      { property: "og:site_name", content: "Thang máy Hưng Phát" },
       // Twitter Card
-      { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:title', content: 'Công ty thang máy Uy Tín - Chất lượng | Thang máy Hưng Phát' },
-      { name: 'twitter:description', content: 'Công ty thang máy Hưng Phát chuyên cung cấp các loại thang máy liên doanh và cầu thang máy nhập khẩu Uy Tín - Giá Rẻ hàng đầu Việt Nam.' },
+      { name: "twitter:card", content: "summary_large_image" },
+      {
+        hid: "twitter:title",
+        name: "twitter:title",
+        content: "Công ty thang máy Uy Tín - Chất lượng | Thang máy Hưng Phát",
+      },
+      {
+        hid: "twitter:description",
+        name: "twitter:description",
+        content:
+          "Công ty thang máy Hưng Phát chuyên cung cấp các loại thang máy liên doanh và cầu thang máy nhập khẩu Uy Tín - Giá Rẻ hàng đầu Việt Nam.",
+      },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap',
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap",
       },
     ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@/assets/css/main.css',
+    "@/assets/css/main.css",
     // '@/assets/css/base.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     {
-      src: '~/common/plugins/globals.js',
-      mode: 'client',
+      src: "~/common/plugins/globals.js",
+      mode: "client",
     },
     {
-      src: '~/common/plugins/toastr',
-      mode: 'client',
+      src: "~/common/plugins/toastr",
+      mode: "client",
     },
     {
-      src: '~/common/plugins/vue-carousel.js',
-      mode: 'client',
+      src: "~/common/plugins/vue-carousel.js",
+      mode: "client",
     },
     {
-      src: '~/common/plugins/axios-config.js',
-      mode: 'client',
+      src: "~/common/plugins/axios-config.js",
+      mode: "client",
     },
     {
-      src: '~/common/plugins/ultiEvents.js',
+      src: "~/common/plugins/ultiEvents.js",
     },
     {
-      src: '~/common/plugins/vue-multiselect.js',
+      src: "~/common/plugins/vue-multiselect.js",
     },
     {
-      src: '~/common/plugins/vue-flickity.js',
+      src: "~/common/plugins/vue-flickity.js",
       ssr: false,
     },
     {
-      src: '~/common/plugins/mixins',
-      mode: 'client',
-    }
-    
+      src: "~/common/plugins/mixins",
+      mode: "client",
+    },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: {
-    dirs: ['~/components', '~/common/components', '~/common/middlewares'],
+    dirs: ["~/components", "~/common/components", "~/common/middlewares"],
   },
 
   dir: {
-    layouts: 'common/layouts',
+    layouts: "common/layouts",
     // middleware: 'common/middlewares',
   },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss',
+    "@nuxtjs/tailwindcss",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
+    "@nuxtjs/axios",
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
+    "@nuxtjs/pwa",
     // https://go.nuxtjs.dev/content
-    '@nuxt/content',
+    "@nuxt/content",
     // https://www.npmjs.com/package/cookie-universal-nuxt
-    'cookie-universal-nuxt',
+    "cookie-universal-nuxt",
     // https://www.vue2editor.com/guide.html#modular-version
     "vue2-editor/nuxt",
     // https://www.npmjs.com/package/@nuxtjs/firebase
-    '@nuxtjs/tailwindcss',
-
-    '@nuxtjs/fontawesome',
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/fontawesome",
+    "@nuxtjs/sitemap",
+    "@nuxtjs/robots",
   ],
+
+  sitemap: {
+    hostname: "https://hungphatelevator.com",
+    gzip: true,
+    routes: ["/", "/project", "/introduce", "/service", "/contact"],
+  },
+  robots: {
+    UserAgent: "*",
+    Disallow: "/admin",
+    Allow: "/",
+    Sitemap: "https://hungphatelevator.com/sitemap.xml",
+  },
 
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: process.env.API_URL || '',
+    baseURL: process.env.API_URL || "",
     debug: process.env.DEBUG || false,
   },
   publicRuntimeConfig: {
-    API_ENVIRONMENT: process.env.API_ENVIRONMENT || '',
-    ACCESS_TOKEN_MAP_BOX: process.env.ACCESS_TOKEN_MAP_BOX || '',
+    API_ENVIRONMENT: process.env.API_ENVIRONMENT || "",
+    ACCESS_TOKEN_MAP_BOX: process.env.ACCESS_TOKEN_MAP_BOX || "",
   },
 
   fontawesome: {
-    component: 'fa',
+    component: "fa",
     icons: {
       solid: [
-        'faMapMarkerAlt'  // thêm các icon bạn muốn sử dụng
-      ]
-    }
+        "faMapMarkerAlt", // thêm các icon bạn muốn sử dụng
+      ],
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -133,17 +173,17 @@ export default {
     extend(config, { isClient }) {
       // Extend only webpack config for client-bundle
       if (isClient) {
-        config.devtool = 'source-map'
+        config.devtool = "source-map";
       }
     },
     postcss: {
       plugins: {
-        'postcss-import': {},
-        'postcss-nested': {},
-        'tailwindcss/nesting': {},
-        tailwindcss: path.resolve(__dirname, './tailwind.config.js'),
+        "postcss-import": {},
+        "postcss-nested": {},
+        "tailwindcss/nesting": {},
+        tailwindcss: path.resolve(__dirname, "./tailwind.config.js"),
         autoprefixer: {},
       },
     },
-  }
-}
+  },
+};
