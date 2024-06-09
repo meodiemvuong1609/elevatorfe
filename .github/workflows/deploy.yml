@@ -3,7 +3,7 @@ name: CI/CD Pipeline for Nuxt.js
 on:
   push:
     branches:
-      - main  # Run the workflow on pushes to the main branch
+      - master
 
 jobs:
   build:
