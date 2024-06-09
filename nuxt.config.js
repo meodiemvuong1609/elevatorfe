@@ -5,13 +5,14 @@ export default {
   head: {
     title: 'Thang máy Hưng Phát',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'vi'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { hid: 'description', name: 'description', content: 'Thang máy Hưng Phát cung cấp các giải pháp thang máy chất lượng cao, đáng tin cậy và an toàn.' },
+      { name: 'format-detection', content: 'telephone=no' },
+      { name: 'keywords', content: 'Thang máy, Hưng Phát, Thang máy chất lượng, Thang máy an toàn, thang máy elevator, Thang máy elevator' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -101,11 +102,6 @@ export default {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: process.env.API_URL || '',
     debug: process.env.DEBUG || false,
-  },
-  pwa: {
-    icon: {
-      fileName: 'hungphat.ico',
-    },
   },
   publicRuntimeConfig: {
     API_ENVIRONMENT: process.env.API_ENVIRONMENT || '',
