@@ -7,7 +7,7 @@
       <div class="flex items-center justify-center p-4">
         <div class="line"></div>
       </div>
-      <div class="content grid grid-cols-3 w-5/6 mx-auto gap-4 mt-4 max-sm:grid-cols-1 max-sm:w-full">
+      <div class="content grid grid-cols-3 w-3/4 mx-auto gap-4 mt-4 max-sm:grid-cols-1 max-sm:w-full">
         <div class="bg-gray-light-1 border border-gray-light" >
           <Flickity
             class="carousel" 

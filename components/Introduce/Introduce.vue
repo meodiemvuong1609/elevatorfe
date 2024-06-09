@@ -1,13 +1,13 @@
 <template>
-  <div class="p-4">
+  <div class="py-4">
     <div class="flex items-center justify-center font-bold text-2xl max-sm:text-xl text-center">
       CÔNG TY TNHH CÔNG NGHỆ THANG MÁY HƯNG PHÁT
     </div>
     <div class="flex items-center justify-center p-4">
       <div class="line"></div>
     </div>
-    <div class="grid grid-cols-2 w-2/3 mx-auto max-sm:block max-sm:w-full">
-      <div class="p-4 ">
+    <div class="w-3/4 mx-auto grid grid-cols-2 gap-3 p-4 max-sm:grid-cols-1 sm:gap-6 max-sm:w-full sm:p-6">
+      <div class="">
         <div class="">
           <div class="flex py-3 font-bold text-xl items-center justify-start ">
             Giới thiệu về chúng tôi
@@ -21,8 +21,7 @@
         </div>
         <button class="w-full self-end py-2 px-4 mt-6 flex items-end justify-center bg-red-dark-2 text-white rounded-large font-bold rounded-lg" @click="$router.push('/introduce')">Đọc thêm</button>
       </div>
-
-      <div class="p-4">
+      <div class="">
         <div class="flex py-3 font-bold text-xl items-center justify-start ">
           Sơ đồ tổ chức
         </div>
