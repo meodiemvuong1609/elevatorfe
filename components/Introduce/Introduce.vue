@@ -22,11 +22,8 @@
         <button class="w-full self-end py-2 px-4 mt-6 flex items-end justify-center bg-red-dark-2 text-white rounded-large font-bold rounded-lg" @click="$router.push('/introduce')">Đọc thêm</button>
       </div>
       <div class="">
-        <div class="flex py-3 font-bold text-xl items-center justify-start ">
-          Sơ đồ tổ chức
-        </div>
         <div class="flex items-center justify-between">
-          <img src="~/assets/img/banner-video.png" class=" h-[300px] w-full rounded-lg border border-gray-light-1 max-sm:h-[250px]" alt="">
+          <img src="~/assets/img/feature5.jpeg" class=" h-[320px] w-full rounded-lg border border-gray-light-1 max-sm:h-[250px]" alt="">
         </div>
       </div>
     </div>

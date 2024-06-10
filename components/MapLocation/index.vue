@@ -85,7 +85,7 @@ export default {
     ];
 
     locations.forEach((location) => {
-      new mapboxgl.Marker()
+      new mapboxgl.Marker({ color: 'red' })
         .setLngLat(location.coordinates)
         .addTo(this.map)
         .setPopup(new mapboxgl.Popup().setHTML(`<p>${location.name}</p>`));
