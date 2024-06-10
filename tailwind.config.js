@@ -35,7 +35,8 @@ module.exports = {
       gray: '#AAAAAA',
       'gray-1': '#656565',
       'gray-light': '#E2E2E2',
-      'gray-light-1': '#F5F5F5',
+      'gray-light-1': '#004c8407',
+      'gray-light-2': '#F5F5F5',
     },
     extend: {
       fontFamily: {},

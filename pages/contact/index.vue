@@ -1,7 +1,9 @@
 <template>
   <div class="contact-container">
-    <div class="bg-banner flex justify-center items-center">
-      <p class="font-bold text-3xl text-white">LIÊN HỆ</p>
+    <div class="bg-banner">
+      <div class="fill w-full h-full flex justify-center items-center">
+        <p class="font-bold text-3xl text-white">LIÊN HỆ</p>
+      </div>
     </div>
     <div class="flex flex-col p-4 sm:flex-row gap-5 mt-10 sm:px-[15%]">
       <div class="w-full sm:w-1/2 flex flex-col gap-5">
@@ -21,9 +23,6 @@
               <div class="flex gap-4 items-center title font-bold text-lg">
                 <span>{{ item.title }}</span>
               </div>
-              <!-- <div class="w-[300px] h-[180px] rounded-lg">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-QjWZ4HN4mVML0loV7HCQ_upXCmogUiX0Xw&s" alt="" class="w-full h-full rounded-lg object-cover">
-              </div> -->
               <div class="flex items-start gap-1 address">
                 <div class="pt-1 pr-1">
                   <Icons-Location />
@@ -84,20 +83,20 @@ export default {
         },
         {
           title: "Văn phòng Thanh Hoá",
-          address: "Số 8, ngõ 9, Dương Quảng Hàm, Quan Hoa, Cầu Giấy, Hà Nội",
+          address: "Số 22 đường Phú Thứ, Phường Phú Sơn, Thành phố Thanh Hóa",
           phone: "090.1987.666",
           email: "hungphatlift@elevator.vn",
         },
         {
           title: "Văn phòng Hồ Chí Minh",
-          address: "Số 22 đường Phú Thứ, Phường Phú Sơn, Thanh phố Thanh Hoá",
+          address: "Số 497/73/14 Phan Văn Trí, Phường 5, Quận Gò Vấp, Thành phố Hồ Chí Minh",
           phone: "090.1987.666",
           email: "hungphatlift@elevator.vn",
         },
         {
           title: "Nhà máy sản xuất",
           address:
-            "Số 497/73/14 Phan Văn Trí, Phường 5, Quận Gò Vấp, Thành phố Hồ Chí Minh",
+            "KCN Thiệu Hóa, Tiểu Khu 13, Thị trấn Thiệu Hóa, Huyện Thiệu Hóa, Tỉnh THanh Hóa",
           phone: "090.1987.666",
           email: "hungphatlift@elevator.vn",
         },
@@ -112,9 +111,9 @@ export default {
 <style>
 .bg-banner {
   height: 200px;
-  background-image: url("@/assets/img/feature3.jpeg");
+  background-image: url("~/assets/img/banner-intro.jpeg");
   background-size: cover;
-  background-position: start;
+  background-position: bottom;
 }
 .section-connect {
   background-image: url(https://thangmayght.com/wp-content/uploads/2022/11/thang-may-van-phong-9.png);
@@ -123,7 +122,6 @@ export default {
   background-size: cover !important;
 }
 .fill{
-
   background-color: rgba(0, 0, 0, 0.5);
 }
 </style>
