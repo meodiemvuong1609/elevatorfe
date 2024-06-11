@@ -59,7 +59,7 @@
         </div>
       </div>
     </div>
-    <div class="h-[100px]"></div>
+    <div class="h-[40px]"></div>
   </div>
 </template>
 
