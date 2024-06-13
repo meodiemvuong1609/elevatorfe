@@ -44,8 +44,7 @@
       <img src="~/assets/img/feature6.jpeg" alt="">
       
       <div class="absolute inset-0 flex items-center p-2 justify-center">
-        <button class="text-center text-lg text-white font-bold bg-red px-4 py-2 rounded-[95px]">
-
+        <button class="text-center text-lg text-white font-bold bg-red px-4 py-2 rounded-[95px]" @click="makeCall">
           ĐẶT LỊCH TƯ VẤN
         </button>
       </div>
@@ -57,7 +56,12 @@
 
 <script>
 export default {
-  name: 'Feature'
+  name: 'Feature',
+  methods: {
+    makeCall() {
+      window.location.href = 'tel:0901987666';
+    }
+  }
 
 }
 </script>
