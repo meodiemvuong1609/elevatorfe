@@ -18,22 +18,30 @@
           <img src="~/assets/img/hungphat.png" class=" h-[150px] mt-4" alt="">
         </div>
       </div>
-      <div class="py-4 text-red font-semibold border-b border-gray" @click="handleRoute('/')">
+      <div class="py-4 text-red border-b border-gray" :class="$route.path == '/' && 'font-bold'" @click="handleRoute('/')">
         Trang chủ
       </div>
       <div
-        class="py-4 text-red font-semibold border-b border-gray"
+        class="py-4 text-red border-b border-gray"
+        :class="$route.path == '/introduce' && 'font-bold'"
         @click="handleRoute('/introduce')"
       >
         Giới thiệu
       </div>
-      <div class="py-4 text-red font-semibold border-b border-gray" @click="handleRoute('/product')">
+      <div
+        class="py-4 text-red border-b border-gray"
+        :class="$route.path == '/service' && 'font-bold'"
+        @click="handleRoute('/service')"
+      >
+        Dịch vụ
+      </div>
+      <div class="py-4 text-red border-b border-gray" :class="$route.path == '/products' && 'font-bold'" @click="handleRoute('/product')">
         Sản phẩm
       </div>
-      <div class="py-4 text-red font-semibold border-b border-gray" @click="handleRoute('/project')">
+      <div class="py-4 text-red border-b border-gray" :class="$route.path == '/project' && 'font-bold'" @click="handleRoute('/project')">
         Dự án
       </div>
-      <div class="py-4 text-red font-semibold border-b border-gray" @click="handleRoute('/contact')">
+      <div class="py-4 text-red border-b border-gray" :class="$route.path == '/contact' && 'font-bold'" @click="handleRoute('/contact')">
         Liên hệ
       </div>
     </div>
