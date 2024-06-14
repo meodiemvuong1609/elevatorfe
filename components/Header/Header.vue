@@ -19,7 +19,7 @@
       <div class="flex items-center gap-5 max-sm:hidden text-gray-dark">
         <nuxt-link to="/" exact-active-class="exact-active"> Trang chủ </nuxt-link>
         <nuxt-link to="/introduce" exact-active-class="exact-active"> Giới thiệu </nuxt-link>
-        <!-- <nuxt-link to="" exact-active-class="exact-active"> Sản phẩm </nuxt-link> -->
+        <nuxt-link to="/products" exact-active-class="exact-active"> Sản phẩm </nuxt-link>
         <nuxt-link to="/service" exact-active-class="exact-active"> Dịch vụ </nuxt-link>
         <nuxt-link to="/project" exact-active-class="exact-active"> Dự án </nuxt-link>
         <nuxt-link to="/contact" exact-active-class="exact-active"> Liên hệ </nuxt-link>
