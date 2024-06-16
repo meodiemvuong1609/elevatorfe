@@ -1,0 +1,319 @@
+<template>
+  <div class="product-container flex flex-col gap-4">
+    <div class="w-full h-[400px]">
+      <img src="~assets/img/banner2.png" alt="" class="w-full h-full object-cover"/>
+    </div>
+    <div class="flex flex-col p-4 gap-5 mt-5 sm:px-[15%]">
+      <p class="text-center text-xl font-bold">CABIN</p>
+      <p class="text-center text-3xl font-bold mb-4">CABIN MẪU TIÊU CHUẨN</p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <div v-for="(item, index) in productDatas.slice(0,10)" :key="index" class="flex flex-col boxshadow relative h-full pb-14">
+          <img :src="item.img" alt="" class="h-[300px]">
+          <div class="p-4">
+            <p class="text-xl font-bold">{{ item.code }}</p>
+            <p class="text-sm"><b>Vách: </b>{{ (item.wall) }}</p>
+            <p class="text-sm"><b>Cửa: </b>{{ (item.door) }}</p>
+            <p class="text-sm"><b>Trần: </b>{{ (item.ceiling) }}</p>
+            <p class="text-sm"><b>Sàn: </b>{{ (item.floor) }}</p>
+            <p class="text-sm"><b>Tay vịn: </b>{{ (item.handrail) }}</p>
+            <p class="text-sm"><b>Bảng điều khiển: </b>{{ (item.controlPanel) }}</p>
+          </div>
+          <div class="p-4 absolute bottom-0 w-full">
+            <v-button type="primary" class="w-full" @click="$router.push('/products')">Xem thêm</v-button>
+          </div>
+        </div>
+      </div>
+      <p class="text-center text-3xl font-bold mb-4">CABIN MẪU LỰA CHỌN</p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <div v-for="(item, index) in productDatas.slice(10,23)" :key="index" class="flex flex-col boxshadow relative h-full pb-14">
+          <img :src="item.img" alt="" class="h-[300px]">
+          <div class="p-4">
+            <p class="text-xl font-bold">{{ item.code }}</p>
+            <p class="text-sm">{{ (item.wall) }}</p>
+            <p class="text-sm">{{ (item.door) }}</p>
+            <p class="text-sm">{{ (item.ceiling) }}</p>
+            <p class="text-sm">{{ (item.floor) }}</p>
+            <p class="text-sm">{{ (item.handrail) }}</p>
+            <p class="text-sm">{{ (item.controlPanel) }}</p>
+          </div>
+          <div class="p-4 absolute bottom-0 w-full">
+            <v-button type="primary" class="w-full" @click="$router.push('/products')">Xem thêm</v-button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-connect w-full h-fit mt-8">
+      <div class="fill w-full flex justify-center pb-10">
+        <div class="content px-4 py-10 w-full sm:w-[450px]">
+          <p class="text-white text-3xl font-bold text-center my-5">TƯ VẤN VÀ BÁO GIÁ</p>
+          <div class="flex flex-col gap-3">
+            <v-input placeholder="Họ và tên"/>
+            <v-input placeholder="Email"/>
+            <v-input placeholder="Số điện thoại liên hệ"/>
+            <v-input type="textarea" :resize="false" :rows="5" placeholder="Chúng tôi có thể giúp gì cho bạn?"/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="h-[40px]"></div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      productDatas: [
+        {
+          code: 'HPE 01',
+          wall: "Inox sọc nhuyễn, inox gương",
+          door: "Inox gương",
+          ceiling: "Inox gương, nhựa đèn led",
+          floor: "Đá lựa chọn",
+          handrail: "Ống inox",
+          controlPanel: "Inox sọc nhuyễn, hiển thị ma trận điểm led",
+          img: require('~/assets/img/cabins/Cabin1.jpg'),
+        },
+        {
+          code: 'HPE 02',
+          wall: "Inox sọc nhuyễn, inox gương",
+          door: "Inox gương",
+          ceiling: "Inox gương, nhựa đèn led",
+          floor: "Đá lựa chọn",
+          handrail: "Ống inox",
+          controlPanel: "Inox sọc nhuyễn, hiển thị ma trận điểm led",
+          img: require('~/assets/img/cabins/Cabin2.jpg'),
+        },
+        {
+          code: 'HPE 03',
+          wall: "Inox sọc nhuyễn, inox gương",
+          door: "Inox gương",
+          ceiling: "Inox gương, nhựa đèn led",
+          floor: "Đá lựa chọn",
+          handrail: "Ống inox",
+          controlPanel: "Inox sọc nhuyễn, hiển thị ma trận điểm led",
+          img: require('~/assets/img/cabins/Cabin3.jpg'),
+        },
+        {
+          code: 'HPE 04',
+          wall: "Inox sọc nhuyễn, inox gương",
+          door: "Inox gương",
+          ceiling: "Inox gương, nhựa đèn led",
+          floor: "Đá lựa chọn",
+          handrail: "Ống inox",
+          controlPanel: "Inox sọc nhuyễn, hiển thị ma trận điểm led",
+          img: require('~/assets/img/cabins/Cabin4.jpg'),
+        },
+        {
+          code: 'HPE 05',
+          wall: "Inox sọc nhuyễn, inox gương",
+          door: "Inox gương",
+          ceiling: "Inox gương, nhựa đèn led",
+          floor: "Đá lựa chọn",
+          handrail: "Ống inox",
+          controlPanel: "Inox sọc nhuyễn, hiển thị ma trận điểm led",
+          img: require('~/assets/img/cabins/Cabin5.jpg'),
+        },
+        {
+          code: 'HPE 06',
+          wall: "Inox sọc nhuyễn, inox gương",
+          door: "Inox gương",
+          ceiling: "Inox gương, nhựa đèn led",
+          floor: "Đá lựa chọn",
+          handrail: "Ống inox",
+          controlPanel: "Inox sọc nhuyễn, hiển thị ma trận điểm led",
+          img: require('~/assets/img/cabins/Cabin6.jpg'),
+        },
+        {
+          code: 'HPE 07',
+          wall: "Inox sọc nhuyễn, inox gương",
+          door: "Inox gương",
+          ceiling: "Inox gương, nhựa đèn led",
+          floor: "Đá lựa chọn",
+          handrail: "Ống inox",
+          controlPanel: "Inox sọc nhuyễn, hiển thị ma trận điểm led",
+          img: require('~/assets/img/cabins/Cabin7.jpg'),
+        },
+        {
+          code: 'HPE 08',
+          wall: "Inox sọc nhuyễn, inox gương",
+          door: "Inox gương",
+          ceiling: "Inox gương, nhựa đèn led",
+          floor: "Đá lựa chọn",
+          handrail: "Ống inox",
+          controlPanel: "Inox sọc nhuyễn, hiển thị ma trận điểm led",
+          img: require('~/assets/img/cabins/Cabin8.jpg'),
+        },
+        {
+          code: 'HPE 09',
+          wall: "Inox sọc nhuyễn, inox gương",
+          door: "Inox gương",
+          ceiling: "Inox gương, nhựa đèn led",
+          floor: "Đá lựa chọn",
+          handrail: "Ống inox",
+          controlPanel: "Inox sọc nhuyễn, hiển thị ma trận điểm led",
+          img: require('~/assets/img/cabins/Cabin9.jpg'),
+        },
+        {
+          code: 'HPE 10',
+          wall: "Inox sọc nhuyễn, inox gương",
+          door: "Inox gương",
+          ceiling: "Inox gương, nhựa đèn led",
+          floor: "Đá lựa chọn",
+          handrail: "Ống inox",
+          controlPanel: "Inox sọc nhuyễn, hiển thị ma trận điểm led",
+          img: require('~/assets/img/cabins/Cabin10.jpg'),
+        },
+        // {
+        //   code: 'HPE 11',
+        //   wall: "Inox sọc nhuyễn, inox gương",
+        //   door: "Inox gương",
+        //   ceiling: "Inox gương, nhựa đèn led",
+        //   floor: "Đá lựa chọn",
+        //   handrail: "Ống inox",
+        //   controlPanel: "Inox sọc nhuyễn, hiển thị ma trận điểm led",
+        //   img: require('~/assets/img/cabins/Cabin11.jpg'),
+        // },
+        {
+          code: 'HPE 12',
+          wall: "Inox sọc nhuyễn, inox gương",
+          door: "Inox gương",
+          ceiling: "Inox gương, nhựa đèn led",
+          floor: "Đá lựa chọn",
+          handrail: "Ống inox",
+          controlPanel: "Inox sọc nhuyễn, hiển thị ma trận điểm led",
+          img: require('~/assets/img/cabins/Cabin12.jpg'),
+        },
+        {
+          code: 'HPE 13',
+          wall: "Inox sọc nhuyễn, inox gương",
+          door: "Inox gương",
+          ceiling: "Inox gương, nhựa đèn led",
+          floor: "Đá lựa chọn",
+          handrail: "Ống inox",
+          controlPanel: "Inox sọc nhuyễn, hiển thị ma trận điểm led",
+          img: require('~/assets/img/cabins/Cabin13.jpg'),
+        },
+        {
+          code: 'HPE 14',
+          wall: "Inox sọc nhuyễn, inox gương",
+          door: "Inox gương",
+          ceiling: "Inox gương, nhựa đèn led",
+          floor: "Đá lựa chọn",
+          handrail: "Ống inox",
+          controlPanel: "Inox sọc nhuyễn, hiển thị ma trận điểm led",
+          img: require('~/assets/img/cabins/Cabin14.jpg'),
+        },
+        {
+          code: 'HPE 15',
+          wall: "Inox sọc nhuyễn, inox gương",
+          door: "Inox gương",
+          ceiling: "Inox gương, nhựa đèn led",
+          floor: "Đá lựa chọn",
+          handrail: "Ống inox",
+          controlPanel: "Inox sọc nhuyễn, hiển thị ma trận điểm led",
+          img: require('~/assets/img/cabins/Cabin15.jpg'),
+        },
+        {
+          code: 'HPE 16',
+          wall: "Inox sọc nhuyễn, inox gương",
+          door: "Inox gương",
+          ceiling: "Inox gương, nhựa đèn led",
+          floor: "Đá lựa chọn",
+          handrail: "Ống inox",
+          controlPanel: "Inox sọc nhuyễn, hiển thị ma trận điểm led",
+          img: require('~/assets/img/cabins/Cabin16.jpg'),
+        },
+        {
+          code: 'HPE 17',
+          wall: "Inox sọc nhuyễn, inox gương",
+          door: "Inox gương",
+          ceiling: "Inox gương, nhựa đèn led",
+          floor: "Đá lựa chọn",
+          handrail: "Ống inox",
+          controlPanel: "Inox sọc nhuyễn, hiển thị ma trận điểm led",
+          img: require('~/assets/img/cabins/Cabin17.jpg'),
+        },
+        { 
+          code: 'HPE 18',
+          wall: "Inox sọc nhuyễn, inox gương",
+          door: "Inox gương",
+          ceiling: "Inox gương, nhựa đèn led",
+          floor: "Đá lựa chọn",
+          handrail: "Ống inox",
+          controlPanel: "Inox sọc nhuyễn, hiển thị ma trận điểm led",
+          img: require('~/assets/img/cabins/Cabin18.jpg'),
+        },
+        {
+          code: 'HPE 19',
+          wall: "Inox sọc nhuyễn, inox gương",
+          door: "Inox gương",
+          ceiling: "Inox gương, nhựa đèn led",
+          floor: "Đá lựa chọn",
+          handrail: "Ống inox",
+          controlPanel: "Inox sọc nhuyễn, hiển thị ma trận điểm led",
+          img: require('~/assets/img/cabins/Cabin19.jpg'),
+        },
+        {
+          code: 'HPE 20',
+          wall: "Inox sọc nhuyễn, inox gương",
+          door: "Inox gương",
+          ceiling: "Inox gương, nhựa đèn led",
+          floor: "Đá lựa chọn",
+          handrail: "Ống inox",
+          controlPanel: "Inox sọc nhuyễn, hiển thị ma trận điểm led",
+          img: require('~/assets/img/cabins/Cabin20.jpg'),
+        },
+        {
+          code: 'HPE 21',
+          wall: "Inox sọc nhuyễn, inox gương",
+          door: "Inox gương",
+          ceiling: "Inox gương, nhựa đèn led",
+          floor: "Đá lựa chọn",
+          handrail: "Ống inox",
+          controlPanel: "Inox sọc nhuyễn, hiển thị ma trận điểm led",
+          img: require('~/assets/img/cabins/Cabin21.jpg'),
+        },
+        {
+          code: 'HPE 22',
+          wall: "Inox sọc nhuyễn, inox gương",
+          door: "Inox gương",
+          ceiling: "Inox gương, nhựa đèn led",
+          floor: "Đá lựa chọn",
+          handrail: "Ống inox",
+          controlPanel: "Inox sọc nhuyễn, hiển thị ma trận điểm led",
+          img: require('~/assets/img/cabins/Cabin22.jpg'),
+        },
+      ],
+    };
+  },
+  mounted() {
+  },
+  methods: {
+    truncateText (text) {
+      if (text.length > 100) {
+        return text.substring(0, 100) + '...';
+    }
+    return text;
+    },
+  }
+};
+</script>
+
+<style>
+.bg-banner {
+  height: 200px;
+  background-image: url("~/assets/img/banner-intro.jpeg");
+  background-size: cover;
+  background-position: bottom;
+}
+.section-connect {
+  background-image: url(https://thangmayght.com/wp-content/uploads/2022/11/thang-may-van-phong-9.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+.fill{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+</style>

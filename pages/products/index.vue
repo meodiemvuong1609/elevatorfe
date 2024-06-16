@@ -3,15 +3,40 @@
     <div class="w-full h-[400px]">
       <img src="~assets/img/banner2.png" alt="" class="w-full h-full object-cover"/>
     </div>
-    <div class="flex flex-col p-4 gap-5 mt-5 sm:px-[15%]">
+    <div class="flex flex-col p-4 gap-20 mt-5 sm:px-[15%]">
       <p class="text-center text-xl font-bold">SẢN PHẨM</p>
-      <p class="text-center text-3xl font-bold mb-4">CÁC DÒNG THANG MÁY HƯNG PHÁT</p>
-      <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
-        <div v-for="(item, index) in productDatas" :key="index" class="flex flex-col boxshadow">
-          <img :src="item.img" alt="" class="h-[280px]">
-          <div class="p-4 ">
-            <p class="text-xl font-bold">{{ item.title }}</p>
-            <p class="text-sm">{{ item.des }}</p>
+      <div>
+        <p class="text-center text-3xl font-bold mb-12">THANG MÁY TẢI KHÁCH</p>
+        <p><b>Thang máy tải khách</b> có kích thước tải trọng từ 200kg, 300kg, 400kg, 450kg, 500kg được nhập khẩu nguyên chiếc từ Châu Âu. Với thiết kế linh hoạt theo thực tế ngôi nhà, mẫu mã đa dạng, chất lượng Châu Âu.</p>
+      </div>
+      <div class="infor">
+        <p class="text-center text-3xl font-bold mb-12">KÍCH THƯỚC THANG MÁY</p>
+        <img src="~assets/img/products/information1.png" alt="">
+      </div>
+      <div class="safe-feature">
+        <p class="text-center text-3xl font-bold mb-12">TÍNH NĂNG AN TOÀN TIÊU CHUẨN</p>
+        <div class="grid grid-cols-1 sm:grid-cols-4 gap-8">
+          <div v-for="(item, index) in freature" :key="index" class="flex flex-col gap-4">
+            <div class="title flex gap-4">
+              <component :is="item.icon" />
+              <p class="font-bold text-base pt-2">{{ item.title }}</p>
+            </div>
+            <p>{{ item.des }}</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="text-center text-3xl font-bold mb-12">CÁC DÒNG THANG MÁY HƯNG PHÁT</p>
+        <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
+          <div v-for="(item, index) in productDatas" :key="index" class="flex flex-col boxshadow relative h-full pb-14">
+            <img :src="item.img" alt="" class="h-[280px]">
+            <div class="p-4">
+              <p class="text-xl font-bold">{{ item.title }}</p>
+              <p class="text-sm">{{ truncateText(item.des) }}</p>
+            </div>
+            <div class="p-4 absolute bottom-0 w-full">
+              <v-button type="primary" class="w-full" @click="$router.push('/products')">Xem thêm</v-button>
+            </div>
           </div>
         </div>
       </div>
@@ -82,9 +107,60 @@ export default {
           img: require('~/assets/img/project/p12.jpg'),
         },
       ],
+      freature: [
+        {
+          title: 'Đồng bộ cứu hộ tự động',
+          icon: 'IconsFeature1',
+          des: 'Một nguồn Ắc quy dự trữ sẽ được cung cấp cho thang máy khi có sự cố mất điện, giúp đưa thang về tầng thấp nhất và mở cửa để hành khách thoát ra ngoài ',
+        },
+        {
+          title: 'Chuông báo quá tải',
+          icon: 'IconsFeature2',
+          des: 'Khi số người trong cabin vượt quá tải trọng định mức, chuông báo quá tải sẽ kêu và thang máy dừng hoạt động cho đến khi tải trọng trở về định mức cho phép',
+        },
+        {
+          title: 'Dừng tầng an toàn',
+          icon: 'IconsFeature3',
+          des: ' Trường hợp thang bị dừng ở khoảng giữa các tầng vì một sự cố chưa xác định, thang sẽ tự động kiểm tra nguyên nhân và nếu an toàn thì phòng thang sẽ được di chuyển tới tầng gần nhất với tốc độ thấp và mở cửa để hành khách ra ngoài',
+        },
+        {
+          title: 'Cửa mở an toàn ',
+          icon: 'IconsFeature4',
+          des: 'Thang tự ngừng hoạt động khi cửa không đóng hoặc mở hoàn toàn nhằm đảm bảo an toàn cho khách đi thang.',
+        },
+        {
+          title: 'Công tắc chống vượt hành trình',
+          icon: 'IconsFeature5',
+          des: 'Công tắc được đặt ở đầu trên và đầu dưới của hành trình nhằm ngăn chặn cabin vượt quá hành trình cho phép đã được cài đặt sẵn',
+        },
+        {
+          title: 'Đèn cabin tự động tắt',
+          icon: 'IconsFeature6',
+          des: 'Đèn tự động tắt khi thang không hoạt động để tiết kiệm điện và tự khởi động lại khi có lệnh gọi',
+        },
+        {
+          title: 'Chống mất pha, ngược pha',
+          icon: 'IconsFeature7',
+          des: 'Khi mất pha hoặc ngược pha điện lưới cung cấp thì thang sẽ tự động dừng để bảo vệ hệ thống điện',
+        },
+        {
+          title: 'Hệ thống an toàn hồng ngoại',
+          icon: 'IconsFeature8',
+          des: ' Hệ thống hồng ngoại được tích hợp, khi có vật cản tia thì thang sẽ không chạy cho đến khi không còn vật cả.',
+        },
+        
+      ]
     };
   },
   mounted() {
+  },
+  methods: {
+    truncateText (text) {
+      if (text.length > 100) {
+        return text.substring(0, 100) + '...';
+    }
+    return text;
+    },
   }
 };
 </script>
