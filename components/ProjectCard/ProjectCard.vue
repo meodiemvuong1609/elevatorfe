@@ -1,5 +1,5 @@
 <template>
-   <div class="p-6 max-sm:p-4">
+   <div class="p-[10%] max-sm:p-4">
     <div>
       <div class="flex items-center justify-center font-bold text-2xl max-sm:text-xl text-center">
         MỘT SỐ DỰ ÁN ĐÃ VÀ ĐANG THỰC HIỆN
@@ -7,7 +7,7 @@
       <div class="flex items-center justify-center p-4">
         <div class="line"></div>
       </div>
-      <div class="content grid grid-cols-3 w-3/4 mx-auto gap-4 mt-4 max-sm:grid-cols-1 max-sm:w-full">
+      <div class="content grid grid-cols-3 mx-auto gap-4 mt-4 max-sm:grid-cols-1 max-sm:w-full">
         <div v-for="(item, index) in data" :key="index" class="bg-gray-light-1 border border-gray-light" >
           <Flickity
             class="carousel" 
@@ -18,8 +18,8 @@
             }"
             ref="flickity"
           >
-            <div v-for="(img, indexImg) in item.imgs" :key="indexImg" class="carousel-cell">
-              <img :src="img" alt="">
+            <div v-for="(img, indexImg) in item.imgs" :key="indexImg" class="carousel-cell w-full">
+              <img :src="img" alt="" class="h-[410px] w-full object-cover">
             </div>
           </Flickity>
           <div class="p-4 grid gap-3">

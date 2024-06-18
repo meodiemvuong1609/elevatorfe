@@ -1,12 +1,12 @@
 <template>
-  <div class="py-4">
+  <div class="py-4 sm:px-[10%]">
     <div class="flex items-center justify-center font-bold text-2xl max-sm:text-xl text-center">
       CÔNG TY TNHH CÔNG NGHỆ THANG MÁY HƯNG PHÁT
     </div>
     <div class="flex items-center justify-center p-4">
       <div class="line"></div>
     </div>
-    <div class="w-3/4 mx-auto grid grid-cols-2 gap-3 p-4 max-sm:grid-cols-1 sm:gap-6 max-sm:w-full sm:p-6">
+    <div class="mx-auto grid grid-cols-2 gap-3 max-sm:grid-cols-1 sm:gap-6 max-sm:w-full">
       <div class="">
         <div class="">
           <div class="flex py-3 font-bold text-xl items-center justify-start ">
