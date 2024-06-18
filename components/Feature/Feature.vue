@@ -1,5 +1,5 @@
 <template>
-  <div class="w-3/4 mx-auto grid grid-cols-2 gap-3 p-4 max-sm:grid-cols-1 sm:gap-6 max-sm:w-full sm:p-6">
+  <div class="mx-auto grid grid-cols-2 gap-3 p-4 max-sm:grid-cols-1 sm:gap-6 max-sm:w-full sm:px-[10%]">
     <div class="relative ">
       <img src="~/assets/img/feature1.jpeg" alt="">
       
