@@ -1,5 +1,6 @@
 <template>
   <svg
+    :style="{ fill: color }"
     id="Capa_1"
     enable-background="new 0 0 512 512"
     height="80"
@@ -36,7 +37,7 @@ export default {
   props: {
     color: {
       type: String,
-      default: "#A7AEB8",
+      default: "black",
     },
   },
 };
