@@ -40,37 +40,113 @@
           </div>
         </div>
       </div>
+      <div class="cabin-feature">
+        <p class="text-center text-3xl font-bold mb-12">CABIN THANG MÁY</p>
+        <div class="grid grid-cols-1 sm:grid-cols-4 gap-8">
+          <div
+            v-for="(item, index) in cabinDatas.slice(0, 10)"
+            :key="index"
+            class="flex flex-col boxshadow relative h-full pb-14"
+          >
+            <img :src="item.img" alt="" class="h-[300px]" />
+            <div class="p-4">
+              <p class="text-xl font-bold">{{ item.code }}</p>
+              <p class="text-sm"><b>Vách: </b>{{ item.wall }}</p>
+              <p class="text-sm"><b>Cửa: </b>{{ item.door }}</p>
+              <p class="text-sm"><b>Trần: </b>{{ item.ceiling }}</p>
+              <p class="text-sm"><b>Sàn: </b>{{ item.floor }}</p>
+              <p class="text-sm"><b>Tay vịn: </b>{{ item.handrail }}</p>
+              <p class="text-sm">
+                <b>Bảng điều khiển: </b>{{ item.controlPanel }}
+              </p>
+            </div>
+            <div class="p-4 absolute bottom-0 w-full">
+              <v-button
+                type="primary"
+                class="w-full"
+                @click="$router.push('/cabins')"
+                >Xem thêm</v-button
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="img-feature flex flex-col gap-5">
         <p class="text-center text-3xl font-bold mb-12">
           ẢNH & THIẾT KẾ THANG MÁY
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-          <img src="~assets/img/products/img3.webp" alt="" class="h-[280px] w-full" />
-          <img src="~assets/img/products/img6.webp" alt="" class="h-[280px] w-full" />
+          <img
+            src="~assets/img/products/img3.webp"
+            alt=""
+            class="h-[280px] w-full"
+          />
+          <img
+            src="~assets/img/products/img6.webp"
+            alt=""
+            class="h-[280px] w-full"
+          />
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <div class="flex flex-col gap-4">
-            <img src="~assets/img/products/img17.webp" alt="" class="h-[320px]" />
-            <img src="~assets/img/products/img2.webp" alt="" class="h-[180px]" />
+            <img
+              src="~assets/img/products/img17.webp"
+              alt=""
+              class="h-[320px]"
+            />
+            <img
+              src="~assets/img/products/img2.webp"
+              alt=""
+              class="h-[180px]"
+            />
           </div>
           <div class="grid grid-cols-1 sm:grid-rows-2 gap-4">
-            <img src="~assets/img/products/img5.webp" alt="" class="max-h-[250px]" />
+            <img
+              src="~assets/img/products/img5.webp"
+              alt=""
+              class="max-h-[250px]"
+            />
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <img src="~assets/img/products/img6.webp" alt=""  class="max-h-[250px]"/>
-              <img src="~assets/img/products/img8.webp" alt=""  class="max-h-[250px]"/>
+              <img
+                src="~assets/img/products/img6.webp"
+                alt=""
+                class="max-h-[250px]"
+              />
+              <img
+                src="~assets/img/products/img8.webp"
+                alt=""
+                class="max-h-[250px]"
+              />
             </div>
           </div>
         </div>
-        
+
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <div class="flex flex-col gap-4">
-            <img src="~assets/img/products/img12.webp" alt="" class="h-[500px]" />
+            <img
+              src="~assets/img/products/img12.webp"
+              alt=""
+              class="h-[500px]"
+            />
           </div>
           <div class="grid grid-cols-1 sm:grid-rows-2 gap-4">
-            <img src="~assets/img/products/img19.webp" alt="" class="max-h-[250px]" />
+            <img
+              src="~assets/img/products/img19.webp"
+              alt=""
+              class="max-h-[250px]"
+            />
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <img src="~assets/img/products/img14.webp" alt="" class="max-h-[234px]" />
-              <img src="~assets/img/products/img15.webp" alt="" class="max-h-[234px]" />
+              <img
+                src="~assets/img/products/img14.webp"
+                alt=""
+                class="max-h-[234px]"
+              />
+              <img
+                src="~assets/img/products/img15.webp"
+                alt=""
+                class="max-h-[234px]"
+              />
             </div>
           </div>
         </div>
@@ -211,6 +287,90 @@ export default {
           des: " Hệ thống hồng ngoại được tích hợp, khi có vật cản tia thì thang sẽ không chạy cho đến khi không còn vật cả.",
         },
       ],
+      cabinDatas: [
+        {
+          code: "HPE 01",
+          wall: "Inox sọc nhuyễn, inox gương",
+          door: "Inox gương",
+          ceiling: "Inox gương, nhựa, đèn LED",
+          floor: "Đá lựa chọn",
+          handrail: "Ống inox",
+          controlPanel: "Inox sọc nhuyễn, hiển thị ma trận điểm LED",
+          img: require("~/assets/img/cabins/Cabin1.jpg"),
+        },
+        {
+          code: "HPE 12",
+          wall: "Inox sọc nhuyễn màu vàng, inox gương màu vàng, inox chạm khắc màu vàng",
+          door: "Inox gương màu vàng",
+          ceiling: "Inox gương màu vàng, nhựa, đèn LED",
+          floor: "Đá",
+          handrail: "Ống inox màu vàng",
+          controlPanel: "Inox sọc nhuyễn màu vàng, hiển thị ma trận điểm LED",
+          img: require("~/assets/img/cabins/Cabin12.jpg"),
+        },
+        {
+          code: "HPE 13",
+          wall: "Inox sọc nhuyễn, inox gương, inox chạm khắc",
+          door: "Inox gương",
+          ceiling: "Inox sọc nhuyễn, inox gương, nhựa, đèn LED",
+          floor: "Đá",
+          handrail: "Ống inox",
+          controlPanel: "Inox sọc nhuyễn, hiển thị ma trận điểm LED",
+          img: require("~/assets/img/cabins/Cabin13.jpg"),
+        },
+        {
+          code: "HPE 14",
+          wall: "Inox sọc nhuyễn màu vàng, inox gương màu vàng, inox chạm khắc màu vàng",
+          door: "Inox gương màu vàng",
+          ceiling: "Inox gương màu vàng, nhựa, đèn LED",
+          floor: "Đá",
+          handrail: "Ống inox màu vàng",
+          controlPanel: "Inox sọc nhuyễn màu vàng, hiển thị ma trận điểm LED",
+          img: require("~/assets/img/cabins/Cabin14.jpg"),
+        },
+
+        {
+          code: "HPE 17",
+          wall: "Inox sọc nhuyễn, inox gương",
+          door: "Inox gương",
+          ceiling: "Inox gương, nhựa đèn led",
+          floor: "Đá lựa chọn",
+          handrail: "Ống inox",
+          controlPanel: "Inox sọc nhuyễn, hiển thị ma trận điểm led",
+          img: require("~/assets/img/cabins/Cabin17.jpg"),
+        },
+        {
+          code: "HPE 19",
+          wall: "Inox sọc nhuyễn màu đồng, inox gương màu đồng, tranh kính trang trí",
+          door: "Inox sọc nhuyễn màu đồng",
+          ceiling: "Inox gương màu đồng, nhựa, đèn LED",
+          floor: "Đá",
+          handrail: "Ống inox màu đồng",
+          controlPanel: "Inox gương màu đồng, hiển thị ma trận điểm LED",
+          img: require("~/assets/img/cabins/Cabin19.jpg"),
+        },
+        {
+          code: "HPE 21",
+          wall: "Inox sọc nhuyễn, kính cường lực",
+          door: "Inox sọc nhuyễn, kính cường lực",
+          ceiling: "Inox sọc nhuyễn, inox gương, nhựa, đèn LED",
+          floor: "Đá",
+          handrail: "Ống inox màu vàng",
+          controlPanel: "Inox sọc nhuyễn, hiển thị ma trận điểm LED",
+          img: require("~/assets/img/cabins/Cabin21.jpg"),
+        },
+        {
+          code: "HPE 22",
+          wall: "Inox sọc nhuyễn màu đồng, kính cường lực",
+          door: "Inox gương màu đồng, kính cường lực",
+          ceiling:
+            "Inox sọc nhuyễn màu đồng, inox gương màu đồng, nhựa, đèn LED",
+          floor: "Đá",
+          handrail: "Ống inox màu đồng",
+          controlPanel: "Inox gương màu đồng, hiển thị ma trận điểm LED",
+          img: require("~/assets/img/cabins/Cabin22.jpg"),
+        },
+      ],
     };
   },
   mounted() {},
@@ -241,13 +401,13 @@ export default {
 .fill {
   background-color: rgba(0, 0, 0, 0.5);
 }
-img{
+img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 @media (max-width: 768px) {
-  img{
+  img {
     height: 300px !important;
     width: 100%;
   }
