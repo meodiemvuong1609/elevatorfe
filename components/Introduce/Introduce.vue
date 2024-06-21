@@ -1,5 +1,5 @@
 <template>
-  <div class="py-4 sm:px-[10%]">
+  <div class="p-4 sm:px-[10%]">
     <div class="flex items-center justify-center font-bold text-2xl max-sm:text-xl text-center">
       CÔNG TY TNHH CÔNG NGHỆ THANG MÁY HƯNG PHÁT
     </div>
