@@ -35,7 +35,7 @@
       >
         Dịch vụ
       </div>
-      <div class="py-4 text-red border-b border-gray" :class="$route.path == '/products' && 'font-bold'" @click="handleRoute('/product')">
+      <div class="py-4 text-red border-b border-gray" :class="$route.path == '/products' && 'font-bold'" @click="handleRoute('/products')">
         Sản phẩm
       </div>
       <div class="py-4 text-red border-b border-gray" :class="$route.path == '/project' && 'font-bold'" @click="handleRoute('/project')">

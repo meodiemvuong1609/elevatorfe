@@ -4,10 +4,10 @@
       class="flex items-center mx-auto w-5/6 justify-between sm:gap-4 max-sm:w-full"
     >
       <div class="flex items-center justify-center">
-        <div class="flex items-center sm:ml-4">
-          <img src="~/assets/img/hungphat.png" class="h-[150px] mt-4" alt="" />
+        <div class="flex items-center sm:ml-4" @click="$router.push('/')">
+          <img src="~/assets/img/hungphat.png" class="!h-[150px] mt-4" alt="" />
         </div>
-        <div class="flex-row ml-2">
+        <div class="max-sm:hidden flex-row ml-2">
           <div
             class="bo font-bold text-2xl max-sm:text-xl text-header text-nowrap"
           >

@@ -30,6 +30,9 @@
       <div class="carousel-cell">
         <img src="~/assets/img/banner-sm.png" alt="" />
       </div>
+      <div class="carousel-cell">
+        <img src="~assets/img/products/img3.webp" alt="" />
+      </div>
     </Flickity>
   </div>
 </template>
