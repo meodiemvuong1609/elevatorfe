@@ -7,13 +7,13 @@
         <div class="flex items-center sm:ml-4" @click="$router.push('/')">
           <img src="~/assets/img/hungphat.png" class="!h-[150px] mt-4" alt="" />
         </div>
-        <div class="max-sm:hidden flex-row ml-2">
+        <div class=" flex-row sm:ml-2">
           <div
-            class="bo font-bold text-2xl max-sm:text-xl text-header text-nowrap"
+            class="bo font-bold text-2xl max-sm:text-base text-header text-nowrap"
           >
             THANG MÁY HƯNG PHÁT
           </div>
-          <div class="text-header font-normal text-lg">HUNG PHAT ELEVATOR</div>
+          <div class="text-header font-normal text-lg max-sm:text-sm">HUNG PHAT ELEVATOR</div>
         </div>
       </div>
       <div class="flex items-center gap-5 max-sm:hidden text-gray-dark">
