@@ -385,7 +385,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .bg-banner {
   height: 200px;
   background-image: url("~/assets/img/banner-intro.jpeg");
@@ -401,15 +401,20 @@ export default {
 .fill {
   background-color: rgba(0, 0, 0, 0.5);
 }
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.img-feature{
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 @media (max-width: 768px) {
-  .img-feature img {
-    height: 300px !important;
-    width: 100%;
+  .img-feature  {
+    img{
+
+      height: 300px !important;
+      width: 100%;
+    }
   }
 }
 </style>
