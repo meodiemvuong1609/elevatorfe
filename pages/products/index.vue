@@ -407,7 +407,7 @@ img {
   object-fit: cover;
 }
 @media (max-width: 768px) {
-  img {
+  .img-feature img {
     height: 300px !important;
     width: 100%;
   }
