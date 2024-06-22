@@ -1,6 +1,6 @@
 <template>
   <div class="mx-auto grid grid-cols-2 gap-3 p-4 max-sm:grid-cols-1 sm:gap-6 max-sm:w-full sm:px-[10%]">
-    <div class="relative ">
+    <div data-aos="fade-right" class="relative ">
       <img src="~/assets/img/feature1.jpeg" alt="">
       
       <div class="absolute inset-0 flex items-center p-2 justify-center">
@@ -8,7 +8,7 @@
       </div>
     </div>
 
-    <div class="relative">
+    <div data-aos="fade-left" class="relative">
       <img src="~/assets/img/feature2.jpeg" alt="">
       
       <div class="absolute inset-0 flex items-center p-2 justify-center">
@@ -16,7 +16,7 @@
       </div>
     </div>
 
-    <div class="relative">
+    <div data-aos="fade-up" class="relative">
       <img src="~/assets/img/feature3.jpeg" alt="">
       
       <div class="absolute inset-0 flex items-center p-2 justify-center">
@@ -24,7 +24,7 @@
       </div>
     </div>
 
-    <div class="relative">
+    <div data-aos="fade-up" class="relative">
       <img src="~/assets/img/feature4.jpeg" alt="">
       
       <div class="absolute inset-0 flex items-center p-2 justify-center">
@@ -32,7 +32,7 @@
       </div>
     </div>
 
-    <div class="relative">
+    <div data-aos="fade-right" class="relative">
       <img src="~/assets/img/feature5.jpeg" alt="">
       
       <div class="absolute inset-0 flex items-center p-2 justify-center">
@@ -40,7 +40,7 @@
       </div>
     </div>
 
-    <div class="relative">
+    <div data-aos="fade-left" class="relative">
       <img src="~/assets/img/feature6.jpeg" alt="">
       
       <div class="absolute inset-0 flex items-center p-2 justify-center">

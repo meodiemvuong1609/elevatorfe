@@ -1,6 +1,6 @@
 <template>
   <div class="product-container flex flex-col gap-4">
-    <div class="w-full sm:h-[400px]">
+    <div data-aos="zoom-in" data-aos-delay="100" class="w-full sm:h-[400px]">
       <img
         src="~assets/img/banner2.png"
         alt=""
@@ -9,7 +9,7 @@
     </div>
     <div class="flex flex-col p-4 gap-12 sm:gap-20 mt-5 sm:px-[10%]">
       <p class="text-center text-xl font-bold">SẢN PHẨM</p>
-      <div>
+      <div class="content">
         <p class="text-center text-3xl font-bold mb-12">THANG MÁY TẢI KHÁCH</p>
         <p>
           <b>Thang máy tải khách</b> có kích thước tải trọng từ 200kg, 300kg,
@@ -71,25 +71,26 @@
           </div>
         </div>
       </div>
-
       <div class="img-feature flex flex-col gap-5">
         <p class="text-center text-3xl font-bold mb-12">
           ẢNH & THIẾT KẾ THANG MÁY
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <img
+            data-aos="fade-right"
             src="~assets/img/products/img3.webp"
             alt=""
             class="h-[280px] w-full"
           />
           <img
+          data-aos="fade-left"
             src="~assets/img/products/img6.webp"
             alt=""
             class="h-[280px] w-full"
           />
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-          <div class="flex flex-col gap-4">
+          <div data-aos="fade-up" data-aos-delay="300" class="flex flex-col gap-4">
             <img
               src="~assets/img/products/img17.webp"
               alt=""
@@ -101,7 +102,7 @@
               class="h-[180px]"
             />
           </div>
-          <div class="grid grid-cols-1 sm:grid-rows-2 gap-4">
+          <div data-aos="fade-left" data-aos-delay="300" class="grid grid-cols-1 sm:grid-rows-2 gap-4">
             <img
               src="~assets/img/products/img5.webp"
               alt=""
@@ -123,20 +124,20 @@
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-          <div class="flex flex-col gap-4">
+          <div data-aos="fade-right" class="flex flex-col gap-4">
             <img
               src="~assets/img/products/img12.webp"
               alt=""
               class="h-[500px]"
             />
           </div>
-          <div class="grid grid-cols-1 sm:grid-rows-2 gap-4">
+          <div data-aos="fade-left" class="grid grid-cols-1 sm:grid-rows-2 gap-4">
             <img
               src="~assets/img/products/img19.webp"
               alt=""
               class="max-h-[250px]"
             />
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div data-aos="fade-up" class="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <img
                 src="~assets/img/products/img14.webp"
                 alt=""
@@ -151,7 +152,6 @@
           </div>
         </div>
       </div>
-
       <div>
         <p class="text-center text-3xl font-bold mb-12">
           CÁC DÒNG THANG MÁY HƯNG PHÁT
@@ -402,16 +402,14 @@ export default {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .img-feature{
+}
   img {
     width: 100%;
-    height: 100%;
     object-fit: cover;
   }
-}
 @media (max-width: 768px) {
   .img-feature  {
     img{
-
       height: 300px !important;
       width: 100%;
     }

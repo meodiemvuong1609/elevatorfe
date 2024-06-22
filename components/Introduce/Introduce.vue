@@ -1,13 +1,13 @@
 <template>
   <div class="p-4 sm:px-[10%]">
-    <div class="flex items-center justify-center font-bold text-2xl max-sm:text-xl text-center">
+    <div data-aos="zoom-in" class="flex items-center justify-center font-bold text-2xl max-sm:text-xl text-center">
       CÔNG TY TNHH CÔNG NGHỆ THANG MÁY HƯNG PHÁT
     </div>
-    <div class="flex items-center justify-center p-4">
+    <div data-aos="zoom-in" class="flex items-center justify-center p-4">
       <div class="line"></div>
     </div>
     <div class="mx-auto grid grid-cols-2 gap-3 max-sm:grid-cols-1 sm:gap-6 max-sm:w-full">
-      <div class="">
+      <div data-aos="fade-right" data-aos-delay="500" class="">
         <div class="">
           <div class="flex py-3 font-bold text-xl items-center justify-start ">
             Giới thiệu về chúng tôi
@@ -21,7 +21,7 @@
         </div>
         <button class="w-full self-end py-2 px-4 mt-6 flex items-end justify-center bg-red-dark-2 text-white rounded-large font-bold rounded-lg" @click="$router.push('/introduce')">Đọc thêm</button>
       </div>
-      <div class="">
+      <div data-aos="fade-left" data-aos-delay="500" class="">
         <div class="flex items-center justify-between">
           <img src="~/assets/img/feature5.jpeg" class=" h-[320px] w-full rounded-lg border border-gray-light-1 max-sm:h-[250px]" alt="">
         </div>

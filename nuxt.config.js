@@ -66,6 +66,8 @@ export default {
   css: [
     "@/assets/css/main.css",
     // '@/assets/css/base.css',
+    'aos/dist/aos.css'
+
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -100,6 +102,7 @@ export default {
       src: "~/common/plugins/mixins",
       mode: "client",
     },
+    { src: '~/common/plugins/aos.js', mode: 'client' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

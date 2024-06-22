@@ -1,18 +1,18 @@
 <template>
   <div>
     <div class="grid gap-4">
-      <Banner />
-      <Introduce />
-      <Feature />
-      <div class="px-[10%] bg-gray-light-1 py-20 max-sm:p-4">
+      <Banner/>
+      <Introduce/>
+      <Feature/>
+      <div data-aos="zoom-in" data-aos-duration="5000"class="px-[10%] bg-gray-light-1 py-20 max-sm:p-4">
         <div class="flex flex-col gap-4">
-          <div class="flex items-center justify-center font-bold text-2xl max-sm:text-xl text-center">
+          <div data-aos="zoom-in" class="flex items-center justify-center font-bold text-2xl max-sm:text-xl text-center">
             GIÁ TRỊ CỐT LỖI CỦA CHÚNG TÔI
           </div>
-          <div class="flex items-center justify-center p-4">
+          <div data-aos="zoom-in" class="flex items-center justify-center p-4">
             <div class="line"></div>
           </div>
-          <div class="content grid grid-cols-3 mx-auto gap-4 mt-4 max-sm:grid-cols-1 max-sm:w-full">
+          <div data-aos="fade-up" data-aos-delay="500" class="content grid grid-cols-3 mx-auto gap-4 mt-4 max-sm:grid-cols-1 max-sm:w-full">
             <div class="bg-white p-6 border border-gray-light boxshadow flex flex-col justify-between items-center gap-4" >
               <p class=" text-xl font-bold text-center">Chất lượng vượt trội</p>
               <div class="text-center">
@@ -34,6 +34,7 @@
           </div>
         </div>
       </div>
+      <Products/>
       <ProjectCard />
     </div>
     
@@ -43,7 +44,10 @@
 <script>
 export default {
   name: 'IndexPage',
-  created() {
+  
+  mounted() {
+    // Khởi tạo lại AOS mỗi khi thành phần được mount
+    
   }
 }
 </script>
