@@ -4,7 +4,7 @@
       <Banner/>
       <Introduce/>
       <Feature/>
-      <div data-aos="zoom-in" data-aos-duration="5000"class="px-[10%] bg-gray-light-1 py-20 max-sm:p-4">
+      <div data-aos="zoom-in" data-aos-duration="5000" class="px-[10%] bg-gray-light-1 py-20 max-sm:p-4">
         <div class="flex flex-col gap-4">
           <div data-aos="zoom-in" class="flex items-center justify-center font-bold text-2xl max-sm:text-xl text-center">
             GIÁ TRỊ CỐT LỖI CỦA CHÚNG TÔI
@@ -37,17 +37,17 @@
       <Products/>
       <ProjectCard />
     </div>
-    
+
   </div>
 </template>
 
 <script>
 export default {
   name: 'IndexPage',
-  
+
   mounted() {
     // Khởi tạo lại AOS mỗi khi thành phần được mount
-    
+
   }
 }
 </script>

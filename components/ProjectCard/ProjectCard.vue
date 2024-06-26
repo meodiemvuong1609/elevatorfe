@@ -1,6 +1,6 @@
 <template>
-   <div class="p-[10%] max-sm:p-4">
-    <div>
+   <div class="p-[10%] py-[90px] max-sm:p-4">
+    <div class="">
       <div class="flex items-center justify-center font-bold text-2xl max-sm:text-xl text-center">
         MỘT SỐ DỰ ÁN ĐÃ VÀ ĐANG THỰC HIỆN
       </div>
@@ -10,7 +10,7 @@
       <div class="content grid grid-cols-3 mx-auto gap-4 mt-4 max-sm:grid-cols-1 max-sm:w-full">
         <div v-for="(item, index) in data" :key="index" class="bg-gray-light-1 border border-gray-light" >
           <Flickity
-            class="carousel" 
+            class="carousel"
             :options="{
               pageDots: false,
               prevNextButtons: true,
@@ -29,7 +29,7 @@
             <div class="flex items-center gap-2"><icons-speed/>{{ item.speed }}</div>
           </div>
         </div>
-      
+
       </div>
     </div>
   </div>
@@ -48,7 +48,7 @@ export default {
         weight: '400kg',
         speed: '0.3m/s',
       },
-       
+
         {
         name: 'Anh Quyền – Khu đô thị Vinhomes Thanh Hóa',
         imgs: [require('~/assets/img/project/p21.jpg'),require('~/assets/img/project/p22.jpg')],

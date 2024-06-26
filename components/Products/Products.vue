@@ -1,8 +1,11 @@
 <template>
   <div class="px-4 sm:px-[10%]">
-    <p class="text-center text-3xl font-bold mb-12">
+    <p class="text-center text-3xl max-sm:text-xl font-bold">
       CÁC DÒNG THANG MÁY HƯNG PHÁT
     </p>
+    <div class="flex items-center justify-center p-4 mb-2">
+        <div class="line"></div>
+      </div>
     <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
       <div
         v-for="(item, index) in productDatas"
@@ -53,26 +56,26 @@ export default {
           des: "Đây là loại thang được thiết kế và chế tạo như một cánh cửa thông thường, có tay nắm, ổ khóa,v.v… Cửa mở bản lề được làm bằng kính cường lực, kết hợp với khung thép hoặc inox. Thang được sử dụng rộng rãi và có kích thước siêu nhỏ",
           img: "https://thangmayklift.vn/upload/attachment/2535z3376839558331_2e7b313b33e7c4735afc0ca015516e33.jpg",
         },
-        {
-          title: "Thang máy bệnh viện",
-          des: "Thang máy bệnh viện là dòng thang chuyên dụng nhằm mục đích vận chuyển bệnh nhân, các thiết thiết bị y tế, băng ca, giường bệnh, hỗ trợ các y bác sĩ thăm khám và cấp cứu bệnh nhân.",
-          img: "https://vietchao.vn/wp-content/uploads/2024/05/14.jpg",
-        },
-        {
-          title: "Thang máy tải hàng",
-          des: "Thang máy nâng hàng (ký hiệu là chữ F : Freight) (thang máy tải hàng) là các loại thang máy chuyên dụng sử dụng để nâng hàng hóa. Trong một số tòa nhà văn phòng, tòa chung cư cao tầng. Thường thang máy tải hàng hóa sẽ được lắp đặt riêng, không sử dụng chung với thang máy vận chuyển người.",
-          img: "https://thangmayanhung.com/wp-content/uploads/2018/06/1.png",
-        },
-        {
-          title: "Thang máy xe hơi",
-          des: "Thang máy tải ô tô hay (hay thang máy chở xe hơi) là một dạng thang máy tải hàng đặc biệt. Được thiết kế đặc biệt chuyên chở ô tô, có thiết kế Kích thước và tải trọng phù hợp với nhóm xe 4 chỗ, 7 chỗ hoặc 16 chỗ thường được dùng cho các chung cư, khu để xe ô tô trong tòa nhà hoặc showroom.",
-          img: "https://thangmayhaiphat.com/wp-content/uploads/2023/08/thang-may-tai-o-to.jpg",
-        },
-        {
-          title: "Thang máy thực phẩm",
-          des: "Thang máy tải thực phẩm hay còn được coi là dạng thang máy tải hàng cỡ nhỏ dùng chuyên biệt cho vận chuyển thực phẩm tại các nhà hàng hay các trung tâm thương mại, bệnh viện. Nhờ có thang máy thực phẩm mà giảm bớt được phần nào sức người và cũng đảm bảo cho cho việc vận chuyển thực phẩm diễn ra thuận lợi hơn.",
-          img: "https://thangmayght.com/wp-content/uploads/2022/11/lap-dat-thang-tai-thuc-pham.jpg",
-        },
+        // {
+        //   title: "Thang máy bệnh viện",
+        //   des: "Thang máy bệnh viện là dòng thang chuyên dụng nhằm mục đích vận chuyển bệnh nhân, các thiết thiết bị y tế, băng ca, giường bệnh, hỗ trợ các y bác sĩ thăm khám và cấp cứu bệnh nhân.",
+        //   img: "https://vietchao.vn/wp-content/uploads/2024/05/14.jpg",
+        // },
+        // {
+        //   title: "Thang máy tải hàng",
+        //   des: "Thang máy nâng hàng (ký hiệu là chữ F : Freight) (thang máy tải hàng) là các loại thang máy chuyên dụng sử dụng để nâng hàng hóa. Trong một số tòa nhà văn phòng, tòa chung cư cao tầng. Thường thang máy tải hàng hóa sẽ được lắp đặt riêng, không sử dụng chung với thang máy vận chuyển người.",
+        //   img: "https://thangmayanhung.com/wp-content/uploads/2018/06/1.png",
+        // },
+        // {
+        //   title: "Thang máy xe hơi",
+        //   des: "Thang máy tải ô tô hay (hay thang máy chở xe hơi) là một dạng thang máy tải hàng đặc biệt. Được thiết kế đặc biệt chuyên chở ô tô, có thiết kế Kích thước và tải trọng phù hợp với nhóm xe 4 chỗ, 7 chỗ hoặc 16 chỗ thường được dùng cho các chung cư, khu để xe ô tô trong tòa nhà hoặc showroom.",
+        //   img: "https://thangmayhaiphat.com/wp-content/uploads/2023/08/thang-may-tai-o-to.jpg",
+        // },
+        // {
+        //   title: "Thang máy thực phẩm",
+        //   des: "Thang máy tải thực phẩm hay còn được coi là dạng thang máy tải hàng cỡ nhỏ dùng chuyên biệt cho vận chuyển thực phẩm tại các nhà hàng hay các trung tâm thương mại, bệnh viện. Nhờ có thang máy thực phẩm mà giảm bớt được phần nào sức người và cũng đảm bảo cho cho việc vận chuyển thực phẩm diễn ra thuận lợi hơn.",
+        //   img: "https://thangmayght.com/wp-content/uploads/2022/11/lap-dat-thang-tai-thuc-pham.jpg",
+        // },
       ],
     };
   },
