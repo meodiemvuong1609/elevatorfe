@@ -30,31 +30,31 @@
             <div class="pt-2">
               <Icons-Location />
             </div>
-            <div class="text-white "> Số 8, ngõ 9, đường Dương Quảng Hàm, P. Quan Hoa, Q. Cầu Giấy, TP. Hà Nội </div>
+            <div class="text-white "> Số 51, Lô F3, KĐT Đại Kim, phường Định Công, Hà Nội </div>
           </div>
           <div class="flex pt-2 gap-2 items-start">
             <div class="pt-2">
               <Icons-Location />
             </div>
-            <div class="text-white "> KCN Thiệu Hóa, Tiểu Khu 13, Thị trấn Thiệu Hóa, Huyện Thiệu Hóa, Tỉnh THanh Hóa </div>
+            <div class="text-white "> Lô LK23-09, KĐT Xuân Hưng, phường Đông Quang, tỉnh Thanh Hóa </div>
           </div>
           <div class="flex pt-2 gap-2 items-start">
             <div class="pt-2">
               <Icons-Location />
             </div>
-            <div class="text-white "> Số 100, đường Đội Cấn, Tổ 7, Khu 5, P. Giếng Đáy, TP. Hạ Long, Tỉnh Quảng Ninh </div>
+            <div class="text-white "> Số 100, đường Đội Cấn, Tổ 7, Khu 5, phường Việt Hưng, tỉnh Quảng Ninh </div>
           </div>
           <div class="flex pt-2 gap-2 items-start">
             <div class="pt-2">
               <Icons-Location />
             </div>
-            <div class="text-white "> 22 đường Phú Thứ, Phường Phú Sơn, Thành phố Thanh Hóa </div>
+            <div class="text-white "> Khu phố Trà Thượng, xã Thiệu Trung, tỉnh Thanh Hóa </div>
           </div>
           <div class="flex pt-2 gap-2 items-start">
             <div class="pt-2">
               <Icons-Location />
             </div>
-            <div class="text-white "> Số 497/73/14 Phan Văn Trí, Phường 5, Quận Gò Vấp, Thành phố Hồ Chí Minh </div>
+            <div class="text-white "> Số 497/73/14 Phan Văn Trị, Phường An Nhơn, Thành phố Hồ Chí Minh </div>
           </div>
         
         </div>

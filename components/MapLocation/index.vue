@@ -77,11 +77,11 @@ export default {
     this.map.addControl(geocoder);
 
     const locations = [
-      { name: "Địa chỉ 1", coordinates: [105.797144, 21.033671] }, // Số 8, ngõ 9, Dương Quảng Hàm, Quan Hoa, Cầu Giấy, Hà Nội
-      { name: "Địa chỉ 2", coordinates: [107.025327, 20.964033] }, // Số 100, Đ. Đội Cấn, Tổ 7, Khu 5, P.Giếng Đáy, TP.Hạ Long, T.Quảng Ninh
-      { name: "Địa chỉ 3", coordinates: [105.764289, 19.799502] }, // Số 22 đường Phú Thứ, Phường Phú Sơn, Thành phố Thanh Hóa
-      { name: "Địa chỉ 4", coordinates: [106.672826, 10.819282] }, // Số 497/73/14 Phan Văn Trí, Phường 5, Quận Gò Vấp, Thành phố Hồ Chí Minh
-      { name: "Địa chỉ 5", coordinates: [105.630921, 19.757815] }, // KCN Thiệu Hóa, Tiểu Khu 13, Thị trấn Thiệu Hóa, Huyện Thiệu Hóa, Tỉnh Thanh Hóa
+      { name: "Địa chỉ 1", coordinates: [105.83620683420604, 20.97794845575552] }, // Số 51, Lô F3, KĐT Đại Kim, phường Định Công, Hà Nội
+      { name: "Địa chỉ 2", coordinates: [105.76029884294039, 19.78499515060052] }, // Lô LK23-09, KĐT Xuân Hưng, phường Đông Quang, tỉnh Thanh Hóa
+      { name: "Địa chỉ 3", coordinates: [107.00770023366181, 20.979885498940007] }, // Số 22 đường Phú Thứ, Phường Phú Sơn, Thành phố Thanh Hóa
+      { name: "Địa chỉ 4", coordinates: [105.630921, 19.757815] }, // Khu phố Trà Thượng, xã Thiệu Trung, tỉnh Thanh Hóa
+      { name: "Địa chỉ 5", coordinates: [106.6915339355372, 10.824142897024513] }, // Số 497/73/14 Phan Văn Trị, Phường An Nhơn, Thành phố Hồ Chí Minh
     ];
 
     locations.forEach((location) => {
