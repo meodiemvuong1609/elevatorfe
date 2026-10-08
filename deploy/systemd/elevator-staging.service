@@ -1,0 +1,20 @@
+# /etc/systemd/system/elevator-staging.service
+# Instance Nuxt thứ hai cho subdomain staging, chạy song song với service
+# "elevator" của production. Sửa User và WorkingDirectory cho đúng server.
+[Unit]
+Description=Hung Phat Elevator - staging (staging.hungphatelevator.com)
+After=network.target
+
+[Service]
+Type=simple
+User=deploy
+WorkingDirectory=/var/www/elevator-staging
+# PORT, HOST, SITE_URL, ALLOW_INDEXING... đặt trong file .env của thư mục trên
+ExecStart=/usr/bin/env yarn start
+Environment=NODE_ENV=production
+Restart=always
+RestartSec=5
+MemoryMax=1G
+
+[Install]
+WantedBy=multi-user.target
