@@ -1,8 +1,8 @@
 <template>
-  <div class="grid justify-center">
+  <div class="grid">
     <div class="bg-banner">
       <div class="fill w-full h-full flex justify-center items-center">
-        <p class="font-bold text-3xl text-white">DỊCH VỤ CỦA CHÚNG TÔI</p>
+        <p class="font-bold text-2xl sm:text-3xl text-white text-center px-4">DỊCH VỤ CỦA CHÚNG TÔI</p>
       </div>
     </div>
     <!-- <p class="text-center font-bold text-3xl pt-5">DỊCH VỤ CỦA CHÚNG TÔI</p> -->

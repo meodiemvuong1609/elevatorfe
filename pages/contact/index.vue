@@ -2,7 +2,7 @@
   <div class="contact-container">
     <div class="bg-banner">
       <div class="fill w-full h-full flex justify-center items-center">
-        <p class="font-bold text-3xl text-white">LIÊN HỆ</p>
+        <p class="font-bold text-2xl sm:text-3xl text-white text-center px-4">LIÊN HỆ</p>
       </div>
     </div>
     <div class="flex flex-col p-4 sm:flex-row gap-5 mt-10 sm:px-[15%]">

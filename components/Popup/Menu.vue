@@ -15,7 +15,7 @@
     >
       <div class="" @click="handleRoute('/')">
         <div class="flex items-center">
-          <img src="~/assets/img/hungphat.png" class=" h-[150px] mt-4" alt="Logo Thang máy Hưng Phát">
+          <img src="~/assets/img/hungphat.png" class="h-[80px] w-auto my-4" alt="Logo Thang máy Hưng Phát">
         </div>
       </div>
       <div class="py-4 text-red border-b border-gray" :class="$route.path == '/' && 'font-bold'" @click="handleRoute('/')">

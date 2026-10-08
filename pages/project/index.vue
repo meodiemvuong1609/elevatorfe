@@ -2,7 +2,7 @@
   <div class="flex flex-col gap-0 max-sm:gap-4">
     <div class="bg-banner">
       <div class="fill w-full h-full flex justify-center items-center">
-        <p class="font-bold text-3xl text-white">DỰ ÁN</p>
+        <p class="font-bold text-2xl sm:text-3xl text-white text-center px-4">DỰ ÁN</p>
       </div>
     </div>
     <!-- <div>

@@ -24,3 +24,16 @@
 .fill {
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+/* Hiệu ứng AOS fade-left/right dịch phần tử ra ngoài màn hình trước khi
+   chạy, gây thanh cuộn ngang trên điện thoại. */
+html,
+body {
+  overflow-x: hidden;
+}
+@supports (overflow-x: clip) {
+  html,
+  body {
+    overflow-x: clip;
+  }
+}
