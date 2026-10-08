@@ -2,7 +2,7 @@
   <div class="contact-container">
     <div class="bg-banner">
       <div class="fill w-full h-full flex justify-center items-center">
-        <p class="font-bold text-3xl text-white">LIÊN HỆ</p>
+        <p class="font-bold text-2xl sm:text-3xl text-white text-center px-4">LIÊN HỆ</p>
       </div>
     </div>
     <div class="flex flex-col p-4 sm:flex-row gap-5 mt-10 sm:px-[15%]">
@@ -32,11 +32,11 @@
 
               <div class="flex gap-1 items-center phone text-blue">
                 <Icons-Phone /> :
-                <a :href="`tel:${item.phone}`">{{ item.phone }}</a>
+                <a :href="`tel:${hotline}`">{{ hotlineDisplay }}</a>
               </div>
               <div class="flex gap-1 items-center email text-blue">
                 <Icons-Email /> :
-                <a :href="`mailto:${item.email}`"> {{ item.email }}</a>
+                <a :href="`mailto:${email}`">{{ email }}</a>
               </div>
             </div>
           </div>
@@ -46,82 +46,36 @@
         <MapLocation :height="isMobile ? '40vh' : '80vh'" :isBorderRadius="true" />
       </div>
     </div>
-    <div class="section-connect w-full h-fit mt-8">
-      <div class="fill w-full flex justify-center pb-10">
-        <div class="content px-4 py-10 w-full sm:w-[450px]">
-          <p class="text-white text-3xl font-bold text-center my-5">TƯ VẤN VÀ BÁO GIÁ</p>
-          <div class="flex flex-col gap-3">
-            <v-input placeholder="Họ và tên"/>
-            <v-input placeholder="Email"/>
-            <v-input placeholder="Số điện thoại liên hệ"/>
-            <v-input type="textarea" :resize="false" :rows="5" placeholder="Chúng tôi có thể giúp gì cho bạn?"/>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ConsultForm wrapper-class="mt-8" />
     <div class="h-[40px]"></div>
   </div>
 </template>
 
 <script>
+import { EMAIL, HOTLINE, HOTLINE_DISPLAY, OFFICES } from "~/common/lib/company";
+
 export default {
+  name: "ContactPage",
   data() {
     return {
-      contactData: [
+      contactData: OFFICES,
+      hotline: HOTLINE,
+      hotlineDisplay: HOTLINE_DISPLAY,
+      email: EMAIL,
+    };
+  },
+  head() {
+    return {
+      title: "Liên hệ",
+      meta: [
         {
-          title: "Trụ sở chính",
-          address: "Số 8, ngõ 9, Dương Quảng Hàm, Quan Hoa, Cầu Giấy, Hà Nội",
-          phone: "090.1987.666",
-          email: "hungphatlift@elevator.vn",
-        },
-        {
-          title: "Văn phòng Quảng Ninh",
-          address:
-            "Số 100, Đ. Đội Cấn, Tổ 7, Khu 5, P.Giếng Đáy, TP.Hạ Long, T.Quảng Ninh",
-          phone: "090.1987.666",
-          email: "hungphatlift@elevator.vn",
-        },
-        {
-          title: "Văn phòng Thanh Hoá",
-          address: "Số 22 đường Phú Thứ, Phường Phú Sơn, Thành phố Thanh Hóa",
-          phone: "090.1987.666",
-          email: "hungphatlift@elevator.vn",
-        },
-        {
-          title: "Văn phòng Hồ Chí Minh",
-          address: "Số 497/73/14 Phan Văn Trí, Phường 5, Quận Gò Vấp, Thành phố Hồ Chí Minh",
-          phone: "090.1987.666",
-          email: "hungphatlift@elevator.vn",
-        },
-        {
-          title: "Nhà máy sản xuất",
-          address:
-            "KCN Thiệu Hóa, Tiểu Khu 13, Thị trấn Thiệu Hóa, Huyện Thiệu Hóa, Tỉnh THanh Hóa",
-          phone: "090.1987.666",
-          email: "hungphatlift@elevator.vn",
+          hid: "description",
+          name: "description",
+          content: "Liên hệ Thang máy Hưng Phát: hotline 090.1987.666, văn phòng tại Hà Nội, Thanh Hóa, Quảng Ninh và TP. Hồ Chí Minh.",
         },
       ],
     };
   },
-  mounted() {
-  }
 };
 </script>
 
-<style>
-.bg-banner {
-  height: 200px;
-  background-image: url("~/assets/img/banner-intro.jpeg");
-  background-size: cover;
-  background-position: bottom;
-}
-.section-connect {
-  background-image: url(https://thangmayght.com/wp-content/uploads/2022/11/thang-may-van-phong-9.png);
-  background-position: 50% 50%;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-}
-.fill{
-  background-color: rgba(0, 0, 0, 0.5);
-}
-</style>

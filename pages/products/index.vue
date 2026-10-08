@@ -2,7 +2,7 @@
   <div class="product-container flex flex-col gap-4">
     <div data-aos="zoom-in" data-aos-delay="100" class="w-full sm:h-[400px]">
       <img
-        src="~assets/img/banner2.png"
+        src="~assets/img/banner2.jpg"
         alt=""
         class="w-full h-full object-cover"
       />
@@ -20,7 +20,14 @@
       </div>
       <div class="infor">
         <p class="text-center text-3xl font-bold mb-12">KÍCH THƯỚC THANG MÁY</p>
-        <img src="~assets/img/products/information1.png" alt="" />
+        <div class="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
+          <img
+            src="~assets/img/products/information1.png"
+            alt="Bảng kích thước thang máy tải khách"
+            class="min-w-[700px] sm:min-w-0 w-full"
+          />
+        </div>
+        <p class="sm:hidden text-sm text-gray-1 text-center mt-2">← Vuốt ngang để xem đầy đủ bảng →</p>
       </div>
       <div class="safe-feature">
         <p class="text-center text-3xl font-bold mb-12">
@@ -175,32 +182,19 @@
       </div>
     </div>
     <ProjectCard />
-    <div class="section-connect w-full h-fit mt-8">
-      <div class="fill w-full flex justify-center pb-10">
-        <div class="content px-4 py-10 w-full sm:w-[450px]">
-          <p class="text-white text-3xl font-bold text-center my-5">
-            TƯ VẤN VÀ BÁO GIÁ
-          </p>
-          <div class="flex flex-col gap-3">
-            <v-input placeholder="Họ và tên" />
-            <v-input placeholder="Email" />
-            <v-input placeholder="Số điện thoại liên hệ" />
-            <v-input
-              type="textarea"
-              :resize="false"
-              :rows="5"
-              placeholder="Chúng tôi có thể giúp gì cho bạn?"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
+    <ConsultForm />
     <div class="h-[40px]"></div>
   </div>
 </template>
 
 <script>
 export default {
+  head() {
+    return {
+      title: "Sản phẩm",
+      meta: [{ hid: "description", name: "description", content: "Các dòng thang máy Hưng Phát: thang tải khách, thang quan sát, home lift, thang cửa bản lề, thang tải hàng, thang bệnh viện. Kích thước và tính năng an toàn tiêu chuẩn." }],
+    };
+  },
   data() {
     return {
       productDatas: [
@@ -212,7 +206,7 @@ export default {
         {
           title: "Thang máy quan sát",
           des: "Thang máy quan sát là thang máy được thiết kế bởi 4 mặt kính bao xung quanh mang đến một vẻ đẹp của sự hiện đại, sang trọng nhưng vẫn giúp con người gần gũi với thiên nhiên hơn bao giờ hết",
-          img: "https://thangmayhaiphat.com/wp-content/uploads/2023/07/Thang-may-quan-sat-Mitsubishi-6.jpg",
+          img: require("~/assets/img/products/img17.webp"),
         },
         {
           title: "Thang máy Home lift",
@@ -237,7 +231,7 @@ export default {
         {
           title: "Thang máy xe hơi",
           des: "Thang máy tải ô tô hay (hay thang máy chở xe hơi) là một dạng thang máy tải hàng đặc biệt. Được thiết kế đặc biệt chuyên chở ô tô, có thiết kế Kích thước và tải trọng phù hợp với nhóm xe 4 chỗ, 7 chỗ hoặc 16 chỗ thường được dùng cho các chung cư, khu để xe ô tô trong tòa nhà hoặc showroom.",
-          img: "https://thangmayhaiphat.com/wp-content/uploads/2023/08/thang-may-tai-o-to.jpg",
+          img: require("~/assets/img/products/img13.jpg"),
         },
         {
           title: "Thang máy thực phẩm",
@@ -386,21 +380,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.bg-banner {
-  height: 200px;
-  background-image: url("~/assets/img/banner-intro.jpeg");
-  background-size: cover;
-  background-position: bottom;
-}
-.section-connect {
-  background-image: url(https://thangmayght.com/wp-content/uploads/2022/11/thang-may-van-phong-9.png);
-  background-position: 50% 50%;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-}
-.fill {
-  background-color: rgba(0, 0, 0, 0.5);
-}
 .img-feature{
 }
   img {

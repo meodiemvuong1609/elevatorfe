@@ -8,13 +8,12 @@
         prevNextButtons: true,
         autoPlay: 5000,
       }"
-      ref="flickity"
     >
       <div class="carousel-cell">
-        <img src="~/assets/img/banner-lg.png" alt="" />
+        <img src="~/assets/img/banner-lg.jpg" alt="Thang máy Hưng Phát" />
       </div>
       <div class="carousel-cell">
-        <img src="~assets/img/banner2.png" alt="" />
+        <img src="~assets/img/banner2.jpg" alt="Thang máy gia đình Hưng Phát" />
       </div>
     </Flickity>
     <Flickity
@@ -25,13 +24,12 @@
         prevNextButtons: true,
         autoPlay: 5000,
       }"
-      ref="flickity"
     >
       <div class="carousel-cell">
-        <img src="~/assets/img/banner-sm.png" alt="" />
+        <img src="~/assets/img/banner-sm.jpg" alt="Thang máy Hưng Phát" />
       </div>
       <div class="carousel-cell">
-        <img src="~assets/img/products/img3.webp" alt="" />
+        <img src="~assets/img/products/img3.webp" alt="Thang máy gia đình" />
       </div>
     </Flickity>
   </div>
@@ -40,23 +38,6 @@
 <script>
 export default {
   name: "Banner",
-  data() {
-    return {
-      flickityOptions: {
-        wrapAround: true,
-        pageDots: false,
-        prevNextButtons: false,
-      },
-    };
-  },
-  methods: {
-    showPrevNextButtons(show) {
-      this.flickityOptions.prevNextButtons = show;
-      if (this.$refs.flickity) {
-        this.$refs.flickity.$flickity.options.prevNextButtons = show;
-      }
-    },
-  },
 };
 </script>
 

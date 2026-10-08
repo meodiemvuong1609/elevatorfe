@@ -12,7 +12,7 @@
         :key="index"
         class="flex flex-col boxshadow relative h-full pb-[62px] rounded-lg"
       >
-        <img :src="item.img" alt="" class="h-[280px] rounded-t-lg" />
+        <img :src="item.img" :alt="item.title" loading="lazy" class="h-[280px] rounded-t-lg" />
         <div class="p-4">
           <p class="text-xl font-bold">{{ item.title }}</p>
           <p class="text-sm">{{ truncateText(item.des) }}</p>
@@ -44,7 +44,7 @@ export default {
         {
           title: "Thang máy quan sát",
           des: "Thang máy quan sát là thang máy được thiết kế bởi 4 mặt kính bao xung quanh mang đến một vẻ đẹp của sự hiện đại, sang trọng nhưng vẫn giúp con người gần gũi với thiên nhiên hơn bao giờ hết",
-          img: "https://thangmayhaiphat.com/wp-content/uploads/2023/07/Thang-may-quan-sat-Mitsubishi-6.jpg",
+          img: require("~/assets/img/products/img17.webp"),
         },
         {
           title: "Thang máy Home lift",
@@ -69,7 +69,7 @@ export default {
         // {
         //   title: "Thang máy xe hơi",
         //   des: "Thang máy tải ô tô hay (hay thang máy chở xe hơi) là một dạng thang máy tải hàng đặc biệt. Được thiết kế đặc biệt chuyên chở ô tô, có thiết kế Kích thước và tải trọng phù hợp với nhóm xe 4 chỗ, 7 chỗ hoặc 16 chỗ thường được dùng cho các chung cư, khu để xe ô tô trong tòa nhà hoặc showroom.",
-        //   img: "https://thangmayhaiphat.com/wp-content/uploads/2023/08/thang-may-tai-o-to.jpg",
+        //   img: require("~/assets/img/products/img13.jpg"),
         // },
         // {
         //   title: "Thang máy thực phẩm",
@@ -81,7 +81,7 @@ export default {
   },
   methods: {
     truncateText(text) {
-      if (text.length > 100) {
+      if (text.length > 150) {
         return text.substring(0, 150) + "...";
       }
       return text;
@@ -90,10 +90,3 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.line {
-  background: #004c84;
-  width: 100px;
-  height: 2px;
-}
-</style>

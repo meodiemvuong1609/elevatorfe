@@ -3,7 +3,7 @@
     <div class="grid gap-4">
       <div class="bg-banner">
         <div class="fill w-full h-full flex justify-center items-center">
-          <p class="font-bold text-3xl text-white">VỀ CHÚNG TÔI</p>
+          <p class="font-bold text-2xl sm:text-3xl text-white text-center px-4">VỀ CHÚNG TÔI</p>
         </div>
       </div>
       <div class="p-6 max-sm:p-4">
@@ -62,7 +62,7 @@
           <div class="content grid grid-cols-2 w-3/4 mx-auto gap-4 mt-4 max-sm:grid-cols-1 max-sm:w-full">
             <div class="bg-white pb-6 border border-gray-light" >
               <div class="h-[300px]">
-                <img src="https://media.licdn.com/dms/image/C5612AQHPvFYw27kzqg/article-cover_image-shrink_720_1280/0/1520174890596?e=2147483647&v=beta&t=809CD_Flshw-FoEPLfkvVl_xD0Rvxd1-RtrIIZXEn4k" class="w-full h-full object-cover" alt="">
+                <img src="~/assets/img/feature3.jpeg" class="w-full h-full object-cover" alt="Tầm nhìn Thang máy Hưng Phát">
               </div>
               <p class=" text-xl font-bold text-center py-4">Tầm nhìn</p>
               <div class="text-center">
@@ -90,6 +90,12 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: "Giới thiệu",
+      meta: [{ hid: "description", name: "description", content: "Hơn 10 năm trong lĩnh vực thang máy gia đình: Hưng Phát tư vấn, cung cấp, lắp đặt và bảo trì thang máy cho biệt thự, nhà phố, văn phòng, chung cư." }],
+    };
+  },
   name: 'Introduce',
 
 }
@@ -108,10 +114,5 @@ export default {
   }
 }
 
-.line {
-  background: #004c84;
-  width: 100px;
-  height: 2px;
-}
 
 </style>

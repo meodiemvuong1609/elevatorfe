@@ -1,8 +1,8 @@
 <template>
-  <div class="grid justify-center">
+  <div class="grid">
     <div class="bg-banner">
       <div class="fill w-full h-full flex justify-center items-center">
-        <p class="font-bold text-3xl text-white">DỊCH VỤ CỦA CHÚNG TÔI</p>
+        <p class="font-bold text-2xl sm:text-3xl text-white text-center px-4">DỊCH VỤ CỦA CHÚNG TÔI</p>
       </div>
     </div>
     <!-- <p class="text-center font-bold text-3xl pt-5">DỊCH VỤ CỦA CHÚNG TÔI</p> -->
@@ -114,6 +114,12 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: "Dịch vụ",
+      meta: [{ hid: "description", name: "description", content: "Dịch vụ lắp đặt, bảo trì thang máy 24/7, tư vấn miễn phí, thiết kế bản vẽ và báo giá chi tiết từ Thang máy Hưng Phát." }],
+    };
+  },
   name: "IndexPage",
   created() {},
   methods: {
@@ -121,10 +127,3 @@ export default {
 };
 </script>
 
-<style scoped>
-.line {
-  background: #004c84;
-  width: 100px;
-  height: 2px;
-}
-</style>

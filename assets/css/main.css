@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Class dùng chung giữa nhiều trang. Trước đây được khai báo rải rác trong
+   style của từng trang nên khi vào thẳng một trang khác sẽ bị thiếu style. */
+.line {
+  background: #004c84;
+  width: 100px;
+  height: 2px;
+}
+
+.boxshadow {
+  box-shadow: 0 1px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.bg-banner {
+  height: 200px;
+  background-image: url("~/assets/img/banner-intro.jpeg");
+  background-size: cover;
+  background-position: bottom;
+}
+
+.fill {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Hiệu ứng AOS fade-left/right dịch phần tử ra ngoài màn hình trước khi
+   chạy, gây thanh cuộn ngang trên điện thoại. */
+html,
+body {
+  overflow-x: hidden;
+}
+@supports (overflow-x: clip) {
+  html,
+  body {
+    overflow-x: clip;
+  }
+}

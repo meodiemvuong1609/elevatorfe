@@ -41,10 +41,3 @@ export default {
 }
 </script>
 
-<style scoped>
-.line {
-  background: #004c84;
-  width: 100px;
-  height: 2px;
-}
-</style>

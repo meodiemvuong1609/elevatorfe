@@ -12,51 +12,33 @@
             <div class="text-white text-xl pt-6">THÔNG TIN LIÊN HỆ</div>
             <div class="flex pt-4 gap-2 items-center">
               <Icons-Phone />
-              <div class="text-white "> 090.1987.666 </div>
+              <a :href="`tel:${hotline}`" class="text-white">{{ hotlineDisplay }}</a>
             </div>
             <div class="flex pt-2 gap-2 items-center">
               <Icons-Email />
-              <div class="text-white "> hungphatlift@elevator.vn </div>
+              <a :href="`mailto:${email}`" class="text-white">{{ email }}</a>
             </div>
             <div class="flex pt-2 gap-2 items-center">
               <Icons-Facebook />
-              <div class="text-white"> facebook.com/hungphatelevator </div>
+              <a :href="facebookUrl" target="_blank" rel="noopener" class="text-white">
+                facebook.com/hungphatelevator
+              </a>
             </div>
           </div>
         </div>
         <div class="">
           <div class="text-white text-xl">ĐỊA CHỈ CÔNG TY</div>
-          <div class="flex pt-4 gap-2 items-start">
+          <div
+            v-for="(office, index) in offices"
+            :key="index"
+            class="flex gap-2 items-start"
+            :class="index === 0 ? 'pt-4' : 'pt-2'"
+          >
             <div class="pt-2">
               <Icons-Location />
             </div>
-            <div class="text-white "> Số 51, Lô F3, KĐT Đại Kim, phường Định Công, Hà Nội </div>
+            <div class="text-white">{{ office.address }}</div>
           </div>
-          <div class="flex pt-2 gap-2 items-start">
-            <div class="pt-2">
-              <Icons-Location />
-            </div>
-            <div class="text-white "> Lô LK23-09, KĐT Xuân Hưng, phường Đông Quang, tỉnh Thanh Hóa </div>
-          </div>
-          <div class="flex pt-2 gap-2 items-start">
-            <div class="pt-2">
-              <Icons-Location />
-            </div>
-            <div class="text-white "> Số 100, đường Đội Cấn, Tổ 7, Khu 5, phường Việt Hưng, tỉnh Quảng Ninh </div>
-          </div>
-          <div class="flex pt-2 gap-2 items-start">
-            <div class="pt-2">
-              <Icons-Location />
-            </div>
-            <div class="text-white "> Khu phố Trà Thượng, xã Thiệu Trung, tỉnh Thanh Hóa </div>
-          </div>
-          <div class="flex pt-2 gap-2 items-start">
-            <div class="pt-2">
-              <Icons-Location />
-            </div>
-            <div class="text-white "> Số 497/73/14 Phan Văn Trị, Phường An Nhơn, Thành phố Hồ Chí Minh </div>
-          </div>
-        
         </div>
         <div class="">
           <div class="text-white text-xl">KẾT NỐI VỚI HƯNG PHÁT</div>
@@ -67,21 +49,26 @@
       </div>
     </div>
     <div class="copyright flex items-center justify-center text-white p-2 gap-1">
-      Copyright 2024 © <p><strong> Hưng Phát</strong></p>
+      Copyright {{ year }} © <p><strong> Hưng Phát</strong></p>
     </div>
   </div>
 </template>
 
 <script>
+import { EMAIL, FACEBOOK_URL, HOTLINE, HOTLINE_DISPLAY, OFFICES } from '~/common/lib/company'
+
 export default {
   name: 'Footer',
   data() {
     return {
-      
+      offices: OFFICES,
+      hotline: HOTLINE,
+      hotlineDisplay: HOTLINE_DISPLAY,
+      email: EMAIL,
+      facebookUrl: FACEBOOK_URL,
+      year: new Date().getFullYear(),
     }
   },
-
-
 }
 </script>
 

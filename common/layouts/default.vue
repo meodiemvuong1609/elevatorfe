@@ -1,8 +1,12 @@
 <template>
   <div class="layout-container pt-[80px]">
-      <Header />
+    <Header />
     <nuxt-child />
-    <div class="fixed bottom-8 right-4 mx-4 cursor-pointer" @click="makeCall">
+    <a
+      :href="`tel:${hotline}`"
+      class="fixed bottom-8 right-4 mx-4 cursor-pointer"
+      aria-label="Gọi hotline"
+    >
       <div class="relative">
         <div class="hotline-phone-ring-img-circle-fill bg-red-light-1 rounded-full absolute bottom-0 right-0"></div>
         <div
@@ -11,7 +15,7 @@
           <icons-phone color="white" />
         </div>
       </div>
-    </div>
+    </a>
     <div class="zalo-widget-container">
       <div
         class="zalo-chat-widget"
@@ -21,7 +25,6 @@
         data-width="300"
         data-height="400"
       ></div>
-      <script src="https://sp.zalo.me/plugins/sdk.js"></script>
     </div>
     <div>
       <Footer />
@@ -32,11 +35,11 @@
 export default {
   name: "DefaultLayout",
 
-  methods: {
-    makeCall() {
-      window.location.href = 'tel:0901987666';
-    }
-  }
+  data() {
+    return {
+      hotline: "0901987666",
+    };
+  },
 };
 </script>
 
