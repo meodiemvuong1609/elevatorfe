@@ -12,7 +12,7 @@
         :key="index"
         class="flex flex-col boxshadow relative h-full pb-[62px] rounded-lg"
       >
-        <img :src="item.img" alt="" class="h-[280px] rounded-t-lg" />
+        <img :src="item.img" :alt="item.title" loading="lazy" class="h-[280px] rounded-t-lg" />
         <div class="p-4">
           <p class="text-xl font-bold">{{ item.title }}</p>
           <p class="text-sm">{{ truncateText(item.des) }}</p>
@@ -81,7 +81,7 @@ export default {
   },
   methods: {
     truncateText(text) {
-      if (text.length > 100) {
+      if (text.length > 150) {
         return text.substring(0, 150) + "...";
       }
       return text;
@@ -90,10 +90,3 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.line {
-  background: #004c84;
-  width: 100px;
-  height: 2px;
-}
-</style>

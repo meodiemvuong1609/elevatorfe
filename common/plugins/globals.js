@@ -1,17 +1,4 @@
 import Vue from 'vue'
-import VueInteractJs from 'vue-interactjs'
-import vSelect from 'vue-select'
-
-const useLibraries = [VueInteractJs]
-const globalComponents = { vSelect }
-
-useLibraries.forEach((component) => {
-  Vue.use(component)
-})
-
-Object.entries(globalComponents).forEach(([name, component]) => {
-  Vue.component(name, component)
-})
 
 Vue.directive('click-outside', {
   bind: function (el, binding, vnode) {

@@ -90,6 +90,12 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: "Giới thiệu",
+      meta: [{ hid: "description", name: "description", content: "Hơn 10 năm trong lĩnh vực thang máy gia đình: Hưng Phát tư vấn, cung cấp, lắp đặt và bảo trì thang máy cho biệt thự, nhà phố, văn phòng, chung cư." }],
+    };
+  },
   name: 'Introduce',
 
 }
@@ -108,10 +114,5 @@ export default {
   }
 }
 
-.line {
-  background: #004c84;
-  width: 100px;
-  height: 2px;
-}
 
 </style>

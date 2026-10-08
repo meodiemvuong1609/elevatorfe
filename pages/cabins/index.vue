@@ -1,7 +1,7 @@
 <template>
   <div class="product-container flex flex-col gap-4">
     <div class="w-full h-[400px]">
-      <img src="~assets/img/banner2.png" alt="" class="w-full h-full object-cover"/>
+      <img src="~assets/img/banner2.jpg" alt="" class="w-full h-full object-cover"/>
     </div>
     <div class="flex flex-col p-4 gap-5 mt-5 sm:px-[15%]">
       <p class="text-center text-xl font-bold">CABIN</p>
@@ -42,25 +42,19 @@
         </div>
       </div>
     </div>
-    <div class="section-connect w-full h-fit mt-8">
-      <div class="fill w-full flex justify-center pb-10">
-        <div class="content px-4 py-10 w-full sm:w-[450px]">
-          <p class="text-white text-3xl font-bold text-center my-5">TƯ VẤN VÀ BÁO GIÁ</p>
-          <div class="flex flex-col gap-3">
-            <v-input placeholder="Họ và tên"/>
-            <v-input placeholder="Email"/>
-            <v-input placeholder="Số điện thoại liên hệ"/>
-            <v-input type="textarea" :resize="false" :rows="5" placeholder="Chúng tôi có thể giúp gì cho bạn?"/>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ConsultForm wrapper-class="mt-8" />
     <div class="h-[40px]"></div>
   </div>
 </template>
 
 <script>
 export default {
+  head() {
+    return {
+      title: "Cabin thang máy",
+      meta: [{ hid: "description", name: "description", content: "Mẫu cabin thang máy tiêu chuẩn và tùy chọn của Hưng Phát: vách inox, cửa, trần đèn LED, sàn đá, tay vịn, bảng điều khiển." }],
+    };
+  },
   data() {
     return {
       cabinDatas: [
@@ -290,20 +284,3 @@ export default {
 };
 </script>
 
-<style>
-.bg-banner {
-  height: 200px;
-  background-image: url("~/assets/img/banner-intro.jpeg");
-  background-size: cover;
-  background-position: bottom;
-}
-.section-connect {
-  background-image: url(https://thangmayght.com/wp-content/uploads/2022/11/thang-may-van-phong-9.png);
-  background-position: 50% 50%;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-}
-.fill{
-  background-color: rgba(0, 0, 0, 0.5);
-}
-</style>

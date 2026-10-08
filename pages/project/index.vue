@@ -31,37 +31,28 @@
         ref="flickity"
       >
         <div class="carousel-cell">
-          <img src="~/assets/img/banner-sm.png" alt="">
+          <img src="~/assets/img/banner-sm.jpg" alt="">
         </div>
 
       </Flickity>
     </div> -->
     <ProjectCard />
     <Products/>
-    <div class="section-connect w-full h-fit mt-20 max-sm:mt-5">
-      <div class="fill w-full flex justify-center pb-10">
-        <div class="content px-4 py-10 w-full sm:w-[450px]">
-          <p class="text-white text-3xl font-bold text-center my-5">TƯ VẤN VÀ BÁO GIÁ</p>
-          <div class="flex flex-col gap-3">
-            <v-input placeholder="Họ và tên"/>
-            <v-input placeholder="Email"/>
-            <v-input placeholder="Số điện thoại liên hệ"/>
-            <v-input type="textarea" :resize="false" :rows="5" placeholder="Chúng tôi có thể giúp gì cho bạn?"/>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ConsultForm wrapper-class="mt-20 max-sm:mt-5" />
     <div class="h-[40px]"></div>
   </div>
 </template>
 
 <script>
 export default {
+  head() {
+    return {
+      title: "Dự án",
+      meta: [{ hid: "description", name: "description", content: "Một số dự án thang máy gia đình Hưng Phát đã và đang thực hiện tại Hà Nội, Thanh Hóa và các tỉnh thành." }],
+    };
+  },
   name: 'Project',
 
 }
 </script>
 
-<style>
-
-</style>

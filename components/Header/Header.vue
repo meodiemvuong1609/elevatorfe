@@ -4,9 +4,9 @@
       class="flex items-center mx-auto w-5/6 justify-between sm:gap-4 max-sm:w-full"
     >
       <div class="flex items-center justify-center">
-        <div class="flex items-center sm:ml-4" @click="$router.push('/')">
-          <img src="~/assets/img/hungphat.png" class="!h-[150px] mt-4" alt="" />
-        </div>
+        <nuxt-link to="/" class="flex items-center sm:ml-4" aria-label="Trang chủ Thang máy Hưng Phát">
+          <img src="~/assets/img/hungphat.png" class="!h-[150px] mt-4" alt="Logo Thang máy Hưng Phát" />
+        </nuxt-link>
         <div class=" flex-row sm:ml-2">
           <div
             class="bo font-bold text-2xl max-sm:text-base text-header text-nowrap"
@@ -16,7 +16,7 @@
           <div class="text-header font-normal text-lg max-sm:text-sm">HUNG PHAT ELEVATOR</div>
         </div>
       </div>
-      <div class="flex items-center gap-5 max-sm:hidden text-gray-dark">
+      <div class="flex items-center gap-5 max-sm:hidden text-gray-dark whitespace-nowrap">
         <nuxt-link to="/" exact-active-class="exact-active"> Trang chủ </nuxt-link>
         <nuxt-link to="/introduce" exact-active-class="exact-active"> Giới thiệu </nuxt-link>
         <nuxt-link to="/products" exact-active-class="exact-active"> Sản phẩm </nuxt-link>

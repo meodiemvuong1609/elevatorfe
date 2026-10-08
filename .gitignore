@@ -88,3 +88,8 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# Thư mục build tạm của scripts/deploy.sh
+.nuxt-next
+.nuxt-prev
+.nuxt-failed

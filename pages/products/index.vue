@@ -2,7 +2,7 @@
   <div class="product-container flex flex-col gap-4">
     <div data-aos="zoom-in" data-aos-delay="100" class="w-full sm:h-[400px]">
       <img
-        src="~assets/img/banner2.png"
+        src="~assets/img/banner2.jpg"
         alt=""
         class="w-full h-full object-cover"
       />
@@ -175,32 +175,19 @@
       </div>
     </div>
     <ProjectCard />
-    <div class="section-connect w-full h-fit mt-8">
-      <div class="fill w-full flex justify-center pb-10">
-        <div class="content px-4 py-10 w-full sm:w-[450px]">
-          <p class="text-white text-3xl font-bold text-center my-5">
-            TƯ VẤN VÀ BÁO GIÁ
-          </p>
-          <div class="flex flex-col gap-3">
-            <v-input placeholder="Họ và tên" />
-            <v-input placeholder="Email" />
-            <v-input placeholder="Số điện thoại liên hệ" />
-            <v-input
-              type="textarea"
-              :resize="false"
-              :rows="5"
-              placeholder="Chúng tôi có thể giúp gì cho bạn?"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
+    <ConsultForm />
     <div class="h-[40px]"></div>
   </div>
 </template>
 
 <script>
 export default {
+  head() {
+    return {
+      title: "Sản phẩm",
+      meta: [{ hid: "description", name: "description", content: "Các dòng thang máy Hưng Phát: thang tải khách, thang quan sát, home lift, thang cửa bản lề, thang tải hàng, thang bệnh viện. Kích thước và tính năng an toàn tiêu chuẩn." }],
+    };
+  },
   data() {
     return {
       productDatas: [
@@ -386,21 +373,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.bg-banner {
-  height: 200px;
-  background-image: url("~/assets/img/banner-intro.jpeg");
-  background-size: cover;
-  background-position: bottom;
-}
-.section-connect {
-  background-image: url(https://thangmayght.com/wp-content/uploads/2022/11/thang-may-van-phong-9.png);
-  background-position: 50% 50%;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-}
-.fill {
-  background-color: rgba(0, 0, 0, 0.5);
-}
 .img-feature{
 }
   img {

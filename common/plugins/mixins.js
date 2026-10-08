@@ -1,13 +1,24 @@
 import Vue from 'vue';
 const TABLET_SCREEN = 648
 
+// Một state dùng chung + một listener resize, thay vì mỗi component tự lưu
+// window.innerWidth (không bao giờ cập nhật và không chạy được khi SSR).
+const viewport = Vue.observable({
+  width: typeof window !== 'undefined' ? window.innerWidth : 1280,
+})
+if (typeof window !== 'undefined') {
+  window.addEventListener('resize', () => {
+    viewport.width = window.innerWidth
+  }, { passive: true })
+}
+
 Vue.mixin({
-  data: () => ({
-    windowWidth: window.innerWidth,
-  }),
   computed: {
+    windowWidth() {
+      return viewport.width
+    },
     isMobile() {
-      return this.windowWidth < TABLET_SCREEN
+      return viewport.width < TABLET_SCREEN
     },
   },
   methods: {

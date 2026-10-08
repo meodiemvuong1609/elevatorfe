@@ -114,6 +114,12 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: "Dịch vụ",
+      meta: [{ hid: "description", name: "description", content: "Dịch vụ lắp đặt, bảo trì thang máy 24/7, tư vấn miễn phí, thiết kế bản vẽ và báo giá chi tiết từ Thang máy Hưng Phát." }],
+    };
+  },
   name: "IndexPage",
   created() {},
   methods: {
@@ -121,10 +127,3 @@ export default {
 };
 </script>
 
-<style scoped>
-.line {
-  background: #004c84;
-  width: 100px;
-  height: 2px;
-}
-</style>
