@@ -36,6 +36,10 @@ Dự án **không có test và không có linter**. `yarn build` thành công l�
 - Các lớp dùng chung của giao diện mới (`hp-container`, `hp-section`, `hp-eyebrow`, `hp-h2`, `hp-btn-primary`, `hp-btn-outline`, `hp-link-arrow`, `hp-zoom`) định nghĩa trong `@layer components` của [assets/css/main.css](assets/css/main.css). Lưu ý: không đặt `m-0` cạnh `hp-container` vì sẽ đè `mx-auto`.
 - `common/lang/` và `store/` hiện không được dùng.
 
+## Hồ sơ PDF
+
+`bash scripts/ho-so/build.sh [file.pdf]` xuất hồ sơ giới thiệu công ty (A4, khoảng 13 trang) từ chính dữ liệu trong `common/lib/`, mặc định ra `~/Desktop/Ho-so-Thang-may-Hung-Phat.pdf`. Cần Node 20, Python 3 + Pillow và Google Chrome. Nội dung không lấy từ `common/lib/` (giới thiệu, dịch vụ, quy trình) đang viết trong `scripts/ho-so/gen.js` — sửa trang web thì sửa cả ở đó.
+
 ## Deploy
 
 - CI ([.github/workflows/deploy.yml](.github/workflows/deploy.yml)): mọi PR/push vào `master`/`staging` đều build thử; push `master` → production, push `staging` → https://staging.hungphatelevator.com. Chỉ deploy khi build trên GitHub thành công.
