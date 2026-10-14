@@ -4,7 +4,7 @@
     <nuxt-child />
     <a
       :href="`tel:${hotline}`"
-      class="fixed bottom-8 right-4 mx-4 cursor-pointer"
+      class="fixed bottom-[112px] right-4 mx-4 cursor-pointer z-[9001]"
       aria-label="Gọi hotline"
     >
       <div class="relative">
