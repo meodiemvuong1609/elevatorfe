@@ -22,7 +22,7 @@ export const OFFICES = [
   },
   {
     id: 'thanh-hoa',
-    title: 'Văn phòng Thanh Hóa',
+    title: 'Văn phòng & showroom Thanh Hóa',
     address: 'Lô LK23-09, KĐT Xuân Hưng, phường Đông Quang, tỉnh Thanh Hóa',
     coordinates: [105.76029884294039, 19.78499515060052],
   },
