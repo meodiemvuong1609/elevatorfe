@@ -124,6 +124,7 @@ Settings → Secrets and variables → Actions:
 | Secret (đã có) | `SERVER_HOST`, `SERVER_USER`, `SSH_PASSWORD`, `SERVER_PATH` | giữ nguyên |
 | Secret (mới) | `STAGING_PATH` | `/var/www/elevator-staging` |
 | Secret (khuyến nghị) | `SSH_PRIVATE_KEY` | private key SSH, sau đó có thể xoá `SSH_PASSWORD` |
+| Variable (đã có) | `SSH_PORT` | `24700` — cổng SSH của server (không phải 22) |
 | Variable (tùy chọn) | `PROD_PORT` | port production nếu khác 3000 |
 | Variable (tùy chọn) | `STAGING_PORT` | port staging nếu khác 3001 |
 
