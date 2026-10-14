@@ -45,6 +45,15 @@ export default {
   data() {
     return { hotline: HOTLINE, hotlineDisplay: HOTLINE_DISPLAY }
   },
+  watch: {
+    // Ẩn thanh hành động / bong bóng Zalo khi menu đang mở
+    isShow(value) {
+      if (process.client) document.body.classList.toggle('hp-overlay-open', value)
+    },
+  },
+  beforeDestroy() {
+    if (process.client) document.body.classList.remove('hp-overlay-open')
+  },
   methods: {
     close() {
       this.$emit('close')

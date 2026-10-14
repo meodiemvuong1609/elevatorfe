@@ -67,6 +67,7 @@ export default {
       this.index = 0
       if (process.client) {
         document.body.style.overflow = value ? 'hidden' : ''
+        document.body.classList.toggle('hp-overlay-open', !!value)
         if (value) this.$nextTick(() => this.$refs.close && this.$refs.close.focus())
       }
     },
@@ -77,6 +78,7 @@ export default {
   beforeDestroy() {
     window.removeEventListener('keydown', this.onKey)
     document.body.style.overflow = ''
+    document.body.classList.remove('hp-overlay-open')
   },
   methods: {
     go(step) {
