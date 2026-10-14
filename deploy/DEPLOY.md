@@ -30,6 +30,18 @@ Trên cùng 1 server:
 → build vào `.nuxt-next` (site cũ vẫn chạy) → đổi thành `.nuxt` → restart service
 → kiểm tra `http://127.0.0.1:<port>/` → nếu lỗi tự rollback về bản build trước.
 
+## Trạng thái server hiện tại (cài 14/10/2026)
+
+Staging đã được cài và chạy. Khác với hướng dẫn chung bên dưới ở các điểm:
+
+- SSH vào server qua **cổng 24700** (biến repo `SSH_PORT`), user `root`. Không có user `deploy`.
+- Production: thư mục `/root/elevatorfe`, service `elevator` (Node 18 qua nvm), cổng 3000.
+- Staging: thư mục `/var/www/elevator-staging`, service `elevator-staging` (chạy root, Node 20 hệ thống `/usr/bin/yarn`), cổng 3001.
+- nginx: `/etc/nginx/sites-available/staging.hungphatelevator.com.conf`, HTTPS do certbot quản lý (tự gia hạn).
+- Mật khẩu xem staging: user `hungphat`, file `/etc/nginx/.htpasswd-staging` (server không có `htpasswd`; đổi mật khẩu bằng
+  `printf "hungphat:%s\n" "$(openssl passwd -apr1 'MAT_KHAU_MOI')" > /etc/nginx/.htpasswd-staging && nginx -t && systemctl reload nginx`).
+- Khi xin chứng chỉ certbot lần đầu phải tạm tắt `auth_basic`, nếu không bước xác minh tên miền bị 401.
+
 ## Cài đặt subdomain staging (làm 1 lần)
 
 Các lệnh dưới đây giả định server Ubuntu dùng nginx, user deploy tên `deploy`.
