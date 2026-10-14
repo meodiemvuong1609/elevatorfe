@@ -11,6 +11,8 @@ const out = process.argv[3]
 function loadLib(name) {
   let src = fs.readFileSync(path.join(repo, 'common/lib', name), 'utf8')
   src = src.replace(/require\((['"])~\/([^'"]+)\1\)/g, (_, q, p) => JSON.stringify('file://' + path.join(repo, p)))
+  // require(`~/...${x}...`) trong projects.js → giữ template literal, chỉ đổi tiền tố
+  src = src.replace(/require\(`~\/([^`]+)`\)/g, (_, p) => `(${JSON.stringify('file://' + repo + '/')} + \`${p}\`)`)
   src = src.replace(/^import .*$/gm, '')
   const names = [...src.matchAll(/^export const (\w+)/gm)].map((m) => m[1])
   src = src.replace(/^export const /gm, 'const ') + `\nmodule.exports = { ${names.join(', ')} }`
@@ -22,7 +24,8 @@ function loadLib(name) {
 const company = loadLib('company.js')
 const { CABINS, STANDARD_CABIN_COUNT } = loadLib('cabins.js')
 const { PRODUCT_LINES, SAFETY_FEATURES } = loadLib('products.js')
-const { PROJECTS } = loadLib('projects.js')
+const { PROJECTS, PROJECT_TYPES } = loadLib('projects.js')
+const { SHOWROOM } = loadLib('showroom.js')
 const { FAQS } = loadLib('faqs.js')
 const img = (p) => 'file://' + path.join(repo, 'assets/img', p)
 
@@ -49,7 +52,7 @@ pages.push(page(`
     <h1>Thang máy<br>Hưng Phát</h1>
     <p>Cung cấp · Lắp đặt · Bảo trì thang máy cho nhà ở, biệt thự, tòa nhà và công trình chuyên dụng.</p>
   </div>
-  <div class="cover-photo"><img src="${img('products/img6.webp')}" alt=""></div>
+  <div class="cover-photo"><img src="${img('cong-trinh/anh-tuan-anh-bac-ninh/01.jpg')}" alt=""></div>
   <div class="cover-foot">
     <div><span>Hotline / Zalo</span><b>${HOTLINE_DISPLAY}</b></div>
     <div><span>Email</span><b>${EMAIL}</b></div>
@@ -152,17 +155,25 @@ pages.push(page(`
       .map(([t, d], i) => `<li><span class="floor">0${i + 1} ▲</span><h4>${esc(t)}</h4><p>${esc(d)}</p></li>`).join('')}
   </ol>`))
 
-// 11. Dự án
+// 11. Showroom
 pages.push(page(`
-  ${head('Dự án', 'Công trình Hưng Phát đã thực hiện', 'Một số dự án thang máy gia đình tại Hà Nội và Thanh Hóa.')}
-  <div class="projects">${PROJECTS.map((p, i) => `
-    <div class="project">
-      <div class="pics">${p.photos.map((ph) => `<img src="${ph.img}" alt="">`).join('')}</div>
-      <div class="pinfo"><span class="floor">DỰ ÁN 0${i + 1}</span><h4>${esc(p.name)}</h4>
-        <div class="pspec"><div><b>${esc(p.floors)}</b><span>Số tầng</span></div><div><b>${esc(p.load)}</b><span>Tải trọng</span></div><div><b>${esc(p.speed)}</b><span>Tốc độ</span></div></div>
-      </div>
-    </div>`).join('')}
-  </div>`))
+  ${head(esc(SHOWROOM.title), 'Đến xem và đi thử thang thật trước khi quyết định', 'Thang trưng bày giúp khách hàng tận mắt thấy chất liệu kính, khung inox vàng, cabin và bảng điều khiển — rồi tự đi thử để cảm nhận độ êm khi thang vận hành.')}
+  <div class="showroom">${SHOWROOM.photos.map((ph) => `<img src="${ph.img}" alt="">`).join('')}</div>
+  <div class="dark-card show-cta"><span>Gọi hẹn lịch xem thang tại showroom${SHOWROOM.address ? ' — ' + esc(SHOWROOM.address) : ''}</span><b>${HOTLINE_DISPLAY}</b></div>`))
+
+// 12–13. Công trình: 8 công trình/trang
+const typeLabel = (id) => (PROJECT_TYPES.find((t) => t.id === id) || {}).label || ''
+for (let i = 0; i < PROJECTS.length; i += 8) {
+  const chunk = PROJECTS.slice(i, i + 8)
+  pages.push(page(`
+    ${head('Dự án', 'Công trình Hưng Phát đã thực hiện' + (i ? ' (tiếp)' : ''), i ? '' : `${PROJECTS.length} công trình thang máy gia đình, tân cổ điển và thang tải hàng tại Hà Nội, Thanh Hóa, Bắc Ninh, Hưng Yên.`)}
+    <div class="works">${chunk.map((p) => `
+      <div class="work"><img src="${p.photos[0].img}" alt="">
+        <div><span class="type">${esc(typeLabel(p.type))}</span><h4>${esc(p.name)}</h4>
+        <span class="spec">${[p.floors, p.load, p.speed].filter(Boolean).map(esc).join(' · ')}</span></div>
+      </div>`).join('')}
+    </div>`))
+}
 
 // 12. Hỏi đáp
 pages.push(page(`

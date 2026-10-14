@@ -14,6 +14,12 @@ def small(m):
     dst = os.path.join(cache, name)
     if not os.path.exists(dst):
         im = ImageOps.exif_transpose(Image.open(src))
+        if fmt == 'JPEG' and im.mode in ('RGBA', 'LA', 'P'):
+            # PNG nền trong suốt (logo): phủ nền trắng, nếu không JPEG sẽ ra nền đen
+            im = im.convert('RGBA')
+            bg = Image.new('RGB', im.size, 'white')
+            bg.paste(im, mask=im.split()[3])
+            im = bg
         im = im.convert('RGBA' if fmt == 'PNG' else 'RGB')
         im.thumbnail((limit, limit), Image.LANCZOS)
         im.save(dst, fmt, **({'optimize': True} if fmt == 'PNG' else {'quality': 78, 'optimize': True, 'progressive': True}))
