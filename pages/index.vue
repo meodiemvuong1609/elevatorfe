@@ -8,6 +8,7 @@
     <HomeProcess />
     <HomeFactory />
     <HomeWhyUs />
+    <HomeActivities />
     <HomeProjects />
     <HomeFaq />
     <HomeNetwork />
