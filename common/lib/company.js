@@ -5,6 +5,8 @@ export const HOTLINE = '0901987666'
 export const HOTLINE_DISPLAY = '090.1987.666'
 export const EMAIL = 'thangmayhungphat666@gmail.com'
 export const FACEBOOK_URL = 'https://facebook.com/hungphatelevator'
+// Zalo theo số hotline (dùng cho nút Zalo trên thanh hành động điện thoại)
+export const ZALO_URL = 'https://zalo.me/0901987666'
 
 // 5 cơ sở hiện có (công ty xác nhận 10/2026). Cơ sở chính là xưởng sản xuất, đứng đầu danh sách.
 export const OFFICES = [

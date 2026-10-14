@@ -3,7 +3,8 @@
     :is="to ? 'nuxt-link' : 'button'"
     :to="to || undefined"
     :type="to ? undefined : 'button'"
-    class="hp-zoom group relative block w-full text-left rounded-[10px] overflow-hidden bg-line h-[380px] lg:h-[420px] cursor-pointer"
+    :class="to ? 'w-[250px] md:w-full h-[330px] md:h-[380px]' : 'w-full h-[380px]'"
+    class="hp-zoom group relative block text-left rounded-[10px] overflow-hidden bg-line lg:h-[420px] cursor-pointer"
     :aria-label="`Xem ${project.photos.length} ảnh: ${project.name}`"
     @click="to ? null : $emit('open', project)"
   >

@@ -1,7 +1,7 @@
 <template>
   <section class="hp-section bg-white border-y border-line">
     <div class="hp-container flex flex-wrap gap-10 lg:gap-14 items-center">
-      <div class="hp-zoom flex-[1_1_420px] min-w-0 rounded-[10px] overflow-hidden h-[380px] lg:h-[520px] bg-line">
+      <div class="hidden md:block hp-zoom flex-[1_1_420px] min-w-0 rounded-[10px] overflow-hidden h-[380px] lg:h-[520px] bg-line">
         <img
           src="~/assets/img/products/img15.webp"
           alt="Thang máy Hưng Phát với khung ốp đá marble và cửa vàng"
@@ -9,12 +9,12 @@
           loading="lazy"
         />
       </div>
-      <div class="flex-[1_1_480px] min-w-0 flex flex-col gap-8">
+      <div class="flex-[1_1_480px] min-w-0 flex flex-col gap-5 md:gap-8">
         <div class="flex flex-col gap-3">
           <div class="hp-eyebrow">Vì sao chọn Hưng Phát</div>
           <h2 class="hp-h2">Uy tín · Chuyên nghiệp · Tận tâm</h2>
         </div>
-        <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-4 md:gap-6">
           <div v-for="item in reasons" :key="item.title" class="flex gap-5">
             <span class="shrink-0 w-12 h-12 rounded-lg bg-paper border border-line inline-flex items-center justify-center" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">

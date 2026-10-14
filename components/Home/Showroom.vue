@@ -1,16 +1,16 @@
 <template>
   <section id="showroom" class="hp-section bg-ink text-white">
     <div class="hp-container grid gap-10 lg:gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)] items-center">
-      <div class="flex flex-col gap-6">
+      <div class="flex flex-col gap-4 md:gap-6">
         <div class="flex flex-col gap-3">
           <div class="hp-eyebrow !text-signal">{{ showroom.title }}</div>
           <h2 class="hp-h2">Đến xem và đi thử thang thật trước khi quyết định</h2>
         </div>
-        <p class="m-0 text-muted-dark text-[17px]">
+        <p class="m-0 text-muted-dark text-[15px] md:text-[17px]">
           Thang trưng bày tại showroom giúp bạn tận mắt thấy chất liệu kính, khung inox vàng, cabin và bảng
           điều khiển — rồi tự đi thử để cảm nhận độ êm khi thang vận hành.
         </p>
-        <ul class="list-none m-0 p-0 flex flex-col gap-3 text-muted-dark">
+        <ul class="hidden md:flex list-none m-0 p-0 flex-col gap-3 text-muted-dark">
           <li v-for="point in points" :key="point" class="flex gap-3 items-start">
             <svg class="shrink-0 mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF6B5E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10" /></svg>
             {{ point }}
@@ -21,19 +21,24 @@
           {{ showroom.address }}
         </address>
         <div class="flex flex-wrap gap-3">
-          <a :href="`tel:${hotline}`" class="hp-btn-primary">
+          <a :href="`tel:${hotline}`" class="hp-btn-primary hidden md:inline-flex">
             Gọi hẹn lịch xem thang · {{ hotlineDisplay }}
           </a>
-          <a :href="mapUrl" target="_blank" rel="noopener" class="hp-btn border-[1.5px] border-white/40 text-white hover:border-white">
+          <a :href="mapUrl" target="_blank" rel="noopener" class="hp-btn w-full md:w-auto border-[1.5px] border-white/40 text-white hover:border-white">
             Chỉ đường đến showroom
           </a>
         </div>
       </div>
-      <div class="grid grid-cols-2 gap-3">
-        <div class="hp-zoom row-span-2 rounded-[10px] overflow-hidden bg-panel h-[360px] sm:h-[540px]">
+      <div class="grid grid-cols-2 gap-2 md:gap-3">
+        <div class="hp-zoom md:row-span-2 rounded-[10px] overflow-hidden bg-panel h-[200px] md:h-[540px]">
           <img :src="gallery[0].img" :alt="gallery[0].alt" class="w-full h-full object-cover object-[68%_50%]" loading="lazy" />
         </div>
-        <div v-for="photo in gallery.slice(1, 3)" :key="photo.img" class="hp-zoom rounded-[10px] overflow-hidden bg-panel h-[174px] sm:h-[264px]">
+        <div
+          v-for="(photo, i) in gallery.slice(1, 3)"
+          :key="photo.img"
+          class="hp-zoom rounded-[10px] overflow-hidden bg-panel h-[200px] md:h-[264px]"
+          :class="i === 1 ? 'hidden md:block' : ''"
+        >
           <img :src="photo.img" :alt="photo.alt" class="w-full h-full object-cover" loading="lazy" />
         </div>
       </div>

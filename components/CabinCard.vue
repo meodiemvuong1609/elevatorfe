@@ -1,6 +1,6 @@
 <template>
-  <article class="hp-zoom flex flex-col gap-3" :class="compact ? '' : 'bg-white border border-line rounded-[10px] overflow-hidden'">
-    <div class="overflow-hidden bg-line-strong" :class="compact ? 'rounded-[10px] h-[260px] sm:h-[360px]' : 'h-[340px]'">
+  <article class="hp-zoom flex flex-col gap-3" :class="compact ? 'w-[150px] md:w-auto' : 'bg-white border border-line rounded-[10px] overflow-hidden'">
+    <div class="overflow-hidden bg-line-strong" :class="compact ? 'rounded-[10px] h-[220px] md:h-[360px]' : 'h-[340px]'">
       <img :src="cabin.img" :alt="`Mẫu cabin ${cabin.code}: ${cabin.wall.toLowerCase()}`" class="w-full h-full object-cover" loading="lazy" />
     </div>
     <div v-if="compact" class="flex flex-col">

@@ -18,20 +18,20 @@
           </div>
         </div>
 
-        <nav class="flex flex-col gap-2.5" aria-label="Liên kết chân trang">
+        <nav class="flex flex-col md:gap-2.5" aria-label="Liên kết chân trang">
           <span class="text-white font-bold mb-1">Hưng Phát</span>
-          <nuxt-link to="/introduce" class="hover:text-white">Giới thiệu</nuxt-link>
-          <nuxt-link to="/products" class="hover:text-white">Các dòng thang máy</nuxt-link>
-          <nuxt-link to="/cabins" class="hover:text-white">Mẫu cabin</nuxt-link>
-          <nuxt-link to="/service" class="hover:text-white">Dịch vụ lắp đặt &amp; bảo trì</nuxt-link>
-          <nuxt-link to="/project" class="hover:text-white">Dự án</nuxt-link>
+          <nuxt-link to="/introduce" class="hover:text-white inline-flex items-center min-h-[44px] md:min-h-0">Giới thiệu</nuxt-link>
+          <nuxt-link to="/products" class="hover:text-white inline-flex items-center min-h-[44px] md:min-h-0">Các dòng thang máy</nuxt-link>
+          <nuxt-link to="/cabins" class="hover:text-white inline-flex items-center min-h-[44px] md:min-h-0">Mẫu cabin</nuxt-link>
+          <nuxt-link to="/service" class="hover:text-white inline-flex items-center min-h-[44px] md:min-h-0">Dịch vụ lắp đặt &amp; bảo trì</nuxt-link>
+          <nuxt-link to="/project" class="hover:text-white inline-flex items-center min-h-[44px] md:min-h-0">Dự án</nuxt-link>
         </nav>
 
-        <div class="flex flex-col gap-2.5">
+        <div class="flex flex-col md:gap-2.5">
           <span class="text-white font-bold mb-1">Liên hệ</span>
-          <a :href="`tel:${hotline}`" class="text-white font-bold text-lg tabular-nums hover:text-signal">{{ hotlineDisplay }}</a>
-          <a :href="`mailto:${email}`" class="hover:text-white break-all">{{ email }}</a>
-          <a :href="facebookUrl" target="_blank" rel="noopener" class="hover:text-white">Facebook</a>
+          <a :href="`tel:${hotline}`" class="text-white font-bold text-lg tabular-nums hover:text-signal inline-flex items-center min-h-[44px] md:min-h-0">{{ hotlineDisplay }}</a>
+          <a :href="`mailto:${email}`" class="hover:text-white break-all inline-flex items-center min-h-[44px] md:min-h-0">{{ email }}</a>
+          <a :href="facebookUrl" target="_blank" rel="noopener" class="hover:text-white inline-flex items-center min-h-[44px] md:min-h-0">Facebook</a>
         </div>
       </div>
 

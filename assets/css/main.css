@@ -13,14 +13,26 @@
   .hp-container {
     @apply max-w-[1240px] mx-auto px-4 sm:px-6;
   }
+  /* Điện thoại: khoảng cách giữa các phần gọn hơn để giảm số lần cuộn */
   .hp-section {
-    @apply py-16 lg:py-24;
+    @apply py-10 md:py-16 lg:py-24;
   }
   .hp-eyebrow {
     @apply text-[13px] font-bold uppercase tracking-[0.1em] text-brand;
   }
   .hp-h2 {
-    @apply m-0 text-[30px] lg:text-[42px] leading-[1.15] font-extrabold tracking-[-0.02em];
+    @apply m-0 text-[25px] md:text-[30px] lg:text-[42px] leading-[1.18] font-extrabold tracking-[-0.02em];
+  }
+  /* Dải thẻ vuốt ngang trên điện thoại; từ md trở lên thành lưới (component tự đặt md:grid-cols-*) */
+  .hp-rail {
+    @apply flex gap-3 overflow-x-auto snap-x snap-mandatory -mx-4 px-4 pb-1 md:grid md:gap-4 md:overflow-visible md:mx-0 md:px-0 md:pb-0;
+    scrollbar-width: none;
+  }
+  .hp-rail::-webkit-scrollbar {
+    display: none;
+  }
+  .hp-rail > * {
+    @apply snap-start shrink-0;
   }
   .hp-btn {
     @apply inline-flex items-center justify-center gap-2.5 min-h-[48px] px-6 rounded-md font-semibold transition-colors;

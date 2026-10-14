@@ -1,36 +1,44 @@
 <template>
   <section id="san-pham" class="hp-section">
-    <div class="hp-container flex flex-col gap-10 lg:gap-12">
-      <div class="flex flex-wrap gap-6 justify-between items-end">
+    <div class="hp-container flex flex-col gap-5 md:gap-10 lg:gap-12">
+      <div class="flex flex-wrap gap-3 md:gap-6 justify-between items-end">
         <div class="max-w-[640px] flex flex-col gap-3">
           <div class="hp-eyebrow">Dòng sản phẩm</div>
           <h2 class="hp-h2">Một đơn vị, đủ các dòng thang cho mọi công trình</h2>
         </div>
-        <p class="m-0 max-w-[440px] text-body">
+        <p class="hidden md:block m-0 max-w-[440px] text-body">
           Từ thang gia đình tiết kiệm diện tích đến thang tải hàng, tải ô tô — mỗi công trình được khảo sát và
           thiết kế bản vẽ riêng.
         </p>
       </div>
 
-      <div class="grid gap-4 grid-cols-[repeat(auto-fit,minmax(280px,1fr))]">
+      <div class="hp-rail md:grid-cols-[repeat(auto-fit,minmax(280px,1fr))]">
         <nuxt-link
           v-for="(item, index) in featured"
           :key="item.title"
           to="/products"
-          class="hp-zoom group bg-white border border-line hover:border-ink rounded-[10px] overflow-hidden flex flex-col"
+          class="hp-zoom group w-[268px] md:w-auto bg-white border border-line hover:border-ink rounded-[10px] overflow-hidden flex flex-col"
         >
-          <div class="h-[240px] overflow-hidden bg-line">
+          <div class="h-[180px] md:h-[240px] overflow-hidden bg-line">
             <img :src="item.img" :alt="item.alt" class="w-full h-full object-cover" loading="lazy" />
           </div>
-          <div class="p-6 flex flex-col gap-2">
-            <div class="text-[13px] text-muted tabular-nums">0{{ index + 1 }}</div>
-            <h3 class="m-0 text-[21px] font-bold group-hover:text-brand">{{ item.title }}</h3>
-            <p class="m-0 text-body text-[15px]">{{ item.short }}</p>
+          <div class="p-4 md:p-6 flex flex-col gap-1 md:gap-2">
+            <div class="hidden md:block text-[13px] text-muted tabular-nums">0{{ index + 1 }}</div>
+            <h3 class="m-0 text-base md:text-[21px] font-bold group-hover:text-brand">{{ item.title }}</h3>
+            <p class="m-0 text-body text-[13px] md:text-[15px]">{{ item.short }}</p>
           </div>
         </nuxt-link>
       </div>
 
-      <ul class="list-none m-0 p-0 grid sm:grid-cols-2 lg:grid-cols-5 lg:gap-x-6 border-t border-line-strong">
+      <!-- Điện thoại: các dòng còn lại dạng nhãn tròn -->
+      <ul class="md:hidden list-none m-0 p-0 flex flex-wrap gap-2">
+        <li v-for="item in others" :key="item.title">
+          <nuxt-link to="/products" class="inline-flex items-center min-h-[40px] px-3.5 rounded-full bg-white border border-line-strong text-[13px] font-semibold">
+            {{ item.title }}
+          </nuxt-link>
+        </li>
+      </ul>
+      <ul class="hidden md:grid list-none m-0 p-0 sm:grid-cols-2 lg:grid-cols-5 lg:gap-x-6 border-t border-line-strong">
         <li
           v-for="(item, index) in others"
           :key="item.title"

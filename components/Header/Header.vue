@@ -15,12 +15,12 @@
     </div>
 
     <div class="bg-white border-b border-line">
-      <div class="hp-container h-[72px] flex items-center gap-6 lg:gap-8">
-        <nuxt-link to="/" class="flex items-center gap-3 shrink-0" aria-label="Thang máy Hưng Phát — về trang chủ">
-          <img src="~/assets/img/hungphat.png" class="h-11 sm:h-12 w-auto" alt="Logo Hưng Phát Elevator" />
+      <div class="hp-container h-[72px] flex items-center gap-3 sm:gap-6 lg:gap-8">
+        <nuxt-link to="/" class="flex items-center gap-2 sm:gap-3 shrink-0" aria-label="Thang máy Hưng Phát — về trang chủ">
+          <img src="~/assets/img/hungphat.png" class="h-10 sm:h-12 w-auto" alt="Logo Hưng Phát Elevator" />
           <span class="flex flex-col leading-tight">
             <span class="font-extrabold text-[15px] sm:text-[17px] tracking-[-0.01em] whitespace-nowrap">Thang máy Hưng Phát</span>
-            <span class="text-xs text-muted whitespace-nowrap">Hung Phat Elevator Technology</span>
+            <span class="text-xs text-muted whitespace-nowrap"><span class="sm:hidden">Hoạt động từ {{ foundedYear }}</span><span class="hidden sm:inline">Hung Phat Elevator Technology</span></span>
           </span>
         </nuxt-link>
 
@@ -36,10 +36,17 @@
           </nuxt-link>
         </nav>
 
-        <div class="flex items-center gap-3 ml-auto">
+        <div class="flex items-center gap-2 sm:gap-3 ml-auto">
           <a :href="`tel:${hotline}`" class="hidden sm:flex flex-col leading-tight text-right hover:text-brand">
             <span class="text-xs text-muted">Hotline / Zalo</span>
             <span class="font-bold text-[17px] tabular-nums">{{ hotlineDisplay }}</span>
+          </a>
+          <a
+            :href="`tel:${hotline}`"
+            class="sm:hidden max-[359px]:hidden w-11 h-11 rounded-md bg-[#FDECEB] text-brand inline-flex items-center justify-center"
+            aria-label="Gọi hotline"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" /></svg>
           </a>
           <nuxt-link to="/contact" class="hp-btn-primary hidden md:inline-flex !min-h-[44px] !px-5 text-[15px] whitespace-nowrap">
             Nhận báo giá
