@@ -53,8 +53,16 @@
         >
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF6B5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10l5-3v3l5-3v3l4-2v13" /></svg>
           <div>
-            <div class="text-[13px] sm:text-[15px] text-muted-dark mb-1">Nhà máy sản xuất riêng</div>
-            <div class="text-[15px] sm:text-xl font-bold leading-snug">Thiệu Trung, Thanh Hóa — chủ động vật tư và tiến độ.</div>
+            <!-- Bọc từ ghép trong nowrap để không bị ngắt giữa từ (vd. "vật / tư") -->
+            <div class="text-[13px] sm:text-[15px] text-muted-dark mb-1">
+              <span class="whitespace-nowrap">Cơ sở chính</span> – <span class="whitespace-nowrap">xưởng sản xuất</span>
+            </div>
+            <div class="text-[15px] sm:text-xl font-bold leading-snug">
+              <span class="whitespace-nowrap">Thiệu Trung,</span> <span class="whitespace-nowrap">Thanh Hóa</span>
+            </div>
+            <div class="hidden sm:block text-[15px] text-muted-dark mt-1">
+              <span class="whitespace-nowrap">Tự sản xuất,</span> <span class="whitespace-nowrap">chủ động tiến độ</span>
+            </div>
           </div>
         </nuxt-link>
       </div>
