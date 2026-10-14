@@ -1,26 +1,26 @@
 <template>
   <section id="dich-vu" class="hp-section bg-ink text-white">
-    <div class="hp-container flex flex-col gap-10 lg:gap-12">
-      <div class="flex flex-wrap gap-6 justify-between items-end">
+    <div class="hp-container flex flex-col gap-5 md:gap-10 lg:gap-12">
+      <div class="flex flex-wrap gap-3 md:gap-6 justify-between items-end">
         <div class="max-w-[680px] flex flex-col gap-3">
           <div class="hp-eyebrow !text-signal">Dịch vụ trọn gói</div>
           <h2 class="hp-h2">Từ buổi khảo sát đầu tiên đến nhiều năm vận hành sau đó</h2>
         </div>
-        <p class="m-0 max-w-[420px] text-muted-dark">
+        <p class="hidden md:block m-0 max-w-[420px] text-muted-dark">
           Một đầu mối chịu trách nhiệm cho cả vòng đời thang máy — bạn không phải làm việc với nhiều nhà thầu.
         </p>
       </div>
-      <ol class="list-none m-0 p-0 grid gap-3 grid-cols-[repeat(auto-fit,minmax(200px,1fr))]">
+      <ol class="list-none m-0 p-0 grid gap-2 md:gap-3 md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))]">
         <li
           v-for="(step, index) in steps"
           :key="step.title"
-          class="bg-panel border border-panel-line rounded-[10px] p-6 flex flex-col gap-3.5"
+          class="bg-panel border border-panel-line rounded-[10px] p-3.5 md:p-6 grid grid-cols-[auto_1fr] md:flex md:flex-col gap-x-3 gap-y-0.5 md:gap-3.5 items-start"
         >
-          <span class="self-start bg-night text-signal font-bold tabular-nums px-2.5 py-1 rounded text-[15px] tracking-[0.06em]">
+          <span class="row-span-2 self-start bg-night text-signal font-bold tabular-nums px-2 md:px-2.5 py-1 rounded text-[13px] md:text-[15px] tracking-[0.06em] whitespace-nowrap">
             0{{ index + 1 }} ▲
           </span>
-          <h3 class="m-0 text-[19px] font-bold">{{ step.title }}</h3>
-          <p class="m-0 text-muted-dark text-[15px]">{{ step.desc }}</p>
+          <h3 class="m-0 text-[15px] md:text-[19px] font-bold">{{ step.title }}</h3>
+          <p class="m-0 text-muted-dark text-[13px] md:text-[15px]">{{ step.desc }}</p>
         </li>
       </ol>
       <nuxt-link v-if="showLink" to="/service" class="hp-link-arrow self-start !border-white hover:!text-signal hover:!border-signal">

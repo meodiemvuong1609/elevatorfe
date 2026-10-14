@@ -1,22 +1,22 @@
 <template>
   <section id="tu-van" class="bg-stone hp-section" :class="wrapperClass">
-    <div class="hp-container flex flex-wrap gap-10 lg:gap-14 items-start">
-      <div class="flex-[1_1_380px] min-w-0 flex flex-col gap-6">
+    <div class="hp-container flex flex-wrap gap-5 md:gap-10 lg:gap-14 items-start">
+      <div class="flex-[1_1_380px] min-w-0 flex flex-col gap-3 md:gap-6">
         <div class="flex flex-col gap-3">
           <div class="hp-eyebrow">Tư vấn miễn phí</div>
-          <h2 class="hp-h2">Nhận khảo sát &amp; báo giá cho công trình của bạn</h2>
+          <h2 class="hp-h2"><span class="md:hidden">Để lại số, kỹ thuật viên gọi lại</span><span class="hidden md:inline">Nhận khảo sát &amp; báo giá cho công trình của bạn</span></h2>
         </div>
-        <p class="m-0 text-body">
+        <p class="hidden md:block m-0 text-body">
           Để lại thông tin, kỹ thuật viên Hưng Phát sẽ gọi lại để hỏi nhu cầu, hẹn lịch khảo sát hố thang
           và gửi báo giá chi tiết từng hạng mục. Bạn chỉ quyết định khi đã rõ phương án và chi phí.
         </p>
-        <ul class="list-none m-0 p-0 flex flex-col gap-3 text-body">
+        <ul class="hidden md:flex list-none m-0 p-0 flex-col gap-3 text-body">
           <li v-for="point in points" :key="point" class="flex gap-3 items-start">
             <svg class="shrink-0 mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E7A46" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10" /></svg>
             {{ point }}
           </li>
         </ul>
-        <a :href="`tel:${hotline}`" class="self-start flex items-center gap-4 bg-ink text-white rounded-lg px-5 py-4 hover:bg-panel">
+        <a :href="`tel:${hotline}`" class="hidden md:flex self-start items-center gap-4 bg-ink text-white rounded-lg px-5 py-4 hover:bg-panel">
           <span class="w-11 h-11 rounded-full bg-brand inline-flex items-center justify-center">
             <icons-phone color="white" />
           </span>
@@ -28,13 +28,13 @@
       </div>
 
       <form
-        class="flex-[1_1_420px] min-w-0 bg-white border border-line rounded-xl p-6 sm:p-9 flex flex-col gap-[18px]"
+        class="flex-[1_1_420px] min-w-0 bg-white border border-line rounded-xl p-5 sm:p-9 flex flex-col gap-[14px] md:gap-[18px]"
         aria-label="Yêu cầu tư vấn"
         novalidate
         @submit.prevent="submit"
       >
         <div>
-          <h3 class="m-0 mb-1.5 text-2xl font-extrabold tracking-[-0.01em]">Gửi yêu cầu tư vấn</h3>
+          <h3 class="hidden md:block m-0 mb-1.5 text-2xl font-extrabold tracking-[-0.01em]">Gửi yêu cầu tư vấn</h3>
           <p class="m-0 text-body text-[15px]">Các mục có dấu * là bắt buộc.</p>
         </div>
         <div class="grid gap-4 sm:grid-cols-2">
@@ -45,17 +45,23 @@
             <input v-model="form.phone" type="tel" name="phone" autocomplete="tel" placeholder="09xx xxx xxx" />
           </label>
         </div>
-        <label class="hp-field">Email
-          <input v-model="form.email" type="email" name="email" autocomplete="email" placeholder="ban@email.com" />
-        </label>
         <label class="hp-field">Nhu cầu
           <select v-model="form.need" name="need">
             <option v-for="need in needs" :key="need">{{ need }}</option>
           </select>
         </label>
+        <!-- Điện thoại: form 3 ô; email và mô tả mở thêm khi cần -->
+        <button v-if="!showMore" type="button" class="md:hidden self-start min-h-[44px] text-sm text-muted underline" @click="showMore = true">
+          + Thêm email và mô tả công trình
+        </button>
+        <div :class="showMore ? 'contents' : 'hidden md:contents'">
+        <label class="hp-field">Email
+          <input v-model="form.email" type="email" name="email" autocomplete="email" placeholder="ban@email.com" />
+        </label>
         <label class="hp-field">Mô tả công trình
           <textarea v-model="form.message" name="message" rows="4" placeholder="Ví dụ: nhà phố 5 tầng, hố thang khoảng 1,5 × 1,5 m"></textarea>
         </label>
+        </div>
         <p v-if="error" class="m-0 text-white bg-brand px-3 py-2 rounded text-sm" role="alert">{{ error }}</p>
         <button type="submit" class="hp-btn-primary w-full min-h-[52px] text-base">Gửi yêu cầu</button>
         <p class="m-0 text-[13px] text-muted text-center">
@@ -89,6 +95,7 @@ export default {
     return {
       form: { name: '', email: '', phone: '', need: NEEDS[0], message: '' },
       needs: NEEDS,
+      showMore: false,
       points: [
         'Khảo sát tận nơi, tư vấn dòng thang phù hợp diện tích và ngân sách',
         'Bản vẽ kỹ thuật và báo giá chi tiết, minh bạch từng hạng mục',

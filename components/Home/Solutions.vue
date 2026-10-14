@@ -1,19 +1,19 @@
 <template>
   <section class="hp-section bg-white border-y border-line">
-    <div class="hp-container flex flex-col gap-10 lg:gap-12">
+    <div class="hp-container flex flex-col gap-5 md:gap-10 lg:gap-12">
       <div class="max-w-[720px] flex flex-col gap-3">
         <div class="hp-eyebrow">Giải pháp theo công trình</div>
         <h2 class="hp-h2">Mỗi loại công trình cần một phương án thang khác nhau</h2>
-        <p class="m-0 text-body">
+        <p class="hidden md:block m-0 text-body">
           Kích thước hố thang, tải trọng, tần suất sử dụng và phong cách nội thất quyết định dòng thang phù hợp.
           Dưới đây là những phương án Hưng Phát thường tư vấn.
         </p>
       </div>
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+      <div class="hp-rail md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         <article
           v-for="item in solutions"
           :key="item.title"
-          class="bg-paper border border-line rounded-[10px] p-6 flex flex-col gap-3"
+          class="w-[250px] md:w-auto bg-paper border border-line rounded-[10px] p-5 md:p-6 flex flex-col gap-3"
         >
           <span class="w-12 h-12 rounded-lg bg-white border border-line inline-flex items-center justify-center" aria-hidden="true">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
