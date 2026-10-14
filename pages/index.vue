@@ -10,6 +10,7 @@
     <HomeWhyUs />
     <HomeActivities />
     <HomeProjects />
+    <HomeShowroom />
     <HomeFaq />
     <HomeNetwork />
     <ConsultForm />

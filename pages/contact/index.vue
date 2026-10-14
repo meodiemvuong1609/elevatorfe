@@ -97,6 +97,7 @@
       </div>
     </section>
 
+    <HomeShowroom />
     <ConsultForm />
   </div>
 </template>
