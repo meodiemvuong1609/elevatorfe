@@ -43,12 +43,11 @@
     <section class="hp-section !pt-0">
       <div class="hp-container grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] items-start">
         <div class="flex flex-col gap-6">
-          <h2 class="hp-h2">Văn phòng &amp; nhà máy</h2>
+          <h2 class="hp-h2">5 cơ sở của Hưng Phát</h2>
           <ul class="list-none m-0 p-0 border-t border-line-strong">
-            <li v-for="office in offices" :key="office.title" class="py-5 border-b border-line-strong flex flex-col gap-1">
+            <li v-for="office in offices" :key="office.id" class="py-5 border-b border-line-strong flex flex-col gap-1">
               <span class="font-bold flex items-center gap-2">
                 {{ office.title }}
-                <span v-if="office.title === factoryTitle" class="whitespace-nowrap text-[11px] font-bold uppercase tracking-[0.08em] bg-ink text-signal px-1.5 py-0.5 rounded">Sản xuất</span>
               </span>
               <span class="text-body">{{ office.address }}</span>
               <a :href="mapUrl(office)" target="_blank" rel="noopener" class="self-start text-sm font-semibold inline-flex items-center gap-1 min-h-[44px] hover:text-brand">
@@ -77,8 +76,8 @@
             <dd class="m-0 tabular-nums">{{ legal.taxCode }}</dd>
             <dt class="text-muted">Người đại diện</dt>
             <dd class="m-0">{{ legal.representative }} — {{ legal.representativeTitle }}</dd>
-            <dt class="text-muted">Địa chỉ</dt>
-            <dd class="m-0">{{ legal.registeredAddress }}</dd>
+            <dt class="text-muted">Cơ sở chính</dt>
+            <dd class="m-0">{{ factoryAddress }}</dd>
             <dt class="text-muted">Hoạt động từ</dt>
             <dd class="m-0">{{ legal.activeSince }}</dd>
           </dl>
@@ -122,7 +121,7 @@ export default {
   data() {
     return {
       offices: OFFICES,
-      factoryTitle: FACTORY.title,
+      factoryAddress: FACTORY.address,
       legal: LEGAL,
       bankAccounts: BANK_ACCOUNTS,
       hotline: HOTLINE,

@@ -84,10 +84,10 @@ pages.push(page(`
 
 // 3. Nhà máy & mạng lưới
 pages.push(page(`
-  ${head('Nhà máy sản xuất', 'Sản xuất tại Thiệu Trung, Thanh Hóa', `Không chỉ phân phối, Hưng Phát có nhà máy sản xuất riêng đặt tại ${esc(FACTORY.address)}.`)}
+  ${head('Cơ sở chính · Xưởng sản xuất', 'Sản xuất tại Thiệu Trung, Thanh Hóa', `Không chỉ phân phối, Hưng Phát có nhà máy sản xuất riêng đặt tại ${esc(FACTORY.address)}.`)}
   <div class="factory">
     <div class="dark-card">
-      <div class="eyebrow light">Địa chỉ nhà máy</div>
+      <div class="eyebrow light">Địa chỉ cơ sở chính</div>
       <div class="addr">Khu phố Trà Thượng,<br>xã Thiệu Trung,<br>tỉnh Thanh Hóa</div>
     </div>
     <ul class="checks">
@@ -97,7 +97,7 @@ pages.push(page(`
     </ul>
   </div>
   <figure class="photo team2"><img src="${img('activities/tat-nien-1.jpg')}" alt=""><figcaption>Tiệc tất niên — tập thể Hưng Phát tổng kết một năm làm việc</figcaption></figure>
-  <h3 class="sub">Văn phòng &amp; nhà máy</h3>
+  <h3 class="sub">5 cơ sở của Hưng Phát</h3>
   <table class="list">${OFFICES.map((o) => `<tr><th>${esc(o.title)}</th><td>${esc(o.address)}</td></tr>`).join('')}</table>`))
 
 // 4. Dòng sản phẩm
@@ -194,13 +194,13 @@ pages.push(page(`
     <tr><th>Tên quốc tế</th><td>${esc(LEGAL.internationalName)}</td></tr>
     <tr><th>Mã số thuế</th><td>${esc(LEGAL.taxCode)}</td></tr>
     <tr><th>Người đại diện</th><td>${esc(LEGAL.representative)} — ${esc(LEGAL.representativeTitle)}</td></tr>
-    <tr><th>Địa chỉ</th><td>${esc(LEGAL.registeredAddress)}</td></tr>
+    <tr><th>Cơ sở chính</th><td>${esc(FACTORY.address)}</td></tr>
     <tr><th>Hoạt động từ</th><td>${esc(LEGAL.activeSince)}</td></tr>
   </table>
   <h3 class="sub">Tài khoản công ty</h3>
   <p class="small">Chủ tài khoản: <b>${esc(LEGAL.name)}</b></p>
   <div class="banks">${BANK_ACCOUNTS.map((a) => `<div class="card"><span>${esc(a.bank)} — ${esc(a.branch)}</span><b>${esc(a.number)}</b></div>`).join('')}</div>
-  <h3 class="sub">Văn phòng &amp; nhà máy</h3>
+  <h3 class="sub">5 cơ sở của Hưng Phát</h3>
   <table class="list">${OFFICES.map((o) => `<tr><th>${esc(o.title)}</th><td>${esc(o.address)}</td></tr>`).join('')}</table>`))
 
 const css = fs.readFileSync(path.join(__dirname, 'brochure.css'), 'utf8')

@@ -42,8 +42,8 @@ export default {
             email: EMAIL,
             address: {
               '@type': 'PostalAddress',
-              streetAddress: 'Số 8, ngõ 9, đường Dương Quảng Hàm, phường Nghĩa Đô',
-              addressLocality: 'Hà Nội',
+              streetAddress: 'Khu phố Trà Thượng, xã Thiệu Trung',
+              addressRegion: 'Thanh Hóa',
               addressCountry: 'VN',
             },
           },

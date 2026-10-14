@@ -8,7 +8,7 @@
           <div>{{ legal.internationalName }}</div>
           <div>Mã số thuế: {{ legal.taxCode }} · Hoạt động từ {{ legal.activeSince }}</div>
           <div>Người đại diện: {{ legal.representative }} — {{ legal.representativeTitle }}</div>
-          <div>Địa chỉ: {{ legal.registeredAddress }}</div>
+          <div>Cơ sở chính: {{ factory.address }}</div>
           <div class="mt-3 flex flex-col gap-1.5">
             <span class="text-white font-bold">Tài khoản công ty</span>
             <div v-for="account in bankAccounts" :key="account.number">
@@ -32,7 +32,6 @@
           <a :href="`tel:${hotline}`" class="text-white font-bold text-lg tabular-nums hover:text-signal">{{ hotlineDisplay }}</a>
           <a :href="`mailto:${email}`" class="hover:text-white break-all">{{ email }}</a>
           <a :href="facebookUrl" target="_blank" rel="noopener" class="hover:text-white">Facebook</a>
-          <span class="mt-2">Nhà máy: {{ factory.address }}</span>
         </div>
       </div>
 

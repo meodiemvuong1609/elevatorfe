@@ -3,7 +3,7 @@
     <div class="hp-container flex flex-wrap gap-10 lg:gap-14 items-stretch">
       <div class="flex-[1_1_480px] min-w-0 flex flex-col gap-6 justify-center">
         <div class="flex flex-col gap-3">
-          <div class="hp-eyebrow">Nhà máy sản xuất</div>
+          <div class="hp-eyebrow">Cơ sở chính · Xưởng sản xuất</div>
           <h2 class="hp-h2">Sản xuất tại Thiệu Trung, Thanh Hóa</h2>
         </div>
         <p class="m-0 text-body text-[17px]">
@@ -27,7 +27,7 @@
           <span class="bg-night text-signal font-bold tabular-nums px-2.5 py-1 rounded text-[13px] tracking-[0.06em]">THANH HÓA</span>
         </div>
         <div class="flex flex-col gap-4">
-          <div class="text-[13px] uppercase tracking-[0.1em] text-muted-dark font-semibold">Địa chỉ nhà máy</div>
+          <div class="text-[13px] uppercase tracking-[0.1em] text-muted-dark font-semibold">Địa chỉ cơ sở chính</div>
           <address class="not-italic text-2xl sm:text-[28px] font-bold leading-snug">
             Khu phố Trà Thượng,<br />xã Thiệu Trung,<br />tỉnh Thanh Hóa
           </address>

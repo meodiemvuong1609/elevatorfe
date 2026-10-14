@@ -3,17 +3,16 @@
     <div class="hp-container flex flex-col gap-8">
       <div class="flex flex-col gap-3 max-w-[640px]">
         <div class="hp-eyebrow">Mạng lưới</div>
-        <h2 class="hp-h2">Văn phòng &amp; nhà máy</h2>
+        <h2 class="hp-h2">5 cơ sở của Hưng Phát</h2>
       </div>
       <ul class="list-none m-0 p-0 border-t border-line-strong">
         <li
           v-for="office in offices"
-          :key="office.title"
+          :key="office.id"
           class="py-5 border-b border-line-strong flex flex-wrap items-center gap-x-6 gap-y-1"
         >
           <span class="font-bold basis-[220px] flex items-center gap-2">
             {{ office.title }}
-            <span v-if="office.title === factoryTitle" class="whitespace-nowrap text-[11px] font-bold uppercase tracking-[0.08em] bg-ink text-signal px-1.5 py-0.5 rounded">Sản xuất</span>
           </span>
           <span class="text-body flex-[1_1_320px]">{{ office.address }}</span>
           <a
@@ -32,12 +31,12 @@
 </template>
 
 <script>
-import { FACTORY, OFFICES } from '~/common/lib/company'
+import { OFFICES } from '~/common/lib/company'
 
 export default {
   name: 'HomeNetwork',
   data() {
-    return { offices: OFFICES, factoryTitle: FACTORY.title }
+    return { offices: OFFICES }
   },
   methods: {
     mapUrl(office) {
