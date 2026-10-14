@@ -1,8 +1,8 @@
-// Thang trưng bày tại showroom TP Thanh Hóa. Chưa có địa chỉ cụ thể:
-// khi công ty cung cấp, điền vào trường address để hiện trên trang chủ, trang Liên hệ và hồ sơ PDF.
+// Thang trưng bày tại showroom TP Thanh Hóa — đặt tại Văn phòng Thanh Hóa (OFFICES id 'thanh-hoa').
+// Đổi địa chỉ văn phòng thì sửa cả ở đây (file này không import company.js để scripts/ho-so đọc được).
 export const SHOWROOM = {
   title: 'Showroom TP Thanh Hóa',
-  address: '',
+  address: 'Lô LK23-09, KĐT Xuân Hưng, phường Đông Quang, tỉnh Thanh Hóa',
   photos: [
     { img: require('~/assets/img/showroom/01.jpg'), alt: 'Thang máy trưng bày khung vàng, kính đen tại showroom Hưng Phát, TP Thanh Hóa' },
     { img: require('~/assets/img/showroom/02.jpg'), alt: 'Cửa cabin khắc logo Thang máy Hưng Phát – Kính chào quý khách' },

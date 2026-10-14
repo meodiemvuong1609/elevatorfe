@@ -16,10 +16,16 @@
             {{ point }}
           </li>
         </ul>
-        <p v-if="showroom.address" class="m-0 text-white font-semibold">{{ showroom.address }}</p>
+        <address v-if="showroom.address" class="not-italic flex gap-3 items-start text-white font-semibold">
+          <svg class="shrink-0 mt-0.5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6B5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" /><circle cx="12" cy="9.5" r="2.5" /></svg>
+          {{ showroom.address }}
+        </address>
         <div class="flex flex-wrap gap-3">
           <a :href="`tel:${hotline}`" class="hp-btn-primary">
             Gọi hẹn lịch xem thang · {{ hotlineDisplay }}
+          </a>
+          <a :href="mapUrl" target="_blank" rel="noopener" class="hp-btn border-[1.5px] border-white/40 text-white hover:border-white">
+            Chỉ đường đến showroom
           </a>
         </div>
       </div>
@@ -36,14 +42,16 @@
 </template>
 
 <script>
-import { HOTLINE, HOTLINE_DISPLAY } from '~/common/lib/company'
+import { HOTLINE, HOTLINE_DISPLAY, OFFICES } from '~/common/lib/company'
 import { SHOWROOM } from '~/common/lib/showroom'
 
 export default {
   name: 'HomeShowroom',
   data() {
+    const [lng, lat] = OFFICES.find((o) => o.id === 'thanh-hoa').coordinates
     return {
       showroom: SHOWROOM,
+      mapUrl: `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`,
       // Ảnh 02 (logo khắc) đã dùng ở phần đầu trang chủ
       gallery: [SHOWROOM.photos[0], SHOWROOM.photos[2], SHOWROOM.photos[3]],
       hotline: HOTLINE,
