@@ -25,7 +25,7 @@
           <div class="p-6 flex flex-col gap-2">
             <div class="text-[13px] text-muted tabular-nums">0{{ index + 1 }}</div>
             <h3 class="m-0 text-[21px] font-bold group-hover:text-brand">{{ item.title }}</h3>
-            <p class="m-0 text-body text-[15px]">{{ item.desc }}</p>
+            <p class="m-0 text-body text-[15px]">{{ item.short }}</p>
           </div>
         </nuxt-link>
       </div>
@@ -39,7 +39,7 @@
           <span class="text-[13px] text-muted tabular-nums pt-1">0{{ featured.length + index + 1 }}</span>
           <div>
             <h3 class="m-0 mb-1 text-lg font-bold">{{ item.title }}</h3>
-            <p class="m-0 text-body text-[15px]">{{ item.desc }}</p>
+            <p class="m-0 text-body text-[15px]">{{ item.short }}</p>
           </div>
         </li>
       </ul>
@@ -53,37 +53,15 @@
 </template>
 
 <script>
+import { PRODUCT_LINES } from '~/common/lib/products'
+
 export default {
   name: 'HomeProductLines',
   data() {
+    // 3 dòng đầu có ảnh riêng, hiển thị dạng thẻ ảnh; các dòng còn lại dạng danh sách
     return {
-      featured: [
-        {
-          title: 'Thang máy tải khách',
-          desc: 'Cho nhà ở, chung cư, văn phòng, khách sạn và trung tâm thương mại.',
-          img: require('~/assets/img/products/img6.webp'),
-          alt: 'Thang máy tải khách trong biệt thự tân cổ điển',
-        },
-        {
-          title: 'Thang máy quan sát',
-          desc: 'Vách kính bao quanh — hiện đại, sáng sủa, tôn kiến trúc công trình.',
-          img: require('~/assets/img/project/p12.jpg'),
-          alt: 'Thang máy giếng kính khung inox',
-        },
-        {
-          title: 'Home lift',
-          desc: 'Thang gia đình nhỏ gọn, tối ưu cho nhà phố diện tích hạn chế.',
-          img: require('~/assets/img/products/img14.webp'),
-          alt: 'Thang máy gia đình Home lift, khung ốp gỗ tự nhiên',
-        },
-      ],
-      others: [
-        { title: 'Thang cửa bản lề', desc: 'Cửa kính cường lực mở như cửa thường, kích thước siêu nhỏ.' },
-        { title: 'Thang máy bệnh viện', desc: 'Vận chuyển băng ca, giường bệnh và thiết bị y tế.' },
-        { title: 'Thang máy tải hàng', desc: 'Nâng hàng hóa cho kho, nhà xưởng, tòa nhà cao tầng.' },
-        { title: 'Thang máy xe hơi', desc: 'Tải xe 4, 7 hoặc 16 chỗ cho hầm xe, chung cư, showroom.' },
-        { title: 'Thang máy thực phẩm', desc: 'Thang tải nhỏ chuyên dụng cho nhà hàng, bếp trung tâm.' },
-      ],
+      featured: PRODUCT_LINES.slice(0, 3),
+      others: PRODUCT_LINES.slice(3),
     }
   },
 }
