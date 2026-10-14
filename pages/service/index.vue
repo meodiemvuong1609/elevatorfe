@@ -1,129 +1,128 @@
 <template>
-  <div class="grid">
-    <div class="bg-banner">
-      <div class="fill w-full h-full flex justify-center items-center">
-        <p class="font-bold text-2xl sm:text-3xl text-white text-center px-4">DỊCH VỤ CỦA CHÚNG TÔI</p>
-      </div>
-    </div>
-    <!-- <p class="text-center font-bold text-3xl pt-5">DỊCH VỤ CỦA CHÚNG TÔI</p> -->
+  <div>
+    <PageHeader
+      eyebrow="Dịch vụ"
+      title="Lắp đặt, bảo trì và hỗ trợ trọn gói"
+      desc="Từ tư vấn, bản vẽ, báo giá đến lắp đặt và bảo trì 24/7 — một đầu mối chịu trách nhiệm cho cả vòng đời thang máy."
+    />
 
-    
+    <!-- Hai dịch vụ chính -->
+    <section class="hp-section">
+      <div class="hp-container flex flex-col gap-16 lg:gap-20">
+        <article
+          v-for="(service, index) in services"
+          :id="service.id"
+          :key="service.id"
+          class="grid gap-8 lg:gap-14 lg:grid-cols-2 items-center"
+        >
+          <div class="hp-zoom rounded-[10px] overflow-hidden bg-line h-[320px] sm:h-[480px]" :class="index % 2 === 1 ? 'lg:order-2' : ''">
+            <img :src="service.img" :alt="service.alt" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="flex flex-col gap-5">
+            <div class="hp-eyebrow">{{ service.eyebrow }}</div>
+            <h2 class="hp-h2">{{ service.title }}</h2>
+            <p v-for="paragraph in service.paragraphs" :key="paragraph" class="m-0 text-body text-[17px]">{{ paragraph }}</p>
+            <ul class="list-none m-0 p-0 flex flex-col gap-2.5">
+              <li v-for="point in service.points" :key="point" class="flex gap-3 items-start">
+                <svg class="shrink-0 mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E7A46" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10" /></svg>
+                {{ point }}
+              </li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
 
-    <div class="px-6 py-12 max-sm:p-4">
-      <div
-        class="content grid grid-cols-2 w-3/4 mx-auto gap-4 sm:gap-12 mt-4 max-sm:grid-cols-1 max-sm:w-full"
-      >
-        <div class="rounded-lg">
-          <img
-            src="https://thangmaytienphat.vn/wp-content/uploads/2020/12/Tieu-chuan-thang-may-700x393.jpg"
-            class="w-full h-auto object-cover rounded-lg"
-            alt=""
-          />
+    <!-- Dịch vụ hỗ trợ -->
+    <section class="hp-section bg-white border-y border-line">
+      <div class="hp-container flex flex-col gap-10">
+        <div class="max-w-[640px] flex flex-col gap-3">
+          <div class="hp-eyebrow">Dịch vụ hỗ trợ</div>
+          <h2 class="hp-h2">Hỗ trợ trước khi bạn quyết định</h2>
         </div>
-        <div class="grid gap-4">
-          <p class="text-2xl font-bold text-green-dark">LẮP ĐẠT THANG MÁY</p>
-          <P
-            >Với đặc thù thang máy là sản phẩm kết tinh của hàng ngàn cấu kiện
-            thiết bị. Chúng tôi hiểu rằng để một cỗ máy vận hành êm ái thì tất
-            cả các chi tiết đều phải lắp đặt chính xác và phải thực sự haonf
-            hảo.</P
-          >
-          <p>
-            Vì vậy việc đào tạo đội ngũ lắp đặt vận hành một yếu tố thiết yếu để
-            không ngừung nâng cao chất lượng hoạt động của
-            <b>Thang máy Hưng Phát</b>. Hướng đến mục đích cao nhất là chất
-            lượng hoạt động của thang máy luôn an toàn, êm ái, nâng cao tổi thọ
-            của thang máy
-          </p>
+        <div class="grid gap-4 md:grid-cols-3">
+          <article v-for="item in supports" :key="item.title" class="bg-paper border border-line rounded-[10px] p-6 flex flex-col gap-3">
+            <span class="w-12 h-12 rounded-lg bg-white border border-line inline-flex items-center justify-center" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path :d="item.icon" /></svg>
+            </span>
+            <h3 class="m-0 text-[19px] font-bold">{{ item.title }}</h3>
+            <p class="m-0 text-body text-[15px] flex-1">{{ item.desc }}</p>
+            <a href="#tu-van" class="hp-link-arrow self-start text-[15px]">
+              Liên hệ ngay
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+          </article>
         </div>
       </div>
-    </div>
-    <div class="px-6 py-12 max-sm:p-4">
-      <div
-        class="content grid grid-cols-2 w-3/4 mx-auto gap-4 sm:gap-12 mt-4 max-sm:grid-cols-1 max-sm:w-full"
-      >
-        <div class="grid gap-4">
-          <p class="text-2xl font-bold text-green-dark">BẢO TRÌ THANG MÁY</p>
-          <P
-            >Thang máy ra đời là bước ngoạt giúp con người đạt tới các đỉnh cao
-            mới của các toà nhà chọc trời. Với những lợi ích mang lại như tiện
-            lợi, nhanh chóng thực sự hiệu quả về kinh tế, thực tế thang máy hiện
-            nay không thể thiếu trong các cáo ốc, toà nhà văn phòng, trung tâm
-            thương mại và thậm chí trong các biệt thự nhà phố, gia đình,...
-          </P>
-          <p>
-            Tuy nhiên do hoạt động với cường độ cao nên cũng không tránh khỏi
-            những lúc thang máy xảy ra sự cố không thể hoạt động. Dịch vụ bảo
-            trì bảo dưỡng 24/7 của <b>Thang máy Hưng Phát</b> luôn lắng nghe và
-            sẵn sàng đáp ứng tất cả các yêu cầu dịch vụ của Quý khách hàng. Luôn
-            luôn đồng hành, phục vụ kịp thời, nhanh chóng là phương châm hành
-            động của chúng tôi nhằm mang lại sự tin tưởng tuyệt đối của khách
-            hàng với <b>Thang máy Hưng Phát</b>.
-          </p>
-        </div>
-        <div class="rounded-lg">
-          <img
-            src="https://tapchithangmay.vn/apps/uploads/2021/11/DAV_2464-scaled.jpg"
-            class="w-full h-auto object-cover rounded-lg"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
+    </section>
 
-    <div class="bg-gray-light-1 py-20">
-      <div
-        class="flex items-center justify-center font-bold text-2xl max-sm:text-xl text-center"
-      >
-        DỊCH VỤ HỖ TRỢ
-      </div>
-      <div class="flex items-center justify-center p-4">
-        <div class="line"></div>
-      </div>
-      <div
-        class="w-3/4 mx-auto grid grid-cols-3 gap-3 p-4 max-sm:grid-cols-1 sm:gap-6 max-sm:w-full sm:p-6"
-      >
-        <div class="p-6 boxshadow flex flex-col gap-4 items-center justify-between">
-          <p class="text-xl font-bold">Tư vấn miễn phí</p>
-          <p class="text-center">
-            Khảo sát nhu cầu sử dụng, tư vấn giải pháp thang máy phù hợp với nhu
-            cầu và ngân sách của khách hàng.
-          </p>
-          <v-button type="primary" class="w-full"  @click="$router.push('/contact')">Liên hệ ngay</v-button>
-        </div>
-        <div class="p-6 boxshadow flex flex-col gap-4 items-center justify-between">
-          <p class="text-xl font-bold">Thiết kế bản vẽ</p>
-          <p class="text-center">
-            Cung cấp bản vẽ thiết kế chi tiết cho hố thang máy, phòng máy và các
-            chi tiết kỹ thuật khác.
-          </p>
-          <v-button type="primary" class="w-full" @click="$router.push('/contact')">Liên hệ ngay</v-button>
-        </div>
-        <div class="p-6 boxshadow flex flex-col gap-4 items-center justify-between">
-          <p class="text-xl font-bold">Báo giá</p>
-          <p class="text-center">
-            Cung cấp báo giá chi tiết cho thang máy, bao gồm giá sản phẩm, chi
-            phí lắp đặt, thuế VAT, bảo hành...
-          </p>
-          <v-button type="primary" class="w-full" @click="$router.push('/contact')">Liên hệ ngay</v-button>
-        </div>
-      </div>
-    </div>
+    <HomeProcess :show-link="false" />
+    <HomeFaq />
+    <ConsultForm />
   </div>
 </template>
 
 <script>
 export default {
+  name: 'ServicePage',
   head() {
     return {
-      title: "Dịch vụ",
-      meta: [{ hid: "description", name: "description", content: "Dịch vụ lắp đặt, bảo trì thang máy 24/7, tư vấn miễn phí, thiết kế bản vẽ và báo giá chi tiết từ Thang máy Hưng Phát." }],
-    };
+      title: 'Dịch vụ',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Dịch vụ lắp đặt, bảo trì thang máy 24/7, tư vấn miễn phí, thiết kế bản vẽ và báo giá chi tiết từ Thang máy Hưng Phát.',
+        },
+      ],
+    }
   },
-  name: "IndexPage",
-  created() {},
-  methods: {
-  }
-};
+  data() {
+    return {
+      services: [
+        {
+          id: 'lap-dat',
+          eyebrow: 'Lắp đặt thang máy',
+          title: 'Lắp đặt chính xác đến từng chi tiết',
+          paragraphs: [
+            'Thang máy là sản phẩm kết tinh của hàng ngàn cấu kiện, thiết bị. Để một cỗ máy vận hành êm ái, tất cả các chi tiết đều phải được lắp đặt chính xác và thực sự hoàn hảo.',
+            'Vì vậy, đào tạo đội ngũ lắp đặt, vận hành là yếu tố thiết yếu để Thang máy Hưng Phát không ngừng nâng cao chất lượng — hướng tới mục tiêu cao nhất là thang luôn vận hành an toàn, êm ái và bền lâu.',
+          ],
+          points: ['Lắp đặt theo bản vẽ đã thống nhất', 'Chạy thử và kiểm định trước khi bàn giao', 'Hướng dẫn sử dụng cho gia đình'],
+          img: require('~/assets/img/project/p12.jpg'),
+          alt: 'Giếng thang kính khung inox do Hưng Phát lắp đặt',
+        },
+        {
+          id: 'bao-tri',
+          eyebrow: 'Bảo trì thang máy 24/7',
+          title: 'Luôn đồng hành, phục vụ kịp thời',
+          paragraphs: [
+            'Thang máy ngày nay không thể thiếu trong cao ốc, tòa nhà văn phòng, trung tâm thương mại và cả biệt thự, nhà phố. Hoạt động với cường độ cao nên khó tránh khỏi những lúc thang gặp sự cố.',
+            'Dịch vụ bảo trì, bảo dưỡng 24/7 của Thang máy Hưng Phát luôn lắng nghe và sẵn sàng đáp ứng mọi yêu cầu của Quý khách hàng. Luôn đồng hành, phục vụ kịp thời và nhanh chóng là phương châm hành động của chúng tôi.',
+          ],
+          points: ['Bảo trì, bảo dưỡng định kỳ', 'Sửa chữa, thay thế linh kiện', 'Cứu hộ 24/7 qua hotline'],
+          img: require('~/assets/img/products/img12.webp'),
+          alt: 'Thang máy gia đình khung ốp đá trắng vân xám',
+        },
+      ],
+      supports: [
+        {
+          title: 'Tư vấn miễn phí',
+          desc: 'Khảo sát nhu cầu sử dụng, tư vấn giải pháp thang máy phù hợp với nhu cầu và ngân sách của khách hàng.',
+          icon: 'M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12zM8 11h8M8 14h5',
+        },
+        {
+          title: 'Thiết kế bản vẽ',
+          desc: 'Cung cấp bản vẽ thiết kế chi tiết cho hố thang máy, phòng máy và các chi tiết kỹ thuật khác.',
+          icon: 'M3 21l3-1 12-12-2-2L4 18zM14 6l2 2M3 3h7M3 3v7',
+        },
+        {
+          title: 'Báo giá chi tiết',
+          desc: 'Báo giá chi tiết cho thang máy, bao gồm giá sản phẩm, chi phí lắp đặt, thuế VAT, bảo hành.',
+          icon: 'M6 3h9l4 4v14H6zM14 3v5h5M9 13h7M9 17h5',
+        },
+      ],
+    }
+  },
+}
 </script>
-

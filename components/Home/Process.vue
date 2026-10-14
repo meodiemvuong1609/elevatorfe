@@ -23,7 +23,7 @@
           <p class="m-0 text-muted-dark text-[15px]">{{ step.desc }}</p>
         </li>
       </ol>
-      <nuxt-link to="/service" class="hp-link-arrow self-start !border-white hover:!text-signal hover:!border-signal">
+      <nuxt-link v-if="showLink" to="/service" class="hp-link-arrow self-start !border-white hover:!text-signal hover:!border-signal">
         Chi tiết dịch vụ
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
       </nuxt-link>
@@ -34,6 +34,10 @@
 <script>
 export default {
   name: 'HomeProcess',
+  props: {
+    // Ẩn link "Chi tiết dịch vụ" khi đang ở chính trang Dịch vụ
+    showLink: { type: Boolean, default: true },
+  },
   data() {
     return {
       steps: [
