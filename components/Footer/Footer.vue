@@ -1,67 +1,59 @@
 <template>
-  <div class="footer">
-    <div class="w-full custom-gradient">
-      <div class="px-4 py-5 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:px-[15%]">
-        <div class="block" >
-          <div>
-            <div class="text-white text-xl">GIỚI THIỆU</div>
-            <div class="text-white box-border mt-4 mr-5"><strong>Hưng Phát</strong> luôn xác định và hiểu rõ nhu cầu của khách hàng, cung cấp giải pháp cá nhân hóa nhanh chóng, phù hợp với thiết kế của từng ngôi nhà cũng như nhu cầu sử dụng của khách hàng <br>
-            </div>
-          </div>
-          <div>
-            <div class="text-white text-xl pt-6">THÔNG TIN LIÊN HỆ</div>
-            <div class="flex pt-4 gap-2 items-center">
-              <Icons-Phone />
-              <a :href="`tel:${hotline}`" class="text-white">{{ hotlineDisplay }}</a>
-            </div>
-            <div class="flex pt-2 gap-2 items-center">
-              <Icons-Email />
-              <a :href="`mailto:${email}`" class="text-white">{{ email }}</a>
-            </div>
-            <div class="flex pt-2 gap-2 items-center">
-              <Icons-Facebook />
-              <a :href="facebookUrl" target="_blank" rel="noopener" class="text-white">
-                facebook.com/hungphatelevator
-              </a>
+  <footer class="bg-ink text-muted-dark text-sm">
+    <div class="hp-container pt-14 pb-8 flex flex-col gap-10">
+      <div class="grid gap-10 md:grid-cols-[minmax(0,1.4fr)_repeat(2,minmax(0,1fr))]">
+        <div class="flex flex-col gap-2.5">
+          <img src="~/assets/img/hungphat.png" class="h-14 w-auto self-start bg-white rounded-md p-1.5 mb-2" alt="Logo Hưng Phát Elevator" />
+          <div class="text-white font-extrabold text-base tracking-[0.01em]">{{ legal.name }}</div>
+          <div>{{ legal.internationalName }}</div>
+          <div>Mã số thuế: {{ legal.taxCode }} · Hoạt động từ {{ legal.activeSince }}</div>
+          <div>Người đại diện: {{ legal.representative }} — {{ legal.representativeTitle }}</div>
+          <div>Địa chỉ: {{ legal.registeredAddress }}</div>
+          <div class="mt-3 flex flex-col gap-1.5">
+            <span class="text-white font-bold">Tài khoản công ty</span>
+            <div v-for="account in bankAccounts" :key="account.number">
+              STK <span class="text-white font-semibold tabular-nums">{{ account.number }}</span>
+              — {{ account.bank }}, {{ account.branch }}
             </div>
           </div>
         </div>
-        <div class="">
-          <div class="text-white text-xl">ĐỊA CHỈ CÔNG TY</div>
-          <div
-            v-for="(office, index) in offices"
-            :key="index"
-            class="flex gap-2 items-start"
-            :class="index === 0 ? 'pt-4' : 'pt-2'"
-          >
-            <div class="pt-2">
-              <Icons-Location />
-            </div>
-            <div class="text-white">{{ office.address }}</div>
-          </div>
-        </div>
-        <div class="">
-          <div class="text-white text-xl">KẾT NỐI VỚI HƯNG PHÁT</div>
-          <div class="pt-4">
-            <MapLocation />
-          </div>
+
+        <nav class="flex flex-col gap-2.5" aria-label="Liên kết chân trang">
+          <span class="text-white font-bold mb-1">Hưng Phát</span>
+          <nuxt-link to="/introduce" class="hover:text-white">Giới thiệu</nuxt-link>
+          <nuxt-link to="/products" class="hover:text-white">Các dòng thang máy</nuxt-link>
+          <nuxt-link to="/cabins" class="hover:text-white">Mẫu cabin</nuxt-link>
+          <nuxt-link to="/service" class="hover:text-white">Dịch vụ lắp đặt &amp; bảo trì</nuxt-link>
+          <nuxt-link to="/project" class="hover:text-white">Dự án</nuxt-link>
+        </nav>
+
+        <div class="flex flex-col gap-2.5">
+          <span class="text-white font-bold mb-1">Liên hệ</span>
+          <a :href="`tel:${hotline}`" class="text-white font-bold text-lg tabular-nums hover:text-signal">{{ hotlineDisplay }}</a>
+          <a :href="`mailto:${email}`" class="hover:text-white break-all">{{ email }}</a>
+          <a :href="facebookUrl" target="_blank" rel="noopener" class="hover:text-white">Facebook</a>
+          <span class="mt-2">Nhà máy: {{ factory.address }}</span>
         </div>
       </div>
+
+      <div class="border-t border-panel-line pt-5 flex flex-wrap gap-2 justify-between text-[13px] text-[#8F8B83]">
+        <span>© {{ year }} Thang máy Hưng Phát. Bảo lưu mọi quyền.</span>
+        <span>Văn phòng: Hà Nội · Thanh Hóa · Quảng Ninh · TP. Hồ Chí Minh</span>
+      </div>
     </div>
-    <div class="copyright flex items-center justify-center text-white p-2 gap-1">
-      Copyright {{ year }} © <p><strong> Hưng Phát</strong></p>
-    </div>
-  </div>
+  </footer>
 </template>
 
 <script>
-import { EMAIL, FACEBOOK_URL, HOTLINE, HOTLINE_DISPLAY, OFFICES } from '~/common/lib/company'
+import { BANK_ACCOUNTS, EMAIL, FACEBOOK_URL, FACTORY, HOTLINE, HOTLINE_DISPLAY, LEGAL } from '~/common/lib/company'
 
 export default {
   name: 'Footer',
   data() {
     return {
-      offices: OFFICES,
+      legal: LEGAL,
+      bankAccounts: BANK_ACCOUNTS,
+      factory: FACTORY,
       hotline: HOTLINE,
       hotlineDisplay: HOTLINE_DISPLAY,
       email: EMAIL,
@@ -71,7 +63,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped>
-@import 'Footer.scss';
-</style>
