@@ -14,8 +14,8 @@ export const PRODUCT_LINES = [
     title: 'Thang máy quan sát',
     short: 'Vách kính bao quanh — hiện đại, sáng sủa, tôn kiến trúc công trình.',
     desc: 'Thang được bao quanh bởi vách kính, mang vẻ đẹp hiện đại, sang trọng mà vẫn giúp người đi thang cảm thấy gần gũi với không gian và thiên nhiên xung quanh.',
-    img: require('~/assets/img/project/p12.jpg'),
-    alt: 'Thang máy giếng kính khung inox',
+    img: require('~/assets/img/cong-trinh/anh-thang-ocean-park-2/01.jpg'),
+    alt: 'Thang máy kính khung inox tại Vinhomes Ocean Park 2',
   },
   {
     title: 'Home lift',
@@ -49,8 +49,8 @@ export const PRODUCT_LINES = [
     title: 'Thang máy tải hàng',
     short: 'Nâng hàng hóa cho kho, nhà xưởng, tòa nhà cao tầng.',
     desc: 'Thang chuyên dụng để nâng hàng hóa (ký hiệu F — Freight), thường lắp riêng, không dùng chung với thang chở người trong tòa nhà văn phòng, chung cư cao tầng, kho và nhà xưởng.',
-    img: null,
-    icon: 'M3 21V9l9-6 9 6v12M7 21v-8h10v8M7 17h10',
+    img: require('~/assets/img/cong-trinh/tai-hang-bac-ninh/01.jpg'),
+    alt: 'Thang máy tải hàng 2000 kg tại nhà xưởng Bắc Ninh',
   },
   {
     title: 'Thang máy thực phẩm',

@@ -34,16 +34,16 @@
       <div class="flex-[1_1_440px] min-w-0 grid grid-cols-2 gap-3">
         <div class="hp-zoom row-span-2 rounded-[10px] overflow-hidden h-[360px] sm:h-[520px] bg-line">
           <img
-            src="~/assets/img/project/p11.jpg"
-            alt="Thang máy gia đình cửa kính khung inox do Hưng Phát lắp đặt"
+            src="~/assets/img/cong-trinh/anh-tuan-anh-bac-ninh/01.jpg"
+            alt="Thang máy khung gỗ chạm tân cổ điển nhà anh Tuấn Anh, Bắc Ninh"
             class="w-full h-full object-cover"
             fetchpriority="high"
           />
         </div>
         <div class="hp-zoom rounded-[10px] overflow-hidden h-[174px] sm:h-[254px] bg-line">
           <img
-            src="~/assets/img/products/img4.webp"
-            alt="Thang máy gia đình cửa vàng gương, khung ốp gỗ"
+            src="~/assets/img/showroom/02.jpg"
+            alt="Cửa cabin khắc logo Thang máy Hưng Phát – Kính chào quý khách"
             class="w-full h-full object-cover"
           />
         </div>
