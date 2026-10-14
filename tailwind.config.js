@@ -11,6 +11,24 @@ module.exports = {
   ],
   theme: {
     colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      // Bảng màu giao diện mới (2026): nền giấy ấm, chữ than chì, đỏ thương hiệu
+      ink: '#15181C',
+      night: '#0B0D0F',
+      panel: '#1F2328',
+      'panel-line': '#2E333A',
+      paper: '#F6F5F2',
+      stone: '#ECEAE5',
+      line: '#E3E0D9',
+      'line-strong': '#C9C5BD',
+      body: '#3F444B',
+      muted: '#5A5F66',
+      'muted-dark': '#C9C5BD',
+      brand: '#B8302A',
+      'brand-dark': '#962620',
+      signal: '#FF6B5E',
+      ok: '#1E7A46',
       white: '#FFFFFF',
       black: '#292929',
       red: '#EF5149',
@@ -39,7 +57,9 @@ module.exports = {
       'gray-light-2': '#F5F5F5',
     },
     extend: {
-      fontFamily: {},
+      fontFamily: {
+        sans: ['"Be Vietnam Pro"', 'system-ui', 'sans-serif'],
+      },
     }
   },
   plugins: [],

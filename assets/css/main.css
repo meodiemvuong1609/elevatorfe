@@ -2,6 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply font-sans bg-paper text-ink antialiased;
+  }
+}
+
+/* Khối dùng lại nhiều lần của giao diện mới */
+@layer components {
+  .hp-container {
+    @apply max-w-[1240px] mx-auto px-4 sm:px-6;
+  }
+  .hp-section {
+    @apply py-16 lg:py-24;
+  }
+  .hp-eyebrow {
+    @apply text-[13px] font-bold uppercase tracking-[0.1em] text-brand;
+  }
+  .hp-h2 {
+    @apply m-0 text-[30px] lg:text-[42px] leading-[1.15] font-extrabold tracking-[-0.02em];
+  }
+  .hp-btn {
+    @apply inline-flex items-center justify-center gap-2.5 min-h-[48px] px-6 rounded-md font-semibold transition-colors;
+  }
+  .hp-btn-primary {
+    @apply hp-btn bg-brand text-white hover:bg-brand-dark;
+  }
+  .hp-btn-outline {
+    @apply hp-btn border-[1.5px] border-ink text-ink hover:bg-ink hover:text-white;
+  }
+  .hp-link-arrow {
+    @apply inline-flex items-center gap-2 min-h-[44px] font-semibold border-b-[1.5px] border-ink hover:text-brand hover:border-brand;
+  }
+  /* Ảnh phóng nhẹ khi rê chuột vào khung cha */
+  .hp-zoom img {
+    @apply transition-transform duration-500;
+  }
+  .hp-zoom:hover img {
+    @apply scale-[1.04];
+  }
+}
+
 /* Class dùng chung giữa nhiều trang. Trước đây được khai báo rải rác trong
    style của từng trang nên khi vào thẳng một trang khác sẽ bị thiếu style. */
 .line {

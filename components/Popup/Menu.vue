@@ -1,150 +1,68 @@
 <template>
-  <div
-  v-if="isShow"
-    class="popup__container fixed"
-    :class="{ 'show-popup': isShow, 'hide-popup': !isShow }"
-    @transitionend="onTransitionEnd"
-  >
-  <!-- <div class="flex justify-between items-center mt-7 mr-4">
-    <div class="cursor-pointer"></div>
-    <div @click="close"><icons-x /></div>
-  </div> -->
-    <div
-      class="popup__content absolute bg-white"
-      :class="paddingClass"
-    >
-      <div class="" @click="handleRoute('/')">
-        <div class="flex items-center">
-          <img src="~/assets/img/hungphat.png" class="h-[80px] w-auto my-4" alt="Logo Thang máy Hưng Phát">
-        </div>
+  <div v-if="isShow" class="fixed inset-0 z-[3001] xl:hidden" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="absolute inset-0 bg-ink/60" @click="close"></div>
+    <nav class="menu-panel absolute top-0 right-0 bottom-0 w-[min(320px,85vw)] bg-white flex flex-col overflow-y-auto">
+      <div class="flex items-center justify-between px-5 h-[72px] border-b border-line">
+        <img src="~/assets/img/hungphat.png" class="h-11 w-auto" alt="Logo Hưng Phát Elevator" />
+        <button
+          type="button"
+          class="w-11 h-11 inline-flex items-center justify-center rounded-md border border-line"
+          aria-label="Đóng menu"
+          @click="close"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
       </div>
-      <div class="py-4 text-red border-b border-gray" :class="$route.path == '/' && 'font-bold'" @click="handleRoute('/')">
-        Trang chủ
-      </div>
-      <div
-        class="py-4 text-red border-b border-gray"
-        :class="$route.path == '/introduce' && 'font-bold'"
-        @click="handleRoute('/introduce')"
+      <nuxt-link
+        v-for="item in menu"
+        :key="item.to"
+        :to="item.to"
+        class="px-5 py-4 border-b border-line font-medium"
+        exact-active-class="text-brand font-bold"
+        @click.native="close"
       >
-        Giới thiệu
+        {{ item.label }}
+      </nuxt-link>
+      <div class="p-5 mt-auto flex flex-col gap-3">
+        <a :href="`tel:${hotline}`" class="hp-btn-primary w-full">Gọi {{ hotlineDisplay }}</a>
+        <nuxt-link to="/contact" class="hp-btn-outline w-full" @click.native="close">Nhận báo giá</nuxt-link>
       </div>
-      <div
-        class="py-4 text-red border-b border-gray"
-        :class="$route.path == '/service' && 'font-bold'"
-        @click="handleRoute('/service')"
-      >
-        Dịch vụ
-      </div>
-      <div class="py-4 text-red border-b border-gray" :class="$route.path == '/products' && 'font-bold'" @click="handleRoute('/products')">
-        Sản phẩm
-      </div>
-      <div class="py-4 text-red border-b border-gray" :class="$route.path == '/project' && 'font-bold'" @click="handleRoute('/project')">
-        Dự án
-      </div>
-      <div class="py-4 text-red border-b border-gray" :class="$route.path == '/contact' && 'font-bold'" @click="handleRoute('/contact')">
-        Liên hệ
-      </div>
-    </div>
-    <div class="popup__bg absolute" @click="close"></div>
+    </nav>
   </div>
 </template>
 
 <script>
+import { HOTLINE, HOTLINE_DISPLAY } from '~/common/lib/company'
+
 export default {
-  name: "PopupComponent",
-
+  name: 'PopupMenu',
   props: {
-    isShow: {
-      type: Boolean,
-      default: false,
-    },
-    width: {
-      type: String,
-      default: "33.333%",
-    },
-
-    paddingClass: {
-      type: String,
-      default: "p-4",
-    },
+    isShow: { type: Boolean, default: false },
+    menu: { type: Array, default: () => [] },
   },
-
   data() {
-    return {};
+    return { hotline: HOTLINE, hotlineDisplay: HOTLINE_DISPLAY }
   },
-
   methods: {
-    handleRoute(to) {
-      this.$router.push(to);
-      this.close();
-    },
-
     close() {
-      this.$emit("close");
-    },
-    onTransitionEnd() {
-      // Xử lý sự kiện khi kết thúc transition nếu cần
+      this.$emit('close')
     },
   },
-};
+}
 </script>
 
-<style lang="scss" scoped>
-.popup {
-  &__container {
-    top: 0;
-    left: -100%; // Ẩn popup ở bên phải màn hình
-    width: 100vw;
-    height: 100vh;
-    z-index: 3001;
-    animation-duration: 0.2s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-  }
-
-  &__content {
-    height: auto;
-    z-index: 1001;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 200px;
-    transition: transform 0.3s ease;
-  }
-
-  &__bg {
-    z-index: 100;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.55);
-  }
+<style scoped>
+.menu-panel {
+  animation: slide-in 0.2s ease;
 }
-
-.show-popup {
-  animation-name: slideRight; // Hiển thị popup từ phải sang trái
-}
-
-.hide-popup {
-  animation-name: slideLeft; // Ẩn popup từ trái sang phải
-}
-
-@keyframes slideRight {
+@keyframes slide-in {
   from {
-    left: -100%; // Ban đầu ẩn popup ở bên phải màn hình
+    transform: translateX(100%);
   }
   to {
-    left: 0; // Khi hiển thị popup, trượt sang vị trí 0
-  }
-}
-
-@keyframes slideLeft {
-  from {
-    left: 0; // Khi ẩn popup, popup ở vị trí 0
-  }
-  to {
-    left: -100%; // Khi ẩn popup, trượt sang bên phải màn hình
+    transform: translateX(0);
   }
 }
 </style>

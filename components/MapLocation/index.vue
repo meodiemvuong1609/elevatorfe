@@ -1,8 +1,21 @@
 <template>
   <div class="w-full">
-    <div class="relative map__container border-radius-m mt1" :style="styleMap">
+    <div v-if="hasToken" class="relative map__container border-radius-m mt1" :style="styleMap">
       <div ref="map" class="map" :style="`height: ${height}`"></div>
     </div>
+    <!-- Chưa cấu hình Mapbox: dẫn sang Google Maps thay vì để khung trống -->
+    <a
+      v-else
+      :href="fallbackUrl"
+      target="_blank"
+      rel="noopener"
+      class="flex flex-col items-center justify-center gap-3 text-center bg-stone border border-line hover:border-ink p-6"
+      :style="styleMap"
+    >
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" /><circle cx="12" cy="9.5" r="2.5" /></svg>
+      <span class="font-semibold">Xem vị trí {{ firstOffice.title.toLowerCase() }} trên Google Maps</span>
+      <span class="text-sm text-muted">{{ firstOffice.address }}</span>
+    </a>
   </div>
 </template>
 
@@ -30,6 +43,16 @@ export default {
     },
   },
   computed: {
+    hasToken() {
+      return Boolean(this.$config.ACCESS_TOKEN_MAP_BOX);
+    },
+    firstOffice() {
+      return OFFICES[0];
+    },
+    fallbackUrl() {
+      const [lng, lat] = OFFICES[0].coordinates;
+      return `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
+    },
     styleMap() {
       return {
         width: this.width,
@@ -39,11 +62,8 @@ export default {
     },
   },
   mounted() {
+    if (!this.hasToken) return;
     const accessToken = this.$config.ACCESS_TOKEN_MAP_BOX;
-    if (!accessToken) {
-      console.warn("[MapLocation] Thiếu ACCESS_TOKEN_MAP_BOX, bỏ qua bản đồ");
-      return;
-    }
 
     // Dùng ref thay vì id="map": trang Liên hệ có 2 bản đồ (nội dung + footer),
     // id trùng khiến cả 2 instance cùng vẽ vào 1 khung.
@@ -69,7 +89,7 @@ export default {
           textContent: `${office.title}: ${office.address}`,
         })
       );
-      new mapboxgl.Marker({ color: "red" })
+      new mapboxgl.Marker({ color: "#B8302A" })
         .setLngLat(office.coordinates)
         .setPopup(popup)
         .addTo(this.map);

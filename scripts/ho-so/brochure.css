@@ -1,0 +1,146 @@
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: 'Be Vietnam Pro', system-ui, sans-serif;
+  color: #15181C; font-size: 9.5pt; line-height: 1.5;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+h1, h2, h3, h4, p { margin: 0; }
+img { display: block; }
+
+.page {
+  width: 210mm; height: 297mm; padding: 16mm 16mm 20mm; position: relative;
+  background: #F6F5F2; overflow: hidden; page-break-after: always; break-after: page;
+  display: flex; flex-direction: column; gap: 6mm;
+}
+.page:last-child { page-break-after: auto; break-after: auto; }
+.foot {
+  position: absolute; left: 16mm; right: 16mm; bottom: 9mm;
+  display: flex; justify-content: space-between; font-size: 7.5pt; color: #5A5F66;
+  border-top: 0.3mm solid #E3E0D9; padding-top: 2.5mm;
+}
+
+.eyebrow { font-size: 7.5pt; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #B8302A; }
+.eyebrow.light { color: #FF6B5E; }
+.head { display: flex; flex-direction: column; gap: 2mm; }
+.head h2 { font-size: 21pt; line-height: 1.15; font-weight: 800; letter-spacing: -0.02em; }
+.lead { font-size: 10.5pt; color: #3F444B; max-width: 160mm; }
+.sub { font-size: 12pt; font-weight: 800; letter-spacing: -0.01em; margin-top: 1mm; }
+.small { font-size: 8.5pt; color: #3F444B; }
+p { color: #3F444B; }
+h4 { font-size: 10.5pt; font-weight: 700; }
+
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 7mm; }
+.two p + p { margin-top: 2.5mm; }
+.three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; }
+.card { background: #fff; border: 0.3mm solid #E3E0D9; border-radius: 2.5mm; padding: 4.5mm; display: flex; flex-direction: column; gap: 1.5mm; }
+.card p { font-size: 8.8pt; }
+.dark-card { background: #15181C; color: #fff; border-radius: 2.5mm; padding: 6mm; display: flex; flex-direction: column; gap: 2mm; justify-content: flex-end; }
+
+.stats { display: grid; grid-template-columns: 1fr 1fr; border-top: 0.3mm solid #C9C5BD; }
+.stats div { padding: 3.5mm 0; border-bottom: 0.3mm solid #C9C5BD; display: flex; flex-direction: column; }
+.stats b { font-size: 18pt; font-weight: 800; letter-spacing: -0.02em; }
+.stats span { font-size: 8pt; color: #5A5F66; }
+
+.photo { margin: 0; border-radius: 2.5mm; overflow: hidden; position: relative; }
+.photo img { width: 100%; height: 100%; object-fit: cover; }
+.photo figcaption { position: absolute; left: 3mm; bottom: 3mm; background: #fff; border-radius: 1.5mm; padding: 1.5mm 3mm; font-size: 8pt; font-weight: 600; }
+.team { height: 82mm; }
+.team2 { height: 62mm; }
+
+/* Bìa */
+.cover { background: #15181C; color: #fff; padding: 18mm; gap: 9mm; }
+.cover-top { display: flex; justify-content: space-between; align-items: center; }
+.logo-box { background: #fff; border-radius: 2.5mm; padding: 2.5mm 4mm; }
+.logo-box img { height: 18mm; }
+.badge { background: #0B0D0F; color: #FF6B5E; font-weight: 700; padding: 1.5mm 3mm; border-radius: 1.5mm; letter-spacing: 0.06em; }
+.cover-title { display: flex; flex-direction: column; gap: 4mm; }
+.cover-title h1 { font-size: 46pt; line-height: 1.02; font-weight: 800; letter-spacing: -0.03em; }
+.cover-title p { color: #C9C5BD; font-size: 12pt; max-width: 140mm; }
+.cover-photo { flex: 1; border-radius: 3mm; overflow: hidden; min-height: 0; }
+.cover-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+.cover-foot { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; border-top: 0.3mm solid #2E333A; padding-top: 5mm; }
+.cover-foot span { display: block; font-size: 8pt; color: #C9C5BD; }
+.cover-foot b { font-size: 11pt; }
+
+/* Nhà máy */
+.factory { display: grid; grid-template-columns: 70mm 1fr; gap: 7mm; align-items: stretch; }
+.factory .addr { font-size: 16pt; font-weight: 700; line-height: 1.3; }
+.checks { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 3.5mm; justify-content: center; }
+.checks li { display: flex; gap: 2.5mm; align-items: flex-start; }
+.checks svg { flex-shrink: 0; margin-top: 0.8mm; }
+.checks b { display: block; font-size: 10pt; }
+.checks span { font-size: 8.8pt; color: #3F444B; }
+.list { width: 100%; border-collapse: collapse; font-size: 9pt; }
+.list th, .list td { text-align: left; vertical-align: top; padding: 2.4mm 0; border-bottom: 0.3mm solid #C9C5BD; }
+.list tr:first-child th, .list tr:first-child td { border-top: 0.3mm solid #C9C5BD; }
+.list th { width: 48mm; font-weight: 700; padding-right: 4mm; }
+.list td { color: #3F444B; }
+
+/* Sản phẩm */
+.products { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5mm; }
+.prod { display: grid; grid-template-columns: 30mm 1fr; gap: 3.5mm; background: #fff; border: 0.3mm solid #E3E0D9; border-radius: 2.5mm; overflow: hidden; height: 53mm; }
+.prod img, .prod .ph { width: 30mm; height: 100%; object-fit: cover; }
+.prod .ph { background: #ECEAE5; display: flex; align-items: center; justify-content: center; }
+.prod > div:last-child { padding: 3mm 3mm 3mm 0; display: flex; flex-direction: column; gap: 1mm; }
+.prod p { font-size: 8pt; line-height: 1.45; }
+.num { font-size: 7.5pt; color: #5A5F66; }
+
+/* Thông số */
+.table-img { width: 100%; max-height: 118mm; object-fit: contain; border: 0.3mm solid #E3E0D9; border-radius: 2mm; background: #fff; }
+.safety { display: grid; grid-template-columns: 1fr 1fr; gap: 2mm 6mm; }
+.safety div { border-top: 0.3mm solid #C9C5BD; padding-top: 2mm; }
+.safety p { font-size: 8pt; line-height: 1.4; }
+.safety h4 { font-size: 9.5pt; }
+
+/* Cabin */
+.cabins { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; }
+.cabin { background: #fff; border: 0.3mm solid #E3E0D9; border-radius: 2.5mm; overflow: hidden; display: flex; flex-direction: column; }
+.cabin img { width: 100%; height: 58mm; object-fit: cover; }
+.cabin h4 { padding: 2.5mm 3mm 1mm; font-size: 11pt; }
+.cabin dl { margin: 0; padding: 0 3mm 3mm; display: grid; grid-template-columns: 13mm 1fr; gap: 0.6mm 2mm; font-size: 7.3pt; line-height: 1.35; }
+.cabin dt { color: #5A5F66; }
+.cabin dd { margin: 0; color: #3F444B; }
+
+/* Dịch vụ */
+.svc .card { gap: 2mm; }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 2.5mm; }
+.steps li { background: #15181C; color: #fff; border-radius: 2.5mm; padding: 4mm 3.5mm; display: flex; flex-direction: column; gap: 2mm; }
+.steps h4 { font-size: 9.5pt; }
+.steps p { color: #C9C5BD; font-size: 7.8pt; }
+.floor { align-self: flex-start; background: #0B0D0F; color: #FF6B5E; font-weight: 700; font-size: 7.5pt; padding: 0.8mm 2mm; border-radius: 1mm; letter-spacing: 0.06em; }
+
+/* Hỏi đáp */
+.faq { display: flex; flex-direction: column; }
+.faq div { border-top: 0.3mm solid #C9C5BD; padding: 4.5mm 0; display: flex; flex-direction: column; gap: 1.5mm; }
+.faq h4 { font-size: 11.5pt; }
+.faq p { font-size: 9.5pt; }
+
+/* Liên hệ */
+.contact-top { display: grid; grid-template-columns: 0.9fr 1.25fr 1.25fr; gap: 3.5mm; }
+.contact-top > * { min-width: 0; padding: 4.5mm 4mm; justify-content: center; }
+.contact-top span, .banks span { font-size: 8pt; color: #5A5F66; }
+.contact-top .dark-card span { color: #C9C5BD; }
+.contact-top b { font-size: 8.4pt; white-space: nowrap; }
+.contact-top .dark-card b { font-size: 13.5pt; }
+.banks { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5mm; }
+.banks b { font-size: 16pt; font-weight: 800; letter-spacing: 0.02em; }
+
+/* Showroom */
+.showroom { display: grid; grid-template-columns: 1.2fr 1fr 1fr; grid-template-rows: 92mm 84mm; gap: 3mm; }
+.showroom img { width: 100%; height: 100%; object-fit: cover; border-radius: 2.5mm; }
+.showroom img:first-child { grid-row: span 2; object-position: 68% 50%; }
+.showroom img:nth-child(4) { grid-column: span 2; }
+.show-cta { flex-direction: row; justify-content: space-between; align-items: center; }
+.show-cta span { color: #C9C5BD; font-size: 10pt; }
+.show-cta b { font-size: 18pt; }
+
+/* Danh mục công trình */
+.works { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4mm; }
+.work { background: #fff; border: 0.3mm solid #E3E0D9; border-radius: 2.5mm; overflow: hidden; display: flex; flex-direction: column; }
+.work img { width: 100%; height: 78mm; object-fit: cover; }
+.work > div { padding: 2.5mm 3mm 3mm; display: flex; flex-direction: column; gap: 0.6mm; }
+.work .type { font-size: 6.8pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #B8302A; }
+.work h4 { font-size: 9pt; line-height: 1.3; }
+.work .spec { font-size: 7.8pt; color: #5A5F66; }

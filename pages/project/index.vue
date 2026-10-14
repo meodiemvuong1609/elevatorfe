@@ -1,58 +1,82 @@
 <template>
-  <div class="flex flex-col gap-0 max-sm:gap-4">
-    <div class="bg-banner">
-      <div class="fill w-full h-full flex justify-center items-center">
-        <p class="font-bold text-2xl sm:text-3xl text-white text-center px-4">DỰ ÁN</p>
+  <div>
+    <PageHeader
+      eyebrow="Dự án"
+      title="Công trình Hưng Phát đã thực hiện"
+      :desc="`${projects.length} công trình thang máy gia đình, tân cổ điển và thang tải hàng tại Hà Nội, Thanh Hóa, Bắc Ninh, Hưng Yên và các tỉnh thành. Bấm vào từng công trình để xem ảnh.`"
+    >
+      <div role="group" aria-label="Lọc theo kiểu thang" class="flex flex-wrap gap-2 mt-2">
+        <button
+          v-for="filter in filters"
+          :key="filter.id"
+          type="button"
+          class="px-4 min-h-[40px] inline-flex items-center gap-1.5 rounded-full border text-sm font-medium"
+          :class="active === filter.id ? 'bg-ink text-white border-ink' : 'border-line-strong hover:border-ink'"
+          :aria-pressed="active === filter.id ? 'true' : 'false'"
+          @click="active = filter.id"
+        >
+          {{ filter.label }}
+          <span class="tabular-nums" :class="active === filter.id ? 'text-muted-dark' : 'text-muted'">{{ filter.count }}</span>
+        </button>
       </div>
-    </div>
-    <!-- <div>
-      <Flickity
-        class="carousel hidden sm:block"
-        :options="{
-          wrapAround: true,
-          pageDots: false,
-          prevNextButtons: false,
-        }"
-        ref="flickity"
-      >
-        <div class="carousel-cell">
-          <img src="~/assets/img/banner-intro.jpeg" alt="">
-        </div>
-      </Flickity>
+    </PageHeader>
 
-        <Flickity
-        class="carousel sm:hidden"
-        :options="{
-          wrapAround: true,
-          pageDots: false,
-          prevNextButtons: true,
-          autoPlay: 5000
-        }"
-        ref="flickity"
-      >
-        <div class="carousel-cell">
-          <img src="~/assets/img/banner-sm.jpg" alt="">
-        </div>
+    <section class="hp-section">
+      <div class="hp-container grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <ProjectTile v-for="project in visible" :key="project.id" :project="project" @open="open" />
+      </div>
+    </section>
 
-      </Flickity>
-    </div> -->
-    <ProjectCard />
-    <Products/>
-    <ConsultForm wrapper-class="mt-20 max-sm:mt-5" />
-    <div class="h-[40px]"></div>
+    <HomeShowroom />
+    <ConsultForm />
+    <PhotoLightbox :project="opened" @close="opened = null" />
   </div>
 </template>
 
 <script>
+import { PROJECTS, PROJECT_TYPES } from '~/common/lib/projects'
+
 export default {
+  name: 'ProjectPage',
   head() {
     return {
-      title: "Dự án",
-      meta: [{ hid: "description", name: "description", content: "Một số dự án thang máy gia đình Hưng Phát đã và đang thực hiện tại Hà Nội, Thanh Hóa và các tỉnh thành." }],
-    };
+      title: 'Dự án',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `${PROJECTS.length} công trình thang máy Hưng Phát đã thực hiện: thang kính gia đình, thang tân cổ điển và thang tải hàng tại Hà Nội, Thanh Hóa, Bắc Ninh, Hưng Yên.`,
+        },
+      ],
+    }
   },
-  name: 'Project',
-
+  data() {
+    return {
+      projects: PROJECTS,
+      active: 'all',
+      opened: null,
+    }
+  },
+  computed: {
+    filters() {
+      return [
+        { id: 'all', label: 'Tất cả', count: this.projects.length },
+        ...PROJECT_TYPES.map((t) => ({ ...t, count: this.projects.filter((p) => p.type === t.id).length })),
+      ]
+    },
+    visible() {
+      return this.active === 'all' ? this.projects : this.projects.filter((p) => p.type === this.active)
+    },
+  },
+  mounted() {
+    // Mở sẵn ảnh khi đến từ trang chủ: /project?cong_trinh=<id>
+    const id = this.$route.query.cong_trinh
+    if (id) this.opened = this.projects.find((p) => p.id === id) || null
+  },
+  methods: {
+    open(project) {
+      this.opened = project
+    },
+  },
 }
 </script>
-

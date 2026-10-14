@@ -44,9 +44,12 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          # SSH trên server không chạy ở cổng 22: đặt biến repo SSH_PORT (Settings → Variables)
+          port: ${{ vars.SSH_PORT || '22' }}
           command_timeout: 20m
           script: |
             set -e
+            test -n "${{ secrets.SERVER_PATH }}" || { echo "Chưa cấu hình secret SERVER_PATH"; exit 1; }
             cd "${{ secrets.SERVER_PATH }}"
             git fetch origin master
             git checkout -q master
@@ -68,9 +71,12 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          # SSH trên server không chạy ở cổng 22: đặt biến repo SSH_PORT (Settings → Variables)
+          port: ${{ vars.SSH_PORT || '22' }}
           command_timeout: 20m
           script: |
             set -e
+            test -n "${{ secrets.STAGING_PATH }}" || { echo "Chưa cấu hình secret STAGING_PATH (xem deploy/DEPLOY.md)"; exit 1; }
             cd "${{ secrets.STAGING_PATH }}"
             git fetch origin staging
             git checkout -q staging
