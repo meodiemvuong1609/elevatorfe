@@ -1,5 +1,5 @@
 <template>
-  <div class="layout-container pt-[80px]">
+  <div class="layout-container pt-[72px] md:pt-[108px]">
     <Header />
     <nuxt-child />
     <a
@@ -8,9 +8,9 @@
       aria-label="Gọi hotline"
     >
       <div class="relative">
-        <div class="hotline-phone-ring-img-circle-fill bg-red-light-1 rounded-full absolute bottom-0 right-0"></div>
+        <div class="hotline-phone-ring-img-circle-fill bg-brand rounded-full absolute bottom-0 right-0"></div>
         <div
-          class="hotline-phone-ring-img-circle p-3 rounded-full bg-red-light-1 absolute bottom-[18px] right-[20px]"
+          class="hotline-phone-ring-img-circle p-3 rounded-full bg-brand absolute bottom-[18px] right-[20px]"
         >
           <icons-phone color="white" />
         </div>
@@ -32,12 +32,14 @@
   </div>
 </template>
 <script>
+import { HOTLINE } from "~/common/lib/company";
+
 export default {
   name: "DefaultLayout",
 
   data() {
     return {
-      hotline: "0901987666",
+      hotline: HOTLINE,
     };
   },
 };
